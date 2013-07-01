@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>我要健康服务网_</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<script type="text/javascript" src="js/pptBox.js"></script>
+<script type="text/javascript" src="js/jquery.js"> </script> 
+<script type="text/javascript" src="js/bxCarousel.js"> </script> 
+<style>
+.mainbox{
+    overflow:hidden;
+    position:relative;
+}
+.flashbox{
+   overflow:hidden;
+    position:relative;
+}
+.imagebox{
+    text-align:right;position:relative;z-index:999;
+}
+
+.bitdiv{display:inline-block;width:18px;height:18px;margin:0 10px 10px 0px;cursor:pointer;float:right;}
+.defimg{background-image:url(images/02.png);width:18px;height:18px;}
+.mcurimg{background-image:url(images/01.png);width:18px;height:18px;}
+
+.bx_wrap {margin-left: 40px; margin-top:20px;position: relative;} 
+.bx_wrap ul img { border: 2px solid #ddd; } 
+.bx_wrap ul li{text-align:center} 
+.bx_wrap ul li a:hover{text-decoration:none; color:#f30} 
+.bx_wrap a.prev {width:34px;height:34px;line-height:34px;outline-style:none;outline-width: 0; 
+position:absolute; top:55px; left:-60px; text-indent:-999em; background: url(images/index/arr_left.gif)  
+no-repeat;} 
+.bx_wrap a.prev:hover{background: url(images/index/arr_left_2.gif)  no-repeat;} 
+.bx_wrap a.next {width:34px;height:34px;line-height:34px; left:626px;position: absolute; 
+top:55px; text-indent:-999em; background:url(images/index/arr_right.gif) no-repeat;} 
+.bx_wrap a.next:hover{background: url(images/index/arr_right_2.gif)  no-repeat;} 
+</style>
+<script>
+$(function(){
+$("#hospital_img").bxCarousel({ 
+   		display_num: 3, 
+		move: 3,
+		margin: 24 
+}); 
+})
+/*
+
+bxCarousel参数说明：
+move：每次滚动移动图片的数量，默认为4。
+display_num：展示图片的数量，默认为4。
+speed：图片滚动速度，默认为500毫秒。
+margin：图片间的间距，默认为0。
+auto：是否自动滚动，默认为false。
+auto_interval：当设为自动滚动时，每次滚动的时间间隔（毫秒），默认为2000毫秒即2秒。
+auto_dir：自动滚动的方向，默认为next，你可以试下prev。
+next_image：向右滚方向按钮图片，可以用CSS设置。
+prev_image：向左滚方向按钮图片，可以用CSS设置。
+auto_hover：滚动时，鼠标滑上图片时是否停止滚动，默认为false。
+controls：是否显示左右滚动按钮图片，默认为true。
+*/
+</script>
+</head>
+
+<body>
+<div class="main_header">
+  <div class="clearfix"> <a class="main_logo" href="/index.html"><img src="images/logo.png"></a>
+    <div class="main_hlink">
+      <ul>
+        <li><a href="/register.html">注册</a></li>
+        <li>|</li>
+        <li class="exit"><a href="/login.html">会员登录</a></li>
+        <li>|</li>
+        <li class="exit"><a href="http://www.51jkfw.com/phycenter">体检机构入口</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_nav">
+    <ul>
+      <li ><a class="main_nav_cur" href="/index.html">首页</a></li>
+      <li class=""><a href="/userCenter/gotoMyRpt.html">健康档案</a></li>
+      <li><a href="/userCenter/gotoQuestionCardList.html?questionCardFindFlag=0">量表测评</a></li>
+      <li class=""><a href="/riskAssessment/riskMain.html">风险评估</a></li>
+      <li><a href="/phyCenter/gotoPhyIndex.html">我要体检</a></li>
+      <li><a href="/consult/freeConsultPage.html">我要咨询</a></li>
+      <li><a href="http://www.51jkzs.com">下载专区</a></li>
+    </ul>
+  </div>
+</div>
+<div class="main_ad clearfix">
+  <div class="main_quickLink">
+    <ul>
+      <li ><img src="images/index/QL1.png" width="32" height="32" /><a href="">体检报告</a></li>
+      <li class="QL2"><img src="images/index/QL2.png" width="32" height="32" /><a href="">体检咨询</a></li>
+      <li class="QL3"><img src="images/index/QL3.png" width="32" height="32" /><a href="">量表测评</a></li>
+      <li class="QL4"><img src="images/index/QL4.png" width="32" height="32" /><a href="">风险评估</a></li>
+    </ul>
+  </div>
+  <div class="main_ad_pic" id="main_ad_pic">
+   <script>
+  
+     var box =new PPTBox();
+     box.width = 808; //宽度
+     box.height = 234;//高度
+     box.autoplayer = 3;//自动播放间隔时间
+
+     //box.add({"url":"图片地址","title":"悬浮标题","href":"链接地址"})
+     box.add({"url":"images/index/tu1.jpg","href":"http://www.51jkfw.com/","title":"悬浮提示标题1"})
+     box.add({"url":"images/index/tu2.jpg","href":"http://www.51jkfw.com/","title":"悬浮提示标题2"})
+     box.add({"url":"images/index/tu3.jpg","href":"http://www.51jkfw.com/","title":"悬浮提示标题3"})
+     box.add({"url":"images/index/tu4.jpg","href":"http://www.51jkfw.com/","title":"悬浮提示标题4"})
+     box.show();
+    
+    </script>
+  </div>
+</div>
+<div class="main_link clearfix">
+  <ul>
+    <li class="link1"><img src="images/index/link1.png" width="60" height="60" /><a href="#">糖尿病风险人群早期筛选</a></li>
+    <li class="link2"><img src="images/index/link2.png" width="60" height="60" /><a href="#">肥胖与疾病风险评估</a></li>
+    <li class="link3"><img src="images/index/link3.png" width="60" height="60" /><a href="#">血管健康状态的评估</a></li>
+    <li class="link4"><img src="images/index/link4.png" width="60" height="60" /><a href="#">更多健康风险评估</a></li>
+  </ul>
+</div>
+<div class="main_link_content clearfix">
+ <ul>
+    <li class="link_content1">
+      <div class="link_article"><h3><a href="">如何对糖尿病前期人群进行干预以预防糖尿病？</a></h3>
+      <img src="images/index/linkImg.png" width="216" height="128" />
+      <p>“失眠有可能是许多人晚餐吃了容易影响睡眠的食物。中日友好医院神经内科主任医师熊新英...”</p>
+      </div>
+      <div class="link_expert">
+      <h2>专家介绍</h2>
+      <dl>
+      	  <dd class="expert_img"><img src="images/index/expert1.png" width="84" height="100" /></dd>
+          <dd class="expert_name"><a href="">朱玲</a></dd>
+          <dd class="expert_detail"><a href="">糖尿病风险 人群筛查及早期干预多中心研究首席专家。</a> </dd>
+          <dd class="more_expert"><a href="">更多专家...</a></dd>
+          
+      </dl>
+      </div>
+    </li>
+    <li class="link_content2">
+      <div class="link_article"><h3><a href="">如何对糖尿病前期人群进行干预以预防糖尿病？</a></h3>
+      <img src="images/index/linkImg2.png" width="216" height="128" />
+      <p>“失眠有可能是许多人晚餐吃了容易影响睡眠的食物。中日友好医院神经内科主任医师熊新英...”</p>
+      </div>
+      <div class="link_expert">
+      <h2>专家介绍</h2>
+      <dl>
+      	  <dd class="expert_img"><img src="images/index/expert2.png" width="84" height="100" /></dd>
+          <dd class="expert_name"><a href="">朱玲</a></dd>
+          <dd class="expert_detail"><a href="">糖尿病风险 人群筛查及早期干预多中心研究首席专家。</a> </dd>
+          <dd class="more_expert"><a href="">更多专家...</a></dd>
+          
+      </dl>
+      </div>
+    </li>
+    <li class="link_content3">
+      <div class="link_article"><h3><a href="">如何对糖尿病前期人群进行干预以预防糖尿病？</a></h3>
+      <img src="images/index/linkImg3.png" width="216" height="128" />
+      <p>“失眠有可能是许多人晚餐吃了容易影响睡眠的食物。中日友好医院神经内科主任医师熊新英...”</p>
+      </div>
+      <div class="link_expert">
+      <h2>专家介绍</h2>
+      <dl>
+      	  <dd class="expert_img"><img src="images/index/expert3.png" width="84" height="100" /></dd>
+          <dd class="expert_name"><a href="">朱玲</a></dd>
+          <dd class="expert_detail"><a href="">糖尿病风险 人群筛查及早期干预多中心研究首席专家。</a> </dd>
+          <dd class="more_expert"><a href="">更多专家...</a></dd>
+          
+      </dl>
+      </div>
+    </li>
+    <li class="link_content4 clearfix">
+      <div class="box1"><img src="images/index/ins_login.png" width="115" height="90" alt="医疗机构登录" /></div>
+      <div class="box2"><img src="images/index/Dotor_login.png" width="115" height="90" alt="医学专家登录" /></div>
+      <div class="box3"><dl>
+      <dt>最新动态 <span><a href="">更多</a></span></dt>
+          <dd>· <a href="">"化制淀粉"是否安全？</a></dd>
+          <dd>· <a href="">荷兰的活体捐献肾移植</a></dd>
+          <dd>· <a href="">医调委 和谐医患的第四条道路</a></dd>
+          <dd>· <a href="">美国猪肉中国达标难</a></dd>
+          <dd>· <a href="">养成漂亮宝贝民间方法多谬误</a></dd>
+          <dd>· <a href="">您知道吸烟的危害有哪些吗？</a></dd>
+      <dd>
+· 吃饼干磨牙不如啃瓜果条</dd></dl></div>
+      <div class="box4">
+          <div class="famous_expert">
+          <h2>名医讲堂</h2>
+          <dl>
+              <dd class="famous_expert_img"><img src="images/index/famous_doctor.png" width="77" height="77" /></dd>
+              <dd class="famous_expert_name"><a href="">许鹏飞</a></dd>
+              <dd class="famous_expert_detail"><a href="">中日友好医院儿科，主任医师。中西医双学士，从医20余年。擅长儿童呼吸系统... </a></dd>
+            
+              
+          </dl>
+          </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="main_tool clearfix">
+<h3>健康工具</h3>
+    <div class="main_tool_link">
+        <ul class="clearfix">
+            <li><img src="images/index/toolLink1.png" width="80" height="80" alt="健康自测" /><div><a href="">健康自测</a></div></li>
+            <li><img src="images/index/toolLink2.png" width="80" height="80" alt="标准体重" /><div><a href="">标准体重</a></div></li>
+            <li><img src="images/index/toolLink3.png" width="80" height="80" alt="身体质量指数" /><div><a href="">身体质量指数</a></div></li>
+            <li><img src="images/index/toolLink4.png" width="80" height="80" alt="女性安全期" /><div><a href="">女性安全期</a></div></li>
+            <li><img src="images/index/toolLink5.png" width="80" height="80" alt="预产期计算" /><div><a href="">预产期计算</a></div></li>
+            <li><img src="images/index/toolLink6.png" width="80" height="80" alt="目标运动心率" /><div><a href="">目标运动心率</a></div></li>
+            <li><img src="images/index/toolLink7.png" width="80" height="80" alt="基础代谢计算" /><div><a href="">基础代谢计算</a></div></li>
+            <li><img src="images/index/toolLink8.png" width="80" height="80" alt="体生物周期" /><div><a href="">体生物周期</a></div></li>
+            <li><img src="images/index/toolLink9.png" width="80" height="80" alt="腰臀比" /><div><a href="">腰臀比</a></div></li>
+            <li><img src="images/index/toolLink10.png" width="80" height="80" alt="体脂肪率" /><div><a href="">体脂肪率</a></div></li>
+        </ul>
+</div>
+</div>
+
+<div class="main_map_hospital clearfix">
+<div class="main_map_wrap"><h3>全国地图</h3>
+  <img src="images/index/map.png" width="204" height="165" /></div>
+<div class="main_hospital_wrap">
+<div class="bx_wrap"> 
+   <div class="bx_container"> 
+	<ul id="hospital_img"> 
+        <li><img  alt="#" width="180" height="130" src="images/index/s1.png"><br/>重庆西南医院健康管理中心</li> 
+        <li><img  alt="#" width="180" height="130" src="images/index/s2.png"><br/>重庆西南医院健康管理中心</li> 
+        <li><img  alt="#" width="180" height="130" src="images/index/s3.png"><br/>重庆西南医院健康管理中心</li> 
+        <li><img  alt="#" width="180" height="130" src="images/index/s1.png"><br/>重庆西南医院健康管理中心</li> 
+        <li><img  alt="#" width="180" height="130" src="images/index/s1.png"><br/>重庆西南医院健康管理中心</li> 
+        <li><img  alt="#" width="180" height="130" src="images/index/s1.png"><br/>重庆西南医院健康管理中心</li> 
+        <li><img  alt="#" width="180" height="130" src="images/index/s1.png"><br/>重庆西南医院健康管理中心</li> 
+        <li><img  alt="#" width="180" height="130" src="images/index/s1.png"><br/>重庆西南医院健康管理中心</li> 
+        <li><img  alt="#" width="180" height="130" src="images/index/s1.png"><br/>重庆西南医院健康管理中心</li> 
+          <!--更多图片--> 
+    </ul> 
+    </div>
+    </div>
+</div>
+</div>
+<div class="friendLink">
+<h3>友情链接</h3>
+<div class="clearfix"><ul><li><a href="">科技部</a></li><li><a href="">卫生部</a></li><li><a href="">中国健康促进基金会</a></li><li><a href="">中华医学会</a></li><li><a href="">卫生部北京医院</a></li><li><a href="">解放军总医院</a></li><li><a href="">福建省第二人民医院</a></li><li><a href="">重庆西南医院</a></li><li><a href="">中南大学湘雅三医院</a></li></ul></div>
+</div>
+<div class="bottomBak">
+
+<p>联系我们 - 免责声明 - 手机客户端<br/>
+版权所有©2013 我要健康服务网 www.51jkfw.com 京ICP备12048765号</p>
+</div>
+</body>
+</html>
