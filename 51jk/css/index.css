@@ -14,7 +14,7 @@ text-decoration: none;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
-	/*behavior: url(/js/PIE.htc);*/
+	*behavior: url(../js/PIE.htc);
 	}
 
 .main_nav { 
