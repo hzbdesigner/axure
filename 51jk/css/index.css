@@ -57,7 +57,7 @@ text-decoration: none;
 	
 
 }
-.main_ad{ width:980px; margin:20px auto 0 auto;}
+.main_ad_div{ width:980px; margin:20px auto 0 auto;}
 .main_ad_pic{ width:808px; height:234px; overflow:hidden; float:right; background:#9C0;}
 .main_quickLink{ float:left;}
 .main_quickLink ul li{
