@@ -110,3 +110,4 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 .wrapBox h3{ font-size:24px; border-bottom:dotted 2px #dadada; padding-bottom:10px; padding-left:45px; position:relative;}
 .wrapBox h3 img{ position:absolute; left:0px; top:-6px}
 .wrapBox p{ font-size:24px; color:#232323; line-height:32px;}
+img{ width:100%;}
