@@ -7,7 +7,7 @@ body{
 	}
 h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 .goodsPic{ position:relative}
-.goodsPic h3{ position:absolute; bottom:0px; left:0px; height:auto; background:#000;opacity: 0.8; color:#fff; line-height:35px; font-size:18px;width:100%; padding-left:5px;}
+.goodsPic h3{ position:absolute; bottom:0px; left:0px; height:auto; background:#000;opacity: 0.8; color:#fff; line-height:35px; font-size:18px;width:100%; padding:5px;}
 
 .downloadButton {
 		float:right;
