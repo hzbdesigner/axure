@@ -43,7 +43,7 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
         
         text-shadow:0px -1px 0px #d17d08;
 		
-		margin:20px 20px 0 0;
+		margin:10px 10px 0 0;
         
     }
 .downloadButton:hover {
@@ -70,10 +70,10 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 	-webkit-box-shadow: 0px 1px 2px #666666;
 	border-top:1px solid #fff;
 	
-	margin:20px 10px;
+	margin:10px 5px;
 	
 	
-	padding: 16px 20px 16px 20px;
+	padding: 8px 10px 8px 10px;
 	
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -89,13 +89,13 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 	position:absolute;
 	right:0px;
 	top:0px;
-	padding:0px 30px;
-	height:49px;
+	padding:0px 15px;
+	height:25px;
 	}
 .callIco:hover{
 	background:-webkit-linear-gradient(top, #e6e6e6 5%, #efefef 100%);
 	}
-.callIco img{ margin-top:24px;}
+.callIco img{ margin-top:12px;}
 .numTitle{
 	font-size:12px;
 	color:#000;
@@ -107,6 +107,6 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 	line-height:33px;
 	
 	}
-.wrapBox h3{ font-size:12px; border-bottom:dotted 2px #dadada; padding-bottom:10px; padding-left:45px; position:relative;}
+.wrapBox h3{ font-size:12px; border-bottom:dotted 2px #dadada; padding-bottom:10px; padding-left:20px; position:relative;}
 .wrapBox h3 img{ position:absolute; left:0px; top:-6px}
 .wrapBox p{ font-size:12px; color:#232323; line-height:16px;}
