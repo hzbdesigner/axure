@@ -7,7 +7,7 @@ body{
 	}
 h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 .goodsPic{ position:relative}
-.goodsPic h3{ position:absolute; bottom:0px; left:0px; height:35px; background:#000;opacity: 0.8; color:#fff; line-height:35px; font-size:14px;width:100%;}
+.goodsPic h3{ position:absolute; bottom:0px; left:0px; height:35px; background:#000;opacity: 0.8; color:#fff; line-height:35px; font-size:18px;width:100%;}
 
 .downloadButton {
 		float:right;
@@ -108,5 +108,5 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 	
 	}
 .wrapBox h3{ font-size:12px; border-bottom:dotted 2px #dadada; padding-bottom:10px; padding-left:20px; position:relative;}
-.wrapBox h3 img{ position:absolute; left:0px; top:-6px}
+.wrapBox h3 img{ position:absolute; left:0px; top:-4px}
 .wrapBox p{ font-size:12px; color:#232323; line-height:16px;}
