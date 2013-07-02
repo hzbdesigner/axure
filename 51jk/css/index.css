@@ -209,19 +209,19 @@ text-decoration: none;
 	width:115px;
 	margin-right:6px;
 	float:left;
-	background:#86c136;
+	background-color:#86c136;
 	height:90px;
 	}
 .main_link_content ul .link_content4 .wrap_box2{
 	width:115px;
 	float:left;
-	background:#86c136;
+	background-color:#86c136;
 	height:90px;
 	}
 .main_link_content ul .link_content4 .wrap_box3{
 	width:236px;
 	float:left;
-	background:#86c136;
+	background-color:#86c136;
 	height:190px;
 	margin:10px 0;
 	font-size:12px;
@@ -248,7 +248,7 @@ text-decoration: none;
 .main_link_content ul .link_content4 .wrap_box4{
 	width:236px;
 	float:left;
-	background:#9cd352;
+	background-color:#86c136;
 	height:120px;
 	}
 .famous_expert{position:relative; margin:5px;}
