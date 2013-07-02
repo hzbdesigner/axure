@@ -15,6 +15,7 @@ text-decoration: none;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
 	behavior: url(js/PIE.htc);
+	position:relative;
 	}
 
 .main_nav { 
