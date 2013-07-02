@@ -110,3 +110,6 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 .wrapBox h3{ font-size:16px; border-bottom:dotted 2px #dadada; padding-bottom:10px; padding-left:20px; position:relative;}
 .wrapBox h3 img{ position:absolute; left:0px; top:-2px}
 .wrapBox p{ font-size:14px; color:#232323; line-height:16px;}
+
+.notice_wrap{ border-radius:10px; margin:100px auto; width:90%; background:#FFF; text-align:center;-webkit-box-shadow: 0px 2px 5px #666666; }
+.notice_wrap h3{ padding:10px; line-height:22px; word-break:break-all;}
