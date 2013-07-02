@@ -209,7 +209,7 @@ text-decoration: none;
 	width:115px;
 	margin-right:6px;
 	float:left;
-	background-color:#86c136;
+	background-color:#86c136 !important;
 	height:90px;
 	}
 .main_link_content ul .link_content4 .wrap_box2{
