@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>通讯助手</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/jquery.backgroundPosition.js" type="text/javascript"></script>
+	
+<script>
+$(document).ready(function(e) {	
+
+	flag=0;		
+	t = $('#fixed').offset().top;
+	mh = $('#main').height()+375;
+	fh = $('#fixed').height();
+	$(window).scroll(function(e){
+		s = $(document).scrollTop();	
+		if(s > t - 160){
+			$('#fixed').css({'position':'fixed','top':'160px'});
+			console.log("mh: "+mh+"s:"+s);
+			if(s + fh > mh){
+				
+				$('#fixed').css('top',mh-s-fh+160+'px');	
+			}				
+		}else{
+			$('#fixed').css('position','');
+			console.log("未移动s:"+s );
+		}
+			if(flag==0){	
+			  if(s<300){$("#menu ul li:nth-child(1)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
+			  if(s>=300&&s<380){$("#menu ul li:nth-child(2)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
+			  if(s>=380&&s<1030){$("#menu ul li:nth-child(3)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
+			  if(s>=1030){$("#menu ul li:nth-child(4)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
+			}
+	})
+//二维码跟随；	
+$('#midground').css({backgroundPosition: '0px 0px'});
+$('#foreground').css({backgroundPosition: '0px 0px'});
+		
+		function loopMid(){
+			console.log("loopmid");
+$('#midground').animate({
+				backgroundPosition:"(-10000px -2000px)"
+			}, 240000, 'linear',function(){$('#midground').css({backgroundPosition: '0px 0px'});loopMid();});
+
+		}
+		
+		function loopFore(){
+			console.log("loopFore");
+$('#foreground').animate({
+				backgroundPosition:"(-10000px -2000px)"
+}, 120000, 'linear',function(){$('#foreground').css({backgroundPosition: '0px 0px'});loopFore();});
+		}
+loopMid();
+loopFore();
+//背景移动
+
+$("#menu ul li").click(function(e){
+	flag=1;
+	$(this).addClass("menu_actived").siblings().removeClass("menu_actived ");
+	$('body').animate({scrollTop:$(this).attr("scrollAttr")}, "slow",function(){flag=0});
+	})
+	
+});
+
+</script>
+<script language="javascript" type="text/javascript">
+document.onmousemove=function(evt){
+    evt=evt || window.event;
+	showP(evt.clientX,evt.clientY);   
+}
+var middleX=600,middleY=350//中心坐标
+function showP(x,y)
+{
+	xP=(x-500)/500;
+	yP=(y-250)/250;   
+	document.getElementById("lay1").style.left=(450+xP*20)+"px";// lay1的左右移动区间是正负20像素
+	document.getElementById("lay1").style.top=(yP*15)+"px";// lay1的上下移动区间是正负15像素
+
+	document.getElementById("lay2").style.left=(300+xP*40)+"px";// lay2的左右移动区间是正负40像素
+	document.getElementById("lay2").style.top=(yP*27)+"px";// lay2的上下移动区间是正负27像素
+
+	document.getElementById("lay3").style.left=(450+xP*60)+"px";// lay3的左右移动区间是正负60像素
+	document.getElementById("lay3").style.top=(yP*35)+"px";// lay3的上下移动区间是正负35像素
+}
+</script>
+<style>
+#background {
+	background: url(images/background.png) repeat 5% 5%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 66;
+}
+
+#midground {
+	background: url(images/midground.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 67;
+}
+
+#foreground {
+	background: url(images/foreground.png) repeat 90% 110%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 69;
+}
+</style>
+</head>
+
+<body >
+
+    
+<div class="top_nav">
+<div class="top_nav_inner">
+  <div class="topleft">
+    <p><a class="on" href="http://www.10086.cn/fj">个人客户</a><span> </span><a href="http://www.10086.cn/power/">政企客户</a></p>
+    <span> 欢迎来到中国移动！</span><a id="logout" class="orange" style="color: rgb(240, 135, 12);" href="https://fj.ac.10086.cn/login">[请登录]</a></div>
+  <div class="topright"><a href="http://www.10086.cn/cmccclient" class="khd">客户端</a><span>&nbsp;|&nbsp;</span><a href="http://www.e100.cn/">手机商城</a><span>&nbsp;|&nbsp;</span><a href="http://www.10086.cn/support/focus/onlineservice/index.htm">在线客服</a><span>&nbsp;|&nbsp;</span><a href="http://www.10086.cn/aboutus/">关于中国移动</a><span>&nbsp;|&nbsp;</span><a href="http://www.chinamobileltd.com/?lang=en">ENGLISH</a></div>
+  </div>
+</div>
+<div class="index_nav">
+  <div class="index_nav_content">
+  <a class="logo" href="#"><img src="images/logo.gif" width="360" height="58" /></a>
+      <div class="menu" id="menu">
+          <ul>
+              <li class="menu_actived" scrollAttr="0">首页</li>
+              <li scrollAttr="300">功能介绍</li>
+              <li scrollAttr="380">下载</li>
+              <li scrollAttr="1030">常见问题</li>
+          </ul>
+      </div>
+  </div>
+</div>
+<div class="index_ad">
+<div class="index_ad_inner">
+  <div class="index_ad_content" style="position:relative">
+  	<div id="lay0" style="left:0px; top: 0px; z-index:77;position:absolute;"><img src="images/phone_ad.png" width="950" height="416" /></div>
+  	
+    <div id="lay1" style="left:364px; top: 0px;"><img src="images/lay2_bak.png" width="590" height="416" /></div>
+    <div id="lay2" style="left:344px; top: 0px;"><img src="images/lay1_bak.png" width="590" height="416" /></div>
+    <div id="lay3" style="left:60px; top: 200px;"><img src="images/lay3_bak.png" width="60" height="60" /></div>
+    
+     
+	<div id="midground"></div>
+	<div id="foreground"></div>
+  </div>
+</div>
+</div>
+<div class="index_content clearfix" id="main">
+  <div class="index_content_left " >
+    <div class="index_leftContent1 radius">
+      <h3>功能介绍</h3>
+      <dl>
+        <dt>流量监控</dt>
+        <dd class="fun_ico"><img src="images/left_ico1.png" width="60" height="60" alt="流量监控" /></dd>
+        <dd>提供流量套餐消耗的实时查看，与运营商流量计算绝无偏差，可作为流量费计算的唯一标准。</dd>
+      </dl>
+      <dl>
+        <dt>彩铃彩印</dt>
+        <dd class="fun_ico"><img src="images/left_ico2.png" width="60" height="60" alt="流量监控" /></dd>
+        <dd>用户在客户端就能直接开通和管理彩铃，彩印业务，方便快捷，使用户的彩铃，彩印随时随
+          地想换就换。</dd>
+      </dl>
+      <dl>
+        <dt>闪电短信群发</dt>
+        <dd class="fun_ico"><img src="images/left_ico3.png" width="60" height="60" alt="流量监控" /></dd>
+        <dd>彻底突破安卓系统的短信群发数量上限，直接通过移动网关进行发送，实现真正的闪电群发
+          免去您在重大节假日期间短信群发的所有烦恼。</dd>
+      </dl>
+      <dl>
+        <dt>多号通</dt>
+        <dd class="fun_ico"><img src="images/left_ico4.png" width="60" height="60" alt="流量监控" /></dd>
+        <dd>满足用户不换机、不换卡，在现有的基础上却能另外同时拥有1-3个手机号码，帮助用户达
+          到沟通圈分离、隐私保护以及免打扰的目的。</dd>
+      </dl>
+      <dl>
+        <dt>更多功能</dt>
+        <dd class="fun_ico"><img src="images/left_ico5.png" width="60" height="60" alt="流量监控" /></dd>
+        <dd>基础功能之上，更添加了“联系人的彩铃、彩印”功能，方便移动用户批量查询联系人的彩铃彩印。 </dd>
+      </dl>
+    </div>
+    <div class="index_leftContent2 radius">
+      <h3>常见问题</h3>
+      <dl>
+        <dt>1.如何下载通讯助手？</dt>
+        <dd>回答：移动MM商城和主流的安卓应用市场均能下载到。</dd>
+      </dl>
+      <dl>
+        <dt>2.电信和联通用户是否能使用通讯助手？</dt>
+        <dd>回答：电信和联通用户只能使用通讯助手基础功能，无法使用其附加功能如：彩铃，彩印等。</dd>
+      </dl>
+      <dl>
+        <dt>3.安装通讯助手后是否会影响原有手机自带通讯录的使用？</dt>
+        <dd>回答：安装通讯助手不会对手机原有通讯录和拨号键盘功能造成任何应影响，请放心使用。</dd>
+      </dl>
+      <dl>
+        <dt>4.福建省外用户是否支持流量查询功能</dt>
+        <dd>回答：暂时只支持福建省内移动用户。</dd>
+      </dl>
+      <dl>
+        <dt>5.福建省外移动用户是否能使用通讯助手?</dt>
+        <dd>回答:只能使用通讯助手的基础功能。不能使用彩铃，彩印等增值业务。</dd>
+      </dl>
+      <dl>
+        <dt>6.通讯助手安装后是否会影响手机原有通讯录和拨号键盘?</dt>
+        <dd>回答：不会影响手机原有的基础功能，请放心使用。</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="index_content_right ">
+    <div class="radius index_float_right_width" style="top:160px;" id="fixed">
+      <h3>下载通讯助手</h3>
+      <dl>
+        <dt>Android</dt>
+        <dd class="android_ico"><img src="images/android_ico.png" width="76" height="76" /></dd>
+        <dd>版本:v2.2.0002<br/>
+          更新:2013-05-21<br/>
+          软件大小：42.4 MB</dd>
+      </dl>
+      <div class="codePic"><img src="images/codePic.png" width="187" height="187" /> </div>
+      <a href="" class="downLoad_btn"></a> </div>
+  </div>
+</div>
+<div class="copyright">
+  <p>新闻中心 | 法律声明 | 诚聘英才 | 采购信息 | 企业合作 | 联系我们 | 站点导航 | 网站地图</p>
+  <p><span>Copyright © 2010 - 2013 360.CN. All Rights Reserved</span></p>
+  <p><span>京ICP备05002571号 | 中国移动通信版权所有</span></p>
+</div>
+</body>
+</html>
