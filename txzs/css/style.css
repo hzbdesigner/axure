@@ -92,7 +92,7 @@ a:hover { color:#FF8F04; text-decoration:underline; }
 
 .index_nav{ width:100%; background:url(../images/index_nav_bak.png) repeat-x;}
 .index_nav_content{height:108px; }
-.index_ad{width:100%; background:url(../images/index_ad_bak.png) repeat-x;margin-top: 140px; }
+.index_ad_wrap{width:100%; background:url(../images/index_ad_bak.png) repeat-x;margin-top: 140px; }
 .index_ad_inner{width:100%;background:url(../images/ad_bak.png) no-repeat;}
 .index_ad_content{ height:416px; }
 
