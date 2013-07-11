@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-
+@media screen and (max-width:320px){
 
 body{
 	margin:0; 
@@ -26,18 +26,22 @@ em{ text-decoration:none;font-style:normal; }
 .main_title h3{
 	color:#FFF;
 	padding-left:20px;
-	width:100%;
 	font-size:26px;
 	text-shadow: 0px 1px 1px #00876c;
+	float:left;
 	}
-.main_title span{ position:absolute; left:150px; top:4px; font-size:16px; color:#d2fff6;}
+.main_title span{font-size:16px; color:#d2fff6;}
 .main_content{ font-size:14px;width:100%;}
-.main_content ul li{ height:80px; border-bottom: solid 1px #e9e9e9; position:relative; padding-top:12px;}
+.main_content ul li{ 
+	height:80px; border-bottom: solid 1px #e9e9e9; position:relative; padding-top:12px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f3f3f3));
+  	background: -moz-linear-gradient(top, #ffffff, #f3f3f3);
+}
 .main_content ul li img{ position:absolute;top:12px; left:5px;}
-.main_content ul li h2{ margin:0 0 0 64px; font-size:16px; margin-right:32px; }
+.main_content ul li h2{ margin:0 0 0 64px; font-size:18px; margin-right:32px; }
 .main_content ul li p{ height:24px; margin:2px 0 0 64px; overflow:hidden; line-height:12px;margin-right:32px; font-size:12px;}
 .main_content ul li em{margin:5px 0 0 64px;margin-right:32px; float:left;}
-.main_content ul li em span{ height:18px; line-height:18px;  display:block; float:left; margin-right:10px;font-size:10px;}
+.main_content ul li em span{ height:20px; line-height:20px;  display:block; float:left; margin-right:10px;font-size:9px;}
 .android_V{}
 
 .android_V_dev_on{ color:#1fbba6;padding-left:20px; background:url(../images/android_V_dev_on_ico.png) no-repeat;}
@@ -45,5 +49,7 @@ em{ text-decoration:none;font-style:normal; }
 
 .apple_V_dev_on{color:#dcdcdc;padding-left:20px; background:url(../images/apple_V_dev_on_ico.png) no-repeat; }
 .apple_V_dev_off{color:#dcdcdc;padding-left:20px; background:url(../images/apple_V_dev_off_ico.png) no-repeat;}
+.main_more{ width:24px; height:24px; background:url(../images/main_more_ico.png) no-repeat; display:block; position:absolute; right:5px; top:32px;}
 
+ }
 
