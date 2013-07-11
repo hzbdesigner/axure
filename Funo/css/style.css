@@ -7,6 +7,8 @@ body{
 	padding:0;
 	font-size:10px;
 	font-family:Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
 }
 a{ text-decoration:none; color:#34495e;}
 h3,h2,ul,li{ margin:0; padding:0;}
@@ -37,6 +39,7 @@ em{ text-decoration:none;font-style:normal; }
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f4f4f4));
   	background: -moz-linear-gradient(top, #ffffff, #f4f4f4);
 }
+.main_content ul li:active { background:#17c8a5;}
 .main_content ul .even{background:#f9f9f9;}
 .main_content ul li img{ position:absolute;top:12px; left:5px;}
 .main_content ul li h2{ margin:0 0 0 64px; font-size:18px; margin-right:32px; }
@@ -48,7 +51,7 @@ em{ text-decoration:none;font-style:normal; }
 .android_V_dev_on{ color:#1fbba6;padding-left:20px; background:url(../images/android_on.svg) no-repeat;background-size: 20px 20px;}
 .android_V_dev_off{ color:#1fbba6;padding-left:20px; background:url(../images/android_off.svg) no-repeat;background-size: 20px 20px;}
 
-.apple_V_dev_on{color:#dcdcdc;padding-left:20px; background:url(../images/apple_on.svg) no-repeat; background-size: 20px 20px;}
+.apple_V_dev_on{color:#dcdcdc;padding-left:20px; background:url(../images/apple_on.svg) no-repeat;background-size: 20px 20px;}
 .apple_V_dev_off{color:#dcdcdc;padding-left:20px; background:url(../images/apple_off.svg) no-repeat;background-size: 20px 20px;}
 .main_more{ width:24px; height:24px; background:url(../images/main_more_ico.png) no-repeat; display:block; position:absolute; right:5px; top:32px;}
 
