@@ -44,7 +44,7 @@ em{ text-decoration:none;font-style:normal; }
 .main_content ul li em span{ height:20px; line-height:20px;  display:block; float:left; margin-right:10px;font-size:9px;}
 .android_V{}
 
-.android_V_dev_on{ color:#1fbba6;padding-left:20px; background:url(../images/android_V_dev_on_ico.png) no-repeat;}
+.android_V_dev_on{ color:#1fbba6;padding-left:20px; background:url(../images/android_on.svg) no-repeat;background-size: 20px 20px;}
 .android_V_dev_off{ color:#1fbba6;padding-left:20px; background:url(../images/android_V_dev_off_ico.png) no-repeat;}
 
 .apple_V_dev_on{color:#dcdcdc;padding-left:20px; background:url(../images/apple_V_dev_on_ico.png) no-repeat; }
