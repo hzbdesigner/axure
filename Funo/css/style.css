@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-@media screen and (max-width:320px){
+
 
 body{
 	margin:0; 
@@ -46,5 +46,4 @@ em{ text-decoration:none;font-style:normal; }
 .apple_V_dev_on{color:#dcdcdc;padding-left:20px; background:url(../images/apple_V_dev_on_ico.png) no-repeat; }
 .apple_V_dev_off{color:#dcdcdc;padding-left:20px; background:url(../images/apple_V_dev_off_ico.png) no-repeat;}
 
- }
 
