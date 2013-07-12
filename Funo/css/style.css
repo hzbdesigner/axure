@@ -15,7 +15,7 @@ em{ text-decoration:none;font-style:normal; }
 .clearfix{ zoom:1;}
 li,span{ list-style:none; margin:0px; padding:0px;}
 
-@media screen and (min-device-width : 320px) and (max-device-width: 480px){
+@media screen and (min-device-width : 320px) and (max-device-width: 720px){
 
 
 .main_title {
