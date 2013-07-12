@@ -119,7 +119,7 @@ li,span{ list-style:none; margin:0px; padding:0px;}
 		background: #e1e1e1;
 	 }
 .button_wrap .disable_btn span{
-	color:#fff;
+	color:#c5c5c5;
 	display:block;
 	text-align:center;
 	font-size:9px;
@@ -226,7 +226,7 @@ html{overflow-x:hidden;}
 		background: #e1e1e1;
 	 }
 .button_wrap .disable_btn span{
-	color:#fff;
+	color:#c5c5c5;
 	display:block;
 	text-align:center;
 	font-size:9px;
