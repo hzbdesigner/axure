@@ -8,7 +8,7 @@
 
 <script>
 $(function(){
-	
+	$(".more_back_btn a").bind("click",function(){history.go(-1);console.log("bingo");})
 	
 })
 </script>
@@ -18,7 +18,7 @@ $(function(){
 <body>
 <div data-role="page" id="page1">
 <div class="more_title">
-<div class="more_back_btn"><a href="#" ></a></div>
+<div class="more_back_btn"><a href="javascript:void(0)" ></a></div>
   <h3> 详细信息</h3>
 </div>
 <div class="more_content" >
