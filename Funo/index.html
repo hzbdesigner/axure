@@ -10,6 +10,7 @@
 
 <script>
 $(function(){
+	$.mobile.changePage( "more.html", { transition: "slideup"} );
 	
 	$('#list ul li').bind("click",function(e){
 			
@@ -23,9 +24,8 @@ $(function(){
 		})
 	$('#list ul li .main_more').bind("click",function(e){
 		
-		  $.mobile.changePage("more.html",
-            { transition: "slideup" });
-		 return false;
+		 
+		return fasle;
 		})
 		
 	

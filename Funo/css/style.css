@@ -128,6 +128,7 @@ li,span{ list-style:none; margin:0px; padding:0px;}
  }
 
 @media (min-device-width:800px) {
+html{overflow-x:hidden;}
 	
 .main_title {
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#14d1ac), to(#1abd9d));
