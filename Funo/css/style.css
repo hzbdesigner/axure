@@ -149,7 +149,7 @@ html{overflow-x:hidden;}
 .main_title span{ position:absolute; left:200px; top:4px; font-size:24px; color:#d2fff6;}
 
 .main_content{ font-size:14px}
-.main_content ul li{ height:auto;  border-bottom: solid 1px #e9e9e9; position:relative; padding-top:19px;}
+.main_content ul li{min-height: 100px; height:auto;  border-bottom: solid 1px #e9e9e9; position:relative; padding-top:19px;}
 .main_content ul li img{ position:absolute;top:19px; left:10px; width:82px; height:82px;}
 .main_content ul li h2{ margin:0 0 0 106px; font-size:24px; margin-right:54px; }
 .main_content ul li p{ height:auto; margin:0 0 0 106px; line-height:18px;margin-right:54px;color:#9e9e9e;}
