@@ -27,6 +27,12 @@ $(document).ready(function(e) {
 	t = $('#fixed').offset().top;
 	mh = $('#main').height()+342;
 	fh = $('#fixed').height();
+	
+	s1=$('.index_leftContent1').offset().top-300;
+	s2=$('.fun_ico').offset().top-120;
+	s3=$('.index_leftContent2').offset().top-120;
+	//console.log("s1:"+s1+"s2:"+s2+"s3:"+s3);
+	
 	$(window).scroll(function(e){
 		s = $(document).scrollTop();	
 		if(s > t - 160){
@@ -41,10 +47,10 @@ $(document).ready(function(e) {
 			//console.log("未移动s:"+s );
 		}
 			if(flag==0){	
-			  if(s<300){$("#menu ul li:nth-child(1)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
-			  if(s>=300&&s<380){$("#menu ul li:nth-child(2)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
-			  if(s>=380&&s<1030){$("#menu ul li:nth-child(3)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
-			  if(s>=1030){$("#menu ul li:nth-child(4)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
+			  if(s<s1){$("#menu ul li:nth-child(1)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
+			  if(s>=s1&&s<s2){$("#menu ul li:nth-child(2)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
+			  if(s>=s2&&s<s3){$("#menu ul li:nth-child(3)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
+			  if(s>=s3){$("#menu ul li:nth-child(4)").addClass("menu_actived").siblings().removeClass("menu_actived ");}
 			}
 	})
 //二维码跟随；	
@@ -71,15 +77,15 @@ loopFore();
 
 $("#menu ul li").click(function(e){
 	flag=1;
-	//console.log($(".copyright").offset().top);
+	console.log($($(this).attr("scrollAttr")).offset().top);
 	
 	$(this).addClass("menu_actived").siblings().removeClass("menu_actived ");
 	if($.browser.msie) { 
 	
-		$(document.documentElement).animate({scrollTop:$($(this).attr("scrollAttr")).offset().top-145}, "slow",function(){flag=0;});
+		$(document.documentElement).animate({scrollTop:$($(this).attr("scrollAttr")).offset().top-120}, "slow",function(){flag=0;});
 	
 	}else{
-		$('body').animate({scrollTop:$($(this).attr("scrollAttr")).offset().top-155}, "slow",function(){flag=0;});
+		$('body').animate({scrollTop:$($(this).attr("scrollAttr")).offset().top-120}, "slow",function(){flag=0;});
 		} 
 	
 	
@@ -152,7 +158,7 @@ function showP(x,y)
           <ul>
               <li class="menu_actived" scrollAttr=".index_ad_wrap">首页</li>
               <li scrollAttr=".index_leftContent1">功能介绍</li>
-              <li scrollAttr=".index_content_right h3">下载</li>
+              <li scrollAttr=".fun_ico">下载</li>
               <li scrollAttr=".index_leftContent2">常见问题</li>
           </ul>
       </div>
