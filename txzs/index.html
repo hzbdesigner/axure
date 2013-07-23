@@ -71,7 +71,7 @@ $("#menu ul li").click(function(e){
 	flag=1;
 
 	$(this).addClass("menu_actived").siblings().removeClass("menu_actived ");
-	$('body').animate({scrollTop:$(this).attr("scrollAttr")}, "slow",function(){flag=0;});
+	$(document.documentElement).animate({scrollTop:$(this).attr("scrollAttr")}, "slow",function(){flag=0;});
 	
 	})
 	
