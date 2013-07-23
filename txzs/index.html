@@ -21,6 +21,8 @@
 <script type="text/javascript">
 $(document).ready(function(e) {	
 	
+	
+	
 	flag=0;		
 	t = $('#fixed').offset().top;
 	mh = $('#main').height()+342;
@@ -69,12 +71,15 @@ loopFore();
 
 $("#menu ul li").click(function(e){
 	flag=1;
-
+	console.log($(".copyright").offset().top);
+	
 	$(this).addClass("menu_actived").siblings().removeClass("menu_actived ");
 	if($.browser.msie) { 
-		$(document.documentElement).animate({scrollTop:$(this).attr("scrollAttr")}, "slow",function(){flag=0;});
+	
+		$(document.documentElement).animate({scrollTop:$($(this).attr("scrollAttr")).offset().top-145}, "slow",function(){flag=0;});
+	
 	}else{
-		$('body').animate({scrollTop:$(this).attr("scrollAttr")}, "slow",function(){flag=0;});
+		$('body').animate({scrollTop:$($(this).attr("scrollAttr")).offset().top-155}, "slow",function(){flag=0;});
 		} 
 	
 	
@@ -145,10 +150,10 @@ function showP(x,y)
   <a class="logo" href="#"><img src="images/logo.gif" width="360" height="58" /></a>
       <div class="menu" id="menu">
           <ul>
-              <li class="menu_actived" scrollAttr="0">首页</li>
-              <li scrollAttr="300">功能介绍</li>
-              <li scrollAttr="380">下载</li>
-              <li scrollAttr="1030">常见问题</li>
+              <li class="menu_actived" scrollAttr=".index_ad_wrap">首页</li>
+              <li scrollAttr=".index_leftContent1">功能介绍</li>
+              <li scrollAttr=".index_content_right h3">下载</li>
+              <li scrollAttr=".index_leftContent2">常见问题</li>
           </ul>
       </div>
   </div>
