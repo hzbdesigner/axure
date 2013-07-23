@@ -22,7 +22,7 @@ a:hover { color:#FF8F04; text-decoration:underline; }
 	background:#FFF;
 	}
 .top_nav{position:fixed; background:#FFF;z-index:98; top:0px;}
-.index_nav{position:fixed; top:33px; z-index:99; border-bottom: solid 1px #e3e3e3;}
+.index_nav{position:fixed; top:0px; z-index:99; border-bottom: solid 1px #e3e3e3;}
 
 
 .top_nav_inner,.index_content,.index_nav_content,.index_ad_content,.index_content,.copyright{width:950px; margin:0 auto;}
@@ -90,10 +90,10 @@ a:hover { color:#FF8F04; text-decoration:underline; }
 
 }
 
-.index_nav{ width:100%; background:url(../images/index_nav_bak.png) repeat-x;}
+.index_nav{ width:100%; background:url(../images/index_nav_bak.png) repeat-x; }
 .index_nav_content{height:108px; }
-.index_ad_wrap{width:100%; background:url(../images/index_ad_bak.png) repeat-x;margin-top: 140px; }
-.index_ad_inner{width:100%;background:url(../images/ad_bak.png) no-repeat;}
+.index_ad_wrap{width:100%; background:url(../images/index_ad_bak.png) repeat-x;margin-top: 107px; _margin-top:0px;}
+.index_ad_inner{width:100%;background:url(../images/ad_bak.png) no-repeat; }
 .index_ad_content{ height:416px; }
 
 .index_content{ position:relative; }
@@ -120,10 +120,10 @@ a:hover { color:#FF8F04; text-decoration:underline; }
 .codePic{ width:187px; margin:20px auto;}
 
 .downLoad_btn{ width:189px; height:47px; background:url(../images/download_btn.png); display:block; margin:20px auto;}
-.downLoad_btn:hover{ filter: alpha(opacity=80);opacity: 0.8;}
+.downLoad_btn:hover{ /*filter: alpha(opacity=80);*/opacity: 0.8;}
 
 .copyright{ text-align:center; font-size:14px; line-height:24px; border-top:solid 1px #eaeaea; padding-top:20px;}
 .copyright span{ font-size:12px;}
 
-#lay1,#lay2{filter: alpha(opacity=50);opacity: 0.5; position:absolute}
-#lay3 {filter: alpha(opacity=30);opacity: 0.3; position:absolute}
+#lay1,#lay2{/*filter: alpha(opacity=50);*/opacity: 0.5; position:absolute}
+#lay3 {/*filter: alpha(opacity=30);*/opacity: 0.3; position:absolute}
