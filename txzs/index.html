@@ -23,7 +23,7 @@ $(document).ready(function(e) {
 	
 	flag=0;		
 	t = $('#fixed').offset().top;
-	mh = $('#main').height()+375;
+	mh = $('#main').height()+342;
 	fh = $('#fixed').height();
 	$(window).scroll(function(e){
 		s = $(document).scrollTop();	
@@ -71,7 +71,12 @@ $("#menu ul li").click(function(e){
 	flag=1;
 
 	$(this).addClass("menu_actived").siblings().removeClass("menu_actived ");
-	$(document.documentElement).animate({scrollTop:$(this).attr("scrollAttr")}, "slow",function(){flag=0;});
+	if($.browser.msie) { 
+		$(document.documentElement).animate({scrollTop:$(this).attr("scrollAttr")}, "slow",function(){flag=0;});
+	}else{
+		$('body').animate({scrollTop:$(this).attr("scrollAttr")}, "slow",function(){flag=0;});
+		} 
+	
 	
 	})
 	
