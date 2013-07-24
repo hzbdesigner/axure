@@ -3,7 +3,7 @@
 @charset "utf-8";
 *{ margin:0; padding:0; }
 html{}
-body {font-family:'Microsoft YaHei UI', 'Segoe UI'; color:#333;  -webkit-text-size-adjust:none;zoom:1;}
+body {font-family:'Microsoft YaHei UI', 'Segoe UI'; color:#333;  -webkit-text-size-adjust:none;*+padding-top:107px;_margin-top:107px;}
 div, form, img, ul, ol, li, dl, dt, dd { border:0px; }
 input,select,button,textarea { font-size:12px; line-height:16px; vertical-align:middle; outline:none; }
 textarea { resize:none; }
