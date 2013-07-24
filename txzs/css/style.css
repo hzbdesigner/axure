@@ -2,7 +2,7 @@
 /* CSS Document */
 @charset "utf-8";
 *{ margin:0; padding:0; }
-body {font-family:'Microsoft YaHei UI', 'Segoe UI'; color:#333;  -webkit-text-size-adjust:none;}
+body {font-family:'Microsoft YaHei UI', 'Segoe UI'; color:#333;  -webkit-text-size-adjust:none;zoom:1;}
 div, form, img, ul, ol, li, dl, dt, dd { border:0px; }
 input,select,button,textarea { font-size:12px; line-height:16px; vertical-align:middle; outline:none; }
 textarea { resize:none; }
@@ -98,7 +98,7 @@ a:hover { color:#FF8F04; text-decoration:underline; }
 
 .index_nav{ width:100%; background:url(../images/index_nav_bak.png) repeat-x; }
 .index_nav_content{height:108px; }
-.index_ad_wrap{width:100%; background:url(../images/index_ad_bak.png) repeat-x;margin-top:107px; zoom:1;}
+.index_ad_wrap{width:100%; background:url(../images/index_ad_bak.png) repeat-x;margin-top:107px;}
 .index_ad_inner{width:100%;background:url(../images/ad_bak.png) no-repeat; }
 .index_ad_content{ height:416px; }
 
