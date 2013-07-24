@@ -2,7 +2,6 @@
 /* CSS Document */
 @charset "utf-8";
 *{ margin:0; padding:0; }
-html{}
 body {font-family:'Microsoft YaHei UI', 'Segoe UI'; color:#333;  -webkit-text-size-adjust:none;*+padding-top:107px;_margin-top:107px;}
 div, form, img, ul, ol, li, dl, dt, dd { border:0px; }
 input,select,button,textarea { font-size:12px; line-height:16px; vertical-align:middle; outline:none; }
@@ -23,8 +22,11 @@ a:hover { color:#FF8F04; text-decoration:underline; }
 	background:#FFF;
 	}
 .top_nav{position:fixed; background:#FFF;z-index:98; top:0px;}
-.index_nav{position:fixed; top:0px; z-index:99; border-bottom: solid 1px #e3e3e3;}
-*html .index_nav{_position:absolute;_left:expression(eval(document.documentElement.scrollLeft));_top:expression(eval(document.documentElement.scrollTop))};
+.index_nav{position:fixed; top:0px; z-index:99; border-bottom: solid 1px #e3e3e3;
+	_position:absolute;
+	_left:expression(eval(document.documentElement.scrollLeft));
+	_top:expression(eval(document.documentElement.scrollTop));
+}
 
 .top_nav_inner,.index_content,.index_nav_content,.index_ad_content,.index_content,.copyright{width:950px; margin:0 auto;}
 
