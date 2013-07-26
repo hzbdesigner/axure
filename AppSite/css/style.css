@@ -38,35 +38,7 @@ div, form, img, ul, ol, li, dl, dt, dd { border:0px; list-style:none;}
 .apple:hover{
 	background: #de4e0f;
 	}
-@media screen (min-device-width:240px) and (max-device-width:320px) {
-	body{ background:url(../images/body_bg.png) repeat-x;background-position:0 -89px;}
-	.main{ background:url(../images/bg.png) no-repeat; background-position:0 -89px; padding-bottom:10px; }
-	.logo{ height:56px; background:url(../images/logo_s.png) no-repeat left bottom;}
-	.logo,.content,.copyright{  margin:0 10px;}
-	.ad{display:none;}
-	.detail h3{ font-size:20px; color:#FFF;}
-	.copyright{ text-align:center; padding-top:10px;padding-bottom: 10px; color:#a5a5a5; font-size:10px; line-height:18px;}
-	.detail{padding-top:20px; }
-	.detail dl { padding: 10px 0 0 44px;}
-	.detail dl dd{color:#cab99f; font-size:10px; position:relative; line-height:18px;}
-	.detail dl dd img{ position:absolute; left:-44px; top:-18px;}
-	.detail dl dt{ color:#da4c07; font-size:16px;}
-}
-@media screen  and (min-device-width:321px) and (max-device-width:720px) {
-	body{ background:url(../images/body_bg.png) repeat-x;background-position:0 -47px;}
-	.main{ background:url(../images/bg.png) no-repeat; background-position:0 -47px; padding-bottom: 47px;}
-	.logo{ height:98px; background:url(../images/logo.png) no-repeat left bottom;}
-	.logo,.content,.copyright{  margin:0 10px;}
-	.ad{display:none;}
-	.detail h3{ font-size:30px; color:#FFF;}
-	.copyright{ text-align:center; padding-top:5px;padding-bottom: 10px; color:#a5a5a5; font-size:14px; line-height:18px;}
-	.detail{padding-top:30px; }
-	.detail dl { padding: 20px 0 0 44px;}
-	.detail dl dd{color:#cab99f; font-size:14px; position:relative; line-height:24px;}
-	.detail dl dd img{ position:absolute; left:-44px; top:-18px;}
-	.detail dl dt{ color:#da4c07; font-size:18px;}
-}
-@media screen and (min-device-width:721px){
+@media all and (min-width: 721px){
 	body{ background:url(../images/body_bg.png) repeat-x;}
 	.main{ background:url(../images/bg.png) no-repeat;}
 	.detail h3{ font-size:34px; color:#FFF;}
@@ -90,3 +62,32 @@ div, form, img, ul, ol, li, dl, dt, dd { border:0px; list-style:none;}
 	#gellery.box { border-radius:0; }
 	.box { margin:0; overflow:hidden; background:#000; }
 }
+@media all and (max-width: 720px) {
+	body{ background:url(../images/body_bg.png) repeat-x;background-position:0 -47px;}
+	.main{ background:url(../images/bg.png) no-repeat; background-position:0 -47px; padding-bottom: 47px;}
+	.logo{ height:98px; background:url(../images/logo.png) no-repeat left bottom;}
+	.logo,.content,.copyright{  margin:0 10px;}
+	.ad{display:none;}
+	.detail h3{ font-size:30px; color:#FFF;}
+	.copyright{ text-align:center; padding-top:5px;padding-bottom: 10px; color:#a5a5a5; font-size:14px; line-height:18px;}
+	.detail{padding-top:30px; }
+	.detail dl { padding: 20px 0 0 44px;}
+	.detail dl dd{color:#cab99f; font-size:14px; position:relative; line-height:24px;}
+	.detail dl dd img{ position:absolute; left:-44px; top:-18px;}
+	.detail dl dt{ color:#da4c07; font-size:18px;}
+}
+@media all and (max-width: 320px){
+	body{ background:url(../images/body_bg.png) repeat-x;background-position:0 -89px;}
+	.main{ background:url(../images/bg.png) no-repeat; background-position:0 -89px; padding-bottom:10px; }
+	.logo{ height:56px; background:url(../images/logo_s.png) no-repeat left bottom;}
+	.logo,.content,.copyright{  margin:0 10px;}
+	.ad{display:none;}
+	.detail h3{ font-size:20px; color:#FFF;}
+	.copyright{ text-align:center; padding-top:10px;padding-bottom: 10px; color:#a5a5a5; font-size:10px; line-height:18px;}
+	.detail{padding-top:20px; }
+	.detail dl { padding: 10px 0 0 44px;}
+	.detail dl dd{color:#cab99f; font-size:10px; position:relative; line-height:18px;}
+	.detail dl dd img{ position:absolute; left:-44px; top:-18px;}
+	.detail dl dt{ color:#da4c07; font-size:16px;}
+}
+
