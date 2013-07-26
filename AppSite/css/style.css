@@ -58,7 +58,7 @@ body{ background:url(../images/body_bg.png) repeat-x;}
 
 .ad{display:block; background:url(../images/detail-bg.png) no-repeat; width:429px; height:520px; position:absolute; top:-88px; right:0px;z-index:99;}
 
-.copyright{ text-align:center; padding-top:100px; color:#a5a5a5; font-size:14px;}
+.copyright{ text-align:center; padding-top:80px; color:#a5a5a5; font-size:14px;}
 
 .UIpic { width:238px; height:357px; margin: 86px 0 0 180px; }
 .UIpic .screen { background:#333; width:238px; height:357px; padding:0; margin:0 auto;}
