@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* CSS Document */
+*{ margin:0; padding:0; }
+div, form, img, ul, ol, li, dl, dt, dd { border:0px; list-style:none;}
+
+.logo{ height:145px; background:url(../images/logo.png) no-repeat left bottom;}
+
+.detail{padding-top:30px; }
+.detail dl { padding: 20px 0 0 44px;}
+.detail dl dd{color:#cab99f; font-size:14px; position:relative; line-height:24px;}
+.detail dl dd img{ position:absolute; left:-44px; top:-18px;}
+.detail dl dt{ color:#da4c07; font-size:18px;}
+
+.button {
+  margin:20px 5px 0 0;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 10px 10px 50px;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#9ec408), to(#8cb008));
+  background: -moz-linear-gradient(top, #9ec408, #8cb008);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#9ec408, endColorStr=#8cb008);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#9ec408, endColorStr=#8cb008);
+  display:inline-block; /* IE is so silly */
+  position:relative;
+}
+.button:hover {
+  background: #8cb008;
+}
+.button img{ position:absolute; left:10px; top:10px;}
+.apple{
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#eb5311), to(#de4e0f));
+ }
+.apple:hover{
+	background: #de4e0f;
+	}
+@media screen (min-device-width : 320px) and (max-device-width: 640px) {
+	body{ background:url(../images/body_bg.png) repeat-x;background-position:0 -47px;}
+	.main{ background:url(../images/bg.png) no-repeat; background-position:0 -47px;}
+	.logo{ height:98px; background:url(../images/logo.png) no-repeat left bottom;}
+	.logo,.content,.copyright{  margin:0 10px;}
+	.ad{display:none;}
+	.detail h3{ font-size:30px; color:#FFF;}
+	.copyright{ text-align:center; padding-top:50px; color:#a5a5a5; font-size:14px;}
+}
+@media screen and (min-width:640px) {
+body{ background:url(../images/body_bg.png) repeat-x;}
+.main{ background:url(../images/bg.png) no-repeat;}
+.detail h3{ font-size:34px; color:#FFF;}
+.logo,.content,.copyright{ width:820px; margin:0 auto;}
+.logo{ height:145px; background:url(../images/logo.png) no-repeat left bottom;}
+.content{ position:relative; height:366px;}
+
+
+.ad{display:block; background:url(../images/detail-bg.png) no-repeat; width:429px; height:520px; position:absolute; top:-88px; right:0px;z-index:99;}
+
+.copyright{ text-align:center; padding-top:100px; color:#a5a5a5; font-size:14px;}
+
+.UIpic { width:238px; height:357px; margin: 86px 0 0 180px; }
+.UIpic .screen { background:#333; width:238px; height:357px; padding:0; margin:0 auto;}
+#gellery-ul li { float:left; width:256px; }
+#gellery.box { border-radius:0; }
+.box { margin:0; overflow:hidden; background:#000; }
+}
