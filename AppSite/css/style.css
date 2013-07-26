@@ -40,12 +40,12 @@ div, form, img, ul, ol, li, dl, dt, dd { border:0px; list-style:none;}
 	}
 @media screen (min-device-width : 320px) and (max-device-width: 720px) {
 	body{ background:url(../images/body_bg.png) repeat-x;background-position:0 -47px;}
-	.main{ background:url(../images/bg.png) no-repeat; background-position:0 -47px;}
+	.main{ background:url(../images/bg.png) no-repeat; background-position:0 -47px; padding-bottom: 47px;}
 	.logo{ height:98px; background:url(../images/logo.png) no-repeat left bottom;}
 	.logo,.content,.copyright{  margin:0 10px;}
 	.ad{display:none;}
 	.detail h3{ font-size:30px; color:#FFF;}
-	.copyright{ text-align:center; padding-top:50px; color:#a5a5a5; font-size:14px;}
+	.copyright{ text-align:center; padding-top:5px; color:#a5a5a5; font-size:14px;}
 }
 @media screen and (min-width:721px) {
 body{ background:url(../images/body_bg.png) repeat-x;}
