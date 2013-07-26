@@ -45,9 +45,9 @@ div, form, img, ul, ol, li, dl, dt, dd { border:0px; list-style:none;}
 	.logo,.content,.copyright{  margin:0 10px;}
 	.ad{display:none;}
 	.detail h3{ font-size:30px; color:#FFF;}
-	.copyright{ text-align:center; padding-top:5px;padding-bottom: 10px; color:#a5a5a5; font-size:14px;}
+	.copyright{ text-align:center; padding-top:5px;padding-bottom: 10px; color:#a5a5a5; font-size:14px; line-height:18px;}
 }
-@media (min-device-width:721px) {
+@media screen and (min-width:721px){
 body{ background:url(../images/body_bg.png) repeat-x;}
 .main{ background:url(../images/bg.png) no-repeat;}
 .detail h3{ font-size:34px; color:#FFF;}
