@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="yes" name="apple-mobile-web-app-capable" >
+<meta content="black" name="apple-mobile-web-app-status-bar-style" >
+<meta content="telephone=no" name="format-detection" >
+<link rel="apple-touch-icon-precomposed" href="images/57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/114x114.png">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<!--<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>-->
+
+<script>
+$(function(){
+	
+	alert($(window).width());
+	$('#list ul li').bind("click",function(e){
+			
+			if($(this).next('.button_wrap:hidden').length>0){
+				$('.button_wrap:visible').animate({height:'toggle', opacity:'toggle'}, "fast");
+				$(this).next('.button_wrap').animate({height: 'toggle', opacity: 'toggle'}, "fast");
+			}else{
+				$('.button_wrap:visible').animate({height:'toggle', opacity:'toggle'}, "fast");
+				}
+			
+		})
+/*	$('#list ul li .main_more').bind("click",function(e){
+		
+		 
+		return fasle;
+		})*/
+		
+	
+})
+</script>
+<title>福诺手机应用</title>
+</head>
+
+<body>
+<div data-role="page" id="page1">
+  <div class="main_title">
+    <h3> FUNO福诺</h3>
+    <span>手机客户端展示</span> </div>
+  <div class="main_content" id="list">
+    <ul>
+      <li class="clearfix"> <a href="javascript:void(0)"> <img src="images/appImg1.png"  >
+        <h2>蜂巢装机</h2>
+        <p>蜂巢装机定位为一款以软件应用推荐为特色的客户端软件，旨在为用户提供少而精的软件应用，提供的安装历史功能尤其方便用户换机时使用。产品目前包含装机必备、明星榜、个人中心、软件管理等功能，是一款下载、管理手机软件的实用工具。</p>
+        <em  ><span class="android_V_dev_on">开发中 V1.0</span><span class="apple_V_dev_off">暂无开发计划</span></em> </a> <a href="more.html" data-url="more.html"  class="main_more"></a></li>
+      <div style="display:none;" class="button_wrap">
+        <div class="triangle_up"></div>
+        <a href="#">Android版下载<span>（版本V1.0 更新:12/08/18)</span></a> <a href="#" class="disable_btn">IOS版下载<span>（版本V1.0 更新:12/08/18)</span></a> </div>
+      <li class="even clearfix"> <a href="javascript:void(0)"> <img src="images/appImg2.png"  >
+        <h2>桌面头条 </h2>
+        <p>桌面头条客户端产品是以城市天气和新闻资讯为主要信源内容，为用户提供桌面widget，可便捷阅读新闻，通过点击widget快速打开程序了解天气情况，阅读各类最新最全的新闻资讯。装历史功能尤其方便用户换机时使用。产品目前包含装机必备、明星榜、个人中心、软件管理等功能，是一款下载、管理手机软件的实用工具。</p>
+        <em ><span class="android_V_dev_on">开发中 V1.0</span><span class="apple_V_dev_off">暂无开发计划</span></em> </a> <a href="" class="main_more"></a></li>
+      <div style="display:none;" class="button_wrap">
+        <div class="triangle_up"></div>
+        <a href="#">Android版下载<span>（版本V1.0 更新:12/08/18)</span></a> <a href="#" class="disable_btn">IOS版下载<span>（版本V1.0 更新:12/08/18)</span></a> </div>
+      <li class="clearfix"> <a href="javascript:void(0)"> <img src="images/appImg3.png"  >
+        <h2>移动通讯助手 </h2>
+        <p>移动通讯助手定位为以集成基本通讯功能和移动基本通讯装备为特色的手机客户端软件，是方便实用的通讯小助手。产品目前包含智能拨号、通讯录管理、彩铃、彩印、场景设置及黄页等功能，为用户提供与通讯相关的一站式服务。</p>
+        <em ><span class="android_V_dev_on">开发中 V1.0</span><span class="apple_V_dev_off">暂无开发计划</span></em> </a> <a href="" class="main_more"></a></li>
+      <div style="display:none;" class="button_wrap">
+        <div class="triangle_up"></div>
+        <a href="#">Android版下载<span>（版本V1.0 更新:12/08/18)</span></a> <a href="#" class="disable_btn">IOS版下载<span>（版本V1.0 更新:12/08/18)</span></a> </div>
+      <li class="even clearfix"> <a href="javascript:void(0)"> <img src="images/appImg4.png"  >
+        <h2>省12580 </h2>
+        <p>12580电子商务是中国移动福建省公司开发的平台，它通过提供便捷的操作，优质的体验，种类丰富的优惠信息、团购信息吸引终端用户使用12580的服务，最终为移动拓展用户渠道，增加12580的服务范围，综合提高12580的影响力。</p>
+        <em ><span class="android_V_dev_on">开发中 V1.0</span><span class="apple_V_dev_on">开发中 V1.0</span></em> </a> <a href="" class="main_more"></a></li>
+      <div style="display:none;" class="button_wrap">
+        <div class="triangle_up"></div>
+        <a href="#">Android版下载<span>（版本V1.0 更新:12/08/18)</span></a> <a href="#">IOS版下载<span>（版本V1.0 更新:12/08/18)</span></a> </div>
+      <li class="clearfix"> <a href="javascript:void(0)"> <img src="images/appImg5.png"  >
+        <h2>厦门12580 </h2>
+        <p>桌面头条客户端产品是以城市天气和新闻资讯为主要信源内容，为用户提供桌面widget，可便捷阅读新闻，通过点击widget快速打开程序了解天气情况，阅读各类最新最全的新闻资讯。装历史功能尤其方便用户换机时使用。产品目前包含装机必备、明星榜、个人中心、软件管理等功能，是一款下载、管理手机软件的实用工具。</p>
+        <em ><span class="android_V_dev_on">开发中 V1.0</span><span class="apple_V_dev_on">开发中 V1.0</span></em> </a> <a href="" class="main_more"></a></li>
+      <div style="display:none;" class="button_wrap">
+        <div class="triangle_up"></div>
+        <a href="#">Android版下载<span>（版本V1.0 更新:12/08/18)</span></a> <a href="#">IOS版下载<span>（版本V1.0 更新:12/08/18)</span></a> </div>
+      <li class="even clearfix"> <a href="javascript:void(0)"> <img src="images/appImg6.png"  >
+        <h2>莆田12580</h2>
+        <p>12580电子商务是12580规划发展方向之一，为了拓展用户渠道，增加12580的服务范围，需要建立12580电子商务平台，通过提供便捷的操作，优质的体验，种类丰富的优惠信息，团购信息吸引终端用户使用12580的服务，提高12580的影响力。同时，12580电子商务平台的建设，还可加大12580与无线城市之间的融合。</p>
+        <em ><span class="android_V_dev_on">开发中 V1.0</span><span class="apple_V_dev_on">开发中 V1.0</span></em> </a> <a href="" class="main_more"></a></li>
+      <div style="display:none;" class="button_wrap">
+        <div class="triangle_up"></div>
+        <a href="#">Android版下载<span>（版本V1.0 更新:12/08/18)</span></a> <a href="#">IOS版下载<span>（版本V1.0 更新:12/08/18)</span></a> </div>
+      <li class="clearfix"> <a href="javascript:void(0)"> <img src="images/appImg7.png"  >
+        <h2>移动售票站 </h2>
+        <p>移动售票站是中国移动福建分公司一项全新的增值服务产品。通过依托手机支付和二维码电子票开发的移动售票站客户端系统，用户可足不出户、随时随地的查询和订购车票，选择手机话费支付购票，交易成功后凭接收到的短信二维码到车站服务窗口换实体票或者通过二维码识读机器就可直接检票上车。</p>
+        <em ><span class="android_V_dev_on">开发中 V1.0</span><span class="apple_V_dev_on">开发中 V1.0</span></em> </a> <a href="" class="main_more"></a></li>
+      <div style="display:none;" class="button_wrap">
+        <div class="triangle_up"></div>
+        <a href="#">Android版下载<span>（版本V1.0 更新:12/08/18)</span></a> <a href="#">IOS版下载<span>（版本V1.0 更新:12/08/18)</span></a> </div>
+      <li class="clearfix"> <a href="javascript:void(0)"> <img src="images/appImg8.png"  >
+        <h2>银联移动支付 </h2>
+        <p>银联移动支付是中国移动福建公司推出便民支付方式， 用户可随时随地通过手机进行缴费，缴费分为移动缴费和电力缴费 交警罚款、自助缴税、点卡充值、水费缴费、自助挂号、保险缴费、 机票订购、自助捐款 从而快速的查询账单信息和缴费。</p>
+        <em ><span class="android_V_dev_on">开发中 V1.0</span><span class="apple_V_dev_off">暂无开发计划</span></em> </a> <a href="" class="main_more"></a></li>
+      <div style="display:none;" class="button_wrap">
+        <div class="triangle_up"></div>
+        <a href="#">Android版下载<span>（版本V1.0 更新:12/08/18)</span></a> <a href="#" class="disable_btn">IOS版下载<span>（版本V1.0 更新:12/08/18)</span></a> </div>
+      <li class="clearfix"> <a href="javascript:void(0)"> <img src="images/appImg9.png"  >
+        <h2>福诺OA </h2>
+        <p>福诺OA是为方便福诺员工快捷的查看和处理OA业务，打造的移动式办公产品，提供公司通讯录、签报查询、报账处理等功能。</p>
+        <em ><span class="android_V_dev_on">开发中 V1.0</span><span class="apple_V_dev_off">暂无开发计划</span></em> </a> <a href="" class="main_more"></a></li>
+      <div style="display:none;" class="button_wrap">
+        <div class="triangle_up"></div>
+        <a href="#">Android版下载<span>（版本V1.0 更新:12/08/18)</span></a> <a href="#" class="disable_btn">IOS版下载<span>（版本V1.0 更新:12/08/18)</span></a> </div>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
