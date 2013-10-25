@@ -71,7 +71,7 @@ li,span{ list-style:none; margin:0px; padding:0px;}
 	display:block;
 	position:absolute; 
     right:15px; 
-	top:32px;}
+	top:25px;}
 .main_content ul .button_wrap{ height:66px; background:#34495e; position:relative; padding-top:0px;}
 .triangle_up {
 	 background:url(../images/triangle_up.svg) no-repeat; background-size:12px 10px;
@@ -195,7 +195,7 @@ background: -moz-linear-gradient(top, #f5f4f0, #f5f2ed);
 	display:block;
 	position:absolute; 
     right:15px; 
-	top:32px;}
+	top:25px;}
 .main_content ul .button_wrap{ height:66px; background:#34495e; position:relative; padding-top:0px; text-align:center;}
 .triangle_up {
 	 background:url(../images/triangle_up.svg) no-repeat; background-size:12px 10px;
