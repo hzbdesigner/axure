@@ -60,7 +60,7 @@ li,span{ list-style:none; margin:0px; padding:0px;}
 .rightDiv{
 	position:absolute; 
     right:15px; 
-	top:25px;}
+	top:20px;}
 .main_download{ 
 	-webkit-border-radius: 5px;
   	-moz-border-radius: 5px;
@@ -73,6 +73,7 @@ li,span{ list-style:none; margin:0px; padding:0px;}
 	color:#685849;
 	display:block;
 	margin-bottom: 10px;
+	text-align:center;
 	}
 .rightDiv em{ color:#9b9b9b;}
 .main_content ul .button_wrap{ height:66px; background:#34495e; position:relative; padding-top:0px;}
@@ -188,7 +189,7 @@ background: -moz-linear-gradient(top, #f5f4f0, #f5f2ed);
 .rightDiv{
 	position:absolute; 
     right:15px; 
-	top:25px;}
+	top:20px;}
 .main_download{ 
 -webkit-border-radius: 5px;
   	-moz-border-radius: 5px;
@@ -197,6 +198,7 @@ background: -moz-linear-gradient(top, #f5f4f0, #f5f2ed);
 	background: -moz-linear-gradient(top, #f6f4ef, #e9e9e9);
 	padding:5px;
 	font-size:14px;
+	text-align:center;
 	color:#685849;
 	display:block;
 	margin-bottom: 10px;
