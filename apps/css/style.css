@@ -48,7 +48,7 @@ li,span{ list-style:none; margin:0px; padding:0px;}
 .main_content ul .even{}
 .main_content ul li img{ position:absolute;top:12px; left:5px; width:54px; height:54px;}
 .main_content ul li h2{ margin:0 0 0 64px; font-size:18px; margin-right:32px; color:#685849;}
-.main_content ul li p{ height:32px; margin:2px 0 0 64px; overflow:hidden; line-height:16px;margin-right:125px; font-size:14px; color:#a5a5a5;}
+.main_content ul li p{ height:32px; margin:2px 0 0 64px; overflow:hidden; line-height:16px;margin-right:75px; font-size:14px; color:#a5a5a5;}
 .main_content ul li em{margin:5px 0 0 64px;margin-right:32px; float:left;}
 .main_content ul li em span{ height:20px; line-height:24px;  display:block; float:left; margin-right:10px;font-size:9px;}
 .android_V{}
@@ -158,7 +158,7 @@ background: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f4f0), to(#f5f2ed));
 }
 .main_content ul li img{ position:absolute;top:19px; left:10px; width:82px; height:82px;}
 .main_content ul li h2{ margin:0 0 0 106px; font-size:24px; margin-right:54px; color:#685849;}
-.main_content ul li p{ height:auto; margin:0 0 0 106px; line-height:18px;margin-right:125px;color:#a5a5a5;}
+.main_content ul li p{ height:auto; margin:0 0 0 106px; line-height:18px;margin-right:75px;color:#a5a5a5;}
 .main_content ul li em{margin:0 0 0 106px;margin-right:54px; float:left;}
 .main_content ul li em span{ height:30px; line-height:30px;  display:block; float:left; margin-right:20px;}
 .android_V{}
