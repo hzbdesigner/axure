@@ -48,9 +48,8 @@ li,span{ list-style:none; margin:0px; padding:0px;}
 .main_content ul .even{}
 .main_content ul li img{ position:absolute;top:12px; left:5px; width:54px; height:54px;}
 .main_content ul li h2{ margin:0 0 0 64px; font-size:18px; margin-right:32px; color:#685849;}
-.main_content ul li p{ height:32px; margin:2px 0 0 64px; overflow:hidden; line-height:16px;margin-right:75px; font-size:14px; color:#a5a5a5;}
-.main_content ul li em{margin:5px 0 0 64px;margin-right:32px; float:left;}
-.main_content ul li em span{ height:20px; line-height:24px;  display:block; float:left; margin-right:10px;font-size:9px;}
+.main_content ul li p{ height:32px; margin:2px 0 0 64px; overflow:hidden; line-height:16px;margin-right:90px; font-size:14px; color:#a5a5a5;}
+
 .android_V{}
 
 .android_V_dev_on{ color:#1fbba6;padding-left:20px; background:url(../images/android_on.svg) no-repeat;background-size: 20px 20px;}
@@ -58,6 +57,10 @@ li,span{ list-style:none; margin:0px; padding:0px;}
 
 .apple_V_dev_on{color:#1fbba6;padding-left:20px; background:url(../images/apple_on.svg) no-repeat;background-size: 20px 20px;}
 .apple_V_dev_off{color:#dcdcdc;padding-left:20px; background:url(../images/apple_off.svg) no-repeat;background-size: 20px 20px;}
+.rightDiv{
+	position:absolute; 
+    right:15px; 
+	top:25px;}
 .main_download{ 
 	-webkit-border-radius: 5px;
   	-moz-border-radius: 5px;
@@ -69,9 +72,9 @@ li,span{ list-style:none; margin:0px; padding:0px;}
 	font-size:14px;
 	color:#685849;
 	display:block;
-	position:absolute; 
-    right:15px; 
-	top:25px;}
+	margin-bottom: 10px;
+	}
+.rightDiv em{ color:#9b9b9b;}
 .main_content ul .button_wrap{ height:66px; background:#34495e; position:relative; padding-top:0px;}
 .triangle_up {
 	 background:url(../images/triangle_up.svg) no-repeat; background-size:12px 10px;
@@ -172,9 +175,8 @@ background: -moz-linear-gradient(top, #f5f4f0, #f5f2ed);
 }
 .main_content ul li img{ position:absolute;top:19px; left:10px; width:82px; height:82px;}
 .main_content ul li h2{ margin:0 0 0 106px; font-size:24px; margin-right:54px; color:#685849;}
-.main_content ul li p{ height:auto; margin:0 0 0 106px; line-height:18px;margin-right:75px;color:#a5a5a5;}
-.main_content ul li em{margin:0 0 0 106px;margin-right:54px; float:left;}
-.main_content ul li em span{ height:30px; line-height:30px;  display:block; float:left; margin-right:20px;}
+.main_content ul li p{ height:auto; margin:0 0 0 106px; line-height:18px;margin-right:90px;color:#a5a5a5;}
+
 .android_V{}
 
 
@@ -183,6 +185,10 @@ background: -moz-linear-gradient(top, #f5f4f0, #f5f2ed);
 
 .apple_V_dev_on{color:#1fbba6;padding-left:20px; background:url(../images/apple_on.svg) no-repeat;background-size: 20px 20px;}
 .apple_V_dev_off{color:#dcdcdc;padding-left:20px; background:url(../images/apple_off.svg) no-repeat;background-size: 20px 20px;}
+.rightDiv{
+	position:absolute; 
+    right:15px; 
+	top:25px;}
 .main_download{ 
 -webkit-border-radius: 5px;
   	-moz-border-radius: 5px;
@@ -193,9 +199,9 @@ background: -moz-linear-gradient(top, #f5f4f0, #f5f2ed);
 	font-size:14px;
 	color:#685849;
 	display:block;
-	position:absolute; 
-    right:15px; 
-	top:25px;}
+	margin-bottom: 10px;
+	}
+.rightDiv em{ color:#9b9b9b;}
 .main_content ul .button_wrap{ height:66px; background:#34495e; position:relative; padding-top:0px; text-align:center;}
 .triangle_up {
 	 background:url(../images/triangle_up.svg) no-repeat; background-size:12px 10px;
