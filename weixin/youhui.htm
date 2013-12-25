@@ -359,23 +359,23 @@ function go(qrcode, activityId){
         _doAjax('/weixin/festival/sendCoupon','get',{linkKey:linkKey, tplId:tplId, ticket:ticket, srcWxuin:srcWxuin, qrcode:qrcode, activityId:activityId},function(sendData){
             if(sendData.code == 0){
                 //成功发券
-                window.location.href="/weixin/festival/use"+url+"&qrcode="+qrcode+"&activityId="+activityId+"#wechat_webview_type=1";
+                window.location.href="../12580HTML/shopNew.html";
                // window.location.href="/qr/"+qrcode;
             }else{
                 //发券失败或者发完了
                 if(sendData.code == 1){
                 //发光了
                     alert('礼品券被抢光了呢，去看看其他券吧~');
-                    window.location.href="/weixin/festival/choose"+url+"&wxuin="+wxuin+"#wechat_webview_type=1";
+                    window.location.href="../12580HTML/shopNew.html";
                 }else{
                 //同一个链接领过券了
                     if(sendData.code == 3){
-                        window.location.href="/weixin/festival/sendOk?ticket="+ticket+"&tplId="+tplId+"&cqrcode="+qrcode+"&haveCoupon=1#wechat_webview_type=1"
+                        window.location.href="../12580HTML/shopNew.html"
                     }else{
                         if(sendData.code == 2){
                             alert('系统繁忙');
                         }else{
-                            window.location.href="/weixin/festival/use"+url+"&qrcode="+qrcode+"&activityId="+activityId+"#wechat_webview_type=1";
+                            window.location.href="../12580HTML/shopNew.html";
                         }
                     }
                 }
