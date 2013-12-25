@@ -354,8 +354,9 @@ function chooseCity(obj){
 }
 function go(qrcode, activityId){
     MLoading.show('加载中...');
+     window.location.href="../12580HTML/shopNew.html";
     //如果关注了 则发券 不关注则在跳转关注后发券
-    //if(subscribe){
+    /*//if(subscribe){
         _doAjax('/weixin/festival/sendCoupon','get',{linkKey:linkKey, tplId:tplId, ticket:ticket, srcWxuin:srcWxuin, qrcode:qrcode, activityId:activityId},function(sendData){
             if(sendData.code == 0){
                 //成功发券
@@ -382,7 +383,7 @@ function go(qrcode, activityId){
             }
         });
    // }
-   /* else{
+    else{
         //关注页面
         window.location.href="/weixin/festival/use"+url+"&qrcode="+qrcode+"&activityId="+activityId+"#wechat_webview_type=1";
     }*/
