@@ -14,9 +14,9 @@
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
 	transform: scale(1);
-	-webkit-transition: all 8s linear 0s;
-	-moz-transition: all 8s linear 0s;
-	transition: all 8s linear 0s;
+	-webkit-transition: all 4s linear 0s;
+	-moz-transition: all 4s linear 0s;
+	transition: all 4s linear 0s;
 	cursor: pointer;
 }
 
