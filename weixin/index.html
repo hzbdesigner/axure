@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Falling Leaves — Using CSS Animations and Transforms</title>
-    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>12580-元旦福利大派送</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <link rel="stylesheet" type="text/css" href="res/demo.css">
     <link rel="stylesheet" type="text/css" href="res/style.css">
     <!-- The leaves.css file animates the leaves -->
@@ -18,9 +18,16 @@
   }
     .title{
        position:absolute;
-       top:-10px;
-       z-index: 99;
+       top:5px;
+       z-index: 88;
        text-align: center;
+       width: 100%;
+
+}
+.eye{
+       position:absolute;
+       top:2px;
+       z-index: 99;
        width: 100%;
 
 }
@@ -28,7 +35,8 @@
 
    </head>
   <body>
-<div class="title"><img src="res/images/title.png" width=98% /></div>
+    <div class="eye"><img class="eye" src="res/images/eye.gif" width=96%></div>
+<div class="title"><img src="res/images/title.png" width=96% /></div>
     <div id="container" class="container">
 
       <!-- The container is dynamically populated using the init function in leaves.js -->
