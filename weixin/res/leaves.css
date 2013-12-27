@@ -65,8 +65,7 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 body
 {
     background: #000 url('images/bak.png') no-repeat top center;
-    background-size: 100% ;
-    background-position: 100%;
+    background-size:100% 100%;
 
 }
 
