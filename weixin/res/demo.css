@@ -1,8 +1,8 @@
-@import url('normalize.css');
+
 /* General Demo Style */
 body{
 	font-family: 'Open Sans Condensed','Arial Narrow', serif;
-	background: #ddd url(../images/bg.png) repeat top left;
+	background: #000 url(../images/bg.png) repeat top left;
 	background-position: 100%;
 	font-weight: 400;
 	font-size: 15px;
