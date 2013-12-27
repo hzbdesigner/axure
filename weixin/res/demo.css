@@ -3,6 +3,7 @@
 body{
 	font-family: 'Open Sans Condensed','Arial Narrow', serif;
 	background: #ddd url(../images/bg.png) repeat top left;
+	background-position: 100%;
 	font-weight: 400;
 	font-size: 15px;
 	color: #333;
