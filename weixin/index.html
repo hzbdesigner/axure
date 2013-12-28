@@ -2,8 +2,7 @@
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>12580-元旦福利大派送</title>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
-    <link rel="stylesheet" type="text/css" href="res/demo.css">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
     <link rel="stylesheet" type="text/css" href="res/style.css">
     <!-- The leaves.css file animates the leaves -->
     <link rel="stylesheet" href="res/leaves.css" type="text/css" media="screen" charset="utf-8">
@@ -21,6 +20,12 @@
     overflow: hidden;
 
   }
+  .container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
     .title{
        position:absolute;
        top:5px;
@@ -41,29 +46,23 @@
    </head>
   <body>
     <div class="eye"><img class="eye" src="res/images/eye.gif" width=96%></div>
-<div class="title"><img src="res/images/title.png" width=96% /></div>
+    <div class="title"><img src="res/images/title.png" width=96% /></div>
     <div id="container" class="container">
-
-      <!-- The container is dynamically populated using the init function in leaves.js -->
-      <!-- Its dimensions and position are defined using its id selector in leaves.css -->
       <div id="leafContainer">
       
       <!-- its appearance, dimensions, and position are defined using its id selector in leaves.css -->
     
-    </div>
+      </div>
 
-      <div style="width:640px;margin:10px auto 20px auto; padding:0 0 0 380px;overflow:hidden">
-
-
-
+     <!--  <div style="width:640px;margin:10px auto 20px auto; padding:0 0 0 380px;overflow:hidden"> !-->
       <section class="main">
         <a href="youhui.htm">
-        <div id="ballWrapper">
+          <div id="ballWrapper">
           <div id="ball"></div>
-          <div id="ballShadow"></div>    
-          </a> 
-        </div>        
+         <!--  <div id="ballShadow"></div>    -->
+          </div> 
+         </a>       
       </section>
-        </div>
+      <!--   </div>！-->
 
 </html>
