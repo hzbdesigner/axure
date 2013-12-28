@@ -32,17 +32,17 @@ section.coupouWp img{width:270px;}
 .coupouDl dd{font-size:11px;line-height:18px;color:#7d7f8a;}
 .coupouDl dd i{font-size:13px;color:#666;font-style:normal;}
 .red{color:red;}
-body#GiftsBuy{background:#ffecd0 url("images/listbak.png"); no-repeat top center;background-size:100% auto;text-align:center;}
+body#GiftsBuy{background:#ffecd0 url("images/listbak2.png");text-align:center;}
 #GiftsBuy .takeit{position:relative;height:90px;padding:20px 12px 0 12px;text-align:left;}
 #GiftsBuy .takeit p{float:left;width:126px;height:92px;font-size:12px;text-align:center;}
 #GiftsBuy .takeit p img{width:59px;height:59px;border-radius:5px;background:#fff;padding:2px;}
 #GiftsBuy .takeit p i{display:inline-block;width:100%;height:22px;font-style:normal;font-size:13px;overflow:hidden;}
 #GiftsBuy .takeit article{position:absolute;right:12px;top:54px;width:185px;height:22px;line-height:22px;overflow:hidden;font-size:14px;color:#f36d00;}
-#GiftsBuy .takeit article.hiForyou{top:24px;padding-bottom:3px;border-bottom:1px #cbb38f solid;color:red;font-size:18px;font-family:"microsoft yahei";font-weight:bold;}
+#GiftsBuy .takeit article.hiForyou{top:24px;padding-bottom:3px;border-bottom:1px #cbb38f solid;color:#dc2200;font-size:18px;font-family:"microsoft yahei";font-weight:bold;}
 #GiftsBuy .suitCity{position:absolute;right:0;bottom:0;width:170px;padding:10px 20px 0;line-height:30px;color:#b2a58a;font-size:12px;text-align:center;}
 #GiftsBuy .suitCity select{margin:0 5px;padding:5px 10px;line-height:normal;border:1px #ccc solid;border-radius:18px;color:#000;font-size:14px;background:#f2f2f2;}
 #GiftsBuy .suitCity select option{opacity:1;}
-#GiftsBuy .beIt{position:absolute;right:5px;bottom:3px;width:83px;height:30px;border:none;border-radius:2em;background:#1cbb63;font-size:14px;color:#fff;cursor:pointer;}
+#GiftsBuy .beIt{position:absolute;right:5px;bottom:3px;width:83px;height:30px;border:none;border-radius:2em;background:#ffa800;font-size:14px;color:#fff;cursor:pointer;}
 .more{width:300px;height:50px;border:none;border-top:1px #ccc dotted;font-size:16px;background:#f7f7f7;cursor:pointer;background-image:-ms-linear-gradient(top,#fdfdfd,#a9a9aa);background-image:-webkit-linear-gradient(top,#fdfdfd,#a9a9aa);background-image:-moz-linear-gradient(top,#fdfdfd,#a9a9aa);background-image:-o-linear-gradient(top,#fdfdfd,#a9a9aa);background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#fdfdfd),to(#a9a9aa));filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd',endColorstr='#a9a9aa');-ms-filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd',endColorstr='#a9a9aa');}
 #GiftsBuy .more i{display:inline-block;vertical-align:middle;width:17px;height:10px;background:url("../images/festival/more2.png") no-repeat;background-size:17px 10px;}
 .wei_copy{position:relative;width:100%;height:30px;line-height:30px;text-align:center;color:#fff;font-size:12px;}

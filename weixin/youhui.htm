@@ -11,8 +11,8 @@
 <body id="GiftsBuy">
 	 	<div class="center">
         <div class="takeit">
-        <p><img src="youhui_res/welife.jpg"><i>12580</i></p>
-            <article class="hiForyou">Hi~优惠券元旦大派啦！</article>
+        <p><img src="youhui_res/welife.png"><i>12580</i></p>
+            <article class="hiForyou">元旦优惠券大派啦！</article>
             <article>从下边的礼券里选一张吧</article>
             <div class="suitCity"><span style="color:#9b2724">点击切换</span>
             <select onchange="chooseCity(this);" style="text-align: center;">
@@ -320,7 +320,7 @@ function chooseCity(obj){
 }
 function go(qrcode, activityId){
     MLoading.show('加载中...');
-     window.location.href="../12580HTML/shopNew.html";
+     window.location.href="more/shopNew.html";
     //如果关注了 则发券 不关注则在跳转关注后发券
     /*//if(subscribe){
         _doAjax('/weixin/festival/sendCoupon','get',{linkKey:linkKey, tplId:tplId, ticket:ticket, srcWxuin:srcWxuin, qrcode:qrcode, activityId:activityId},function(sendData){
