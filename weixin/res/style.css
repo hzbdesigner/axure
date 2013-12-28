@@ -2,8 +2,8 @@
 /* 3D Bouncing ball */
 
 #ballWrapper {
-	width: 140px;
-	height: 300px;
+	width: 30%;
+	height: 30%;
 	position: fixed;
 	left: 50%;
 	top: 55%;
@@ -31,24 +31,8 @@
 
 #ball {
 
-	width: 140px;
-	height: 140px;
-	/*
-	border-radius: 70px;
-	background: rgb(187,187,187);
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JiYmJiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzc3Nzc3NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-	background: -moz-linear-gradient(top,  rgba(187,187,187,1) 0%, rgba(119,119,119,1) 99%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(187,187,187,1)), color-stop(99%,rgba(119,119,119,1)));
-	background: -webkit-linear-gradient(top,  rgba(187,187,187,1) 0%,rgba(119,119,119,1) 99%);
-	background: -o-linear-gradient(top,  rgba(187,187,187,1) 0%,rgba(119,119,119,1) 99%);
-	background: -ms-linear-gradient(top,  rgba(187,187,187,1) 0%,rgba(119,119,119,1) 99%);
-	background: linear-gradient(top,  rgba(187,187,187,1) 0%,rgba(119,119,119,1) 99%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd800', endColorstr='#ffae00',GradientType=0 );
-	
-	
-	box-shadow: inset 0 -5px 15px rgba(255,255,255,0.4), 
-				inset -2px -1px 40px rgba(0,0,0,0.4), 
-				0 0 1px #000;	*/
+	width: 100%;
+	height: 100%;
 	background:url(images/ball1.svg) no-repeat;
 	position: absolute;
 	top: 0;	
@@ -70,19 +54,9 @@
 	top: 0px;
 	z-index: 10;
 	background:url(images/ball1.svg) no-repeat;
-	/*
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZThlOGU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-	background: -moz-linear-gradient(top,  rgba(232,232,232,1) 0%, rgba(232,232,232,1) 1%, rgba(255,255,255,0) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232,232,232,1)), color-stop(1%,rgba(232,232,232,1)), color-stop(100%,rgba(255,255,255,0)));
-	background: -webkit-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
-	background: -o-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
-	background: -ms-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
-	background: linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#00ffffff',GradientType=0 );
-	border-radius: 40px / 20px;	
-	*/
+	
 }
-
+/*
 #ballShadow {
 	position: absolute;
 	left: 50%;
@@ -105,7 +79,7 @@
 	-ms-animation: shrink 2s infinite;
 	animation: shrink 2s infinite;
 }
-
+*/
 /* Animations */
 
 @-webkit-keyframes jump {
@@ -131,7 +105,7 @@
 		-webkit-animation-timing-function: ease-in;
 	}
 }
-
+/*
 @-moz-keyframes jump {
 	0% {top: 0;
 		-moz-animation-timing-function: ease-in;
@@ -197,7 +171,7 @@
 		-ms-animation-timing-function: ease-in;
 	}
 }
-
+*/
 @keyframes jump {
 	0% {
 		top: 0;
@@ -230,7 +204,7 @@
 	}
 }
 
-
+/*
 
 @-webkit-keyframes shrink {
 	0% {
@@ -398,3 +372,4 @@
 		animation-timing-function: ease-in;
 	}
 }
+*/
