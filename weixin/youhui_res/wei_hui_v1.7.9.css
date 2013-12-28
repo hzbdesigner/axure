@@ -33,9 +33,9 @@ section.coupouWp img{width:270px;}
 .coupouDl dd i{font-size:13px;color:#666;font-style:normal;}
 .red{color:red;}
 body#GiftsBuy{background:#ffecd0 url("images/listbak2.png");text-align:center;}
-#GiftsBuy .takeit{position:relative;height:90px;padding:20px 12px 0 12px;text-align:left;}
+#GiftsBuy .takeit{position:relative;height:50px;padding:20px 12px 0 12px;text-align:left;}
 #GiftsBuy .takeit p{float:left;width:126px;height:92px;font-size:12px;text-align:center;}
-#GiftsBuy .takeit p img{width:59px;height:59px;border-radius:5px;background:#fff;padding:2px;}
+#GiftsBuy .takeit p img{width:90px;height:90px;margin-top: -10px}
 #GiftsBuy .takeit p i{display:inline-block;width:100%;height:22px;font-style:normal;font-size:13px;overflow:hidden;}
 #GiftsBuy .takeit article{position:absolute;right:12px;top:54px;width:185px;height:22px;line-height:22px;overflow:hidden;font-size:14px;color:#f36d00;}
 #GiftsBuy .takeit article.hiForyou{top:24px;padding-bottom:3px;border-bottom:1px #cbb38f solid;color:#dc2200;font-size:18px;font-family:"microsoft yahei";font-weight:bold;}
@@ -46,5 +46,5 @@ body#GiftsBuy{background:#ffecd0 url("images/listbak2.png");text-align:center;}
 .more{width:300px;height:50px;border:none;border-top:1px #ccc dotted;font-size:16px;background:#f7f7f7;cursor:pointer;background-image:-ms-linear-gradient(top,#fdfdfd,#a9a9aa);background-image:-webkit-linear-gradient(top,#fdfdfd,#a9a9aa);background-image:-moz-linear-gradient(top,#fdfdfd,#a9a9aa);background-image:-o-linear-gradient(top,#fdfdfd,#a9a9aa);background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#fdfdfd),to(#a9a9aa));filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd',endColorstr='#a9a9aa');-ms-filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd',endColorstr='#a9a9aa');}
 #GiftsBuy .more i{display:inline-block;vertical-align:middle;width:17px;height:10px;background:url("../images/festival/more2.png") no-repeat;background-size:17px 10px;}
 .wei_copy{position:relative;width:100%;height:30px;line-height:30px;text-align:center;color:#fff;font-size:12px;}
-.wei_copy .tencentCopy{display:inline-block;position:absolute;right:12px;top:0;color:#ad907e;}
-.wei_copy i{display:inline-block;vertical-align:middle;width:13px;height:14px;margin-top:-3px;margin-right:3px;background:url("../images/festival/logo.png") no-repeat left top;background-size:13px 14px;}
+.wei_copy .huiCopy{display:inline-block;position:absolute;right:12px;top:0;color:#ad907e;}
+.wei_copy i{display:inline-block;width:100px;height:14px;float:left; color:#ad907e;}

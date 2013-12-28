@@ -17,7 +17,7 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 
 .downloadButton {
 		float:right;
-		  display:inline-block;
+		display:inline-block;
         color:#ffffff;
         font-family:Trebuchet MS;
         font-size:14px;
@@ -53,18 +53,14 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
         text-shadow:0px -1px 0px #d17d08;
         */
 		
-		margin:10px 10px 0 0;
+		margin:10px 0 0 0;
 
         
     }
 .downloadButton:hover {
        
-        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff6d04), color-stop(1, #fbb450));
-        background:-moz-linear-gradient(top, #ff6d04 5%, #fbb450 100%);
-        background:-webkit-linear-gradient(top, #ff6d04 5%, #fbb450 100%);
-        background:-o-linear-gradient(top, #ff6d04 5%, #fbb450 100%);
-        background:-ms-linear-gradient(top, #ff6d04 5%, #fbb450 100%);
-        background:linear-gradient(to bottom, #ff6d04 5%, #fbb450 100%);
+        background:#e42c00;
+        
         filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6d04', endColorstr='#fbb450',GradientType=0);
         
         background-color:#ff6d04;
@@ -75,7 +71,7 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
         top:1px;
     }
 .toBuy{background:#fffcf7;  height:46px;}
-.toBuy span{ font-size:22px; color:#ff8a1b; line-height:56px; padding-left:20px;}
+.toBuy span{ font-size:22px; color:#ff8a1b; line-height:56px; padding-left:0px;}
 .toBuy span em{font-size:16px; color:#c3c3c3; text-decoration:line-through;}
 .wrapBox{
 	/*-webkit-box-shadow: 0px 1px 2px #666666;*/
@@ -96,7 +92,7 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 .callIco{
 	/*border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;*/
-	background:#fdbe89;
+	background:#ffa800;
 	position:absolute;
 	right:0px;
 	top:0px;
@@ -104,23 +100,26 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 	height:49px;
 	}
 .callIco:hover{
-	background:-webkit-linear-gradient(top, #e6e6e6 5%, #efefef 100%);
+	background:#e69a05;
 	}
 .callIco img{ margin-top:12px;}
 .numTitle{
-	font-size:16px;
+	font-size:18px;
 	color:##525863;
 	line-height:33px;
 	}
 .num{
-	font-size:20px;
+
 	color:##525863;
-	line-height:33px;
+	
 	
 	}
-.wrapBox h3{ font-size:16px; border-bottom:dotted 2px #dadada; padding-bottom:10px; padding-left:20px; position:relative;}
+.wrapBox h3{ font-size:16px; border-bottom:dotted 2px #dadada; padding-bottom:10px; padding-left:0px; position:relative; color:#36210f;}
 .wrapBox h3 img{ position:absolute; left:0px; top:-2px}
-.wrapBox p{ font-size:14px; color:#232323; line-height:16px;}
+.wrapBox p{ font-size:14px; color:#666; line-height:16px;}
 
 .notice_wrap{ border-radius:10px; margin:100px auto; width:90%; background:#FFF; text-align:center;-webkit-box-shadow: 0px 2px 5px #666666; }
 .notice_wrap h3{ padding:10px; line-height:22px; word-break:break-all;}
+.wei_copy{position:relative;width:100%;height:30px;line-height:30px;text-align:center;color:#fff;font-size:12px;}
+.wei_copy .huiCopy{display:inline-block;position:absolute;right:12px;top:0;color:#ad907e;}
+.wei_copy i{display:inline-block;width:100px;height:14px;float:left; color:#ad907e;}
