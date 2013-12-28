@@ -3,7 +3,7 @@
 
 /* Define the number of leaves to be used in the animation */
 const NUMBER_OF_LEAVES = 10;
-xScroll=(document.documentElement.scrollWidth>document.documentElement.clientWidth) ? document.documentElement.scrollWidth : document.documentElement.scrollWidth;
+screenWidth=(document.documentElement.scrollWidth>document.documentElement.clientWidth) ? document.documentElement.scrollWidth : document.documentElement.scrollWidth;
 
 
 /* 
@@ -78,7 +78,7 @@ function createALeaf()
     leafDiv.style.top = "-100px";
 
     /* Position the leaf at a random location along the screen */
-    leafDiv.style.left = pixelValue(randomInteger(0, xScroll));
+    leafDiv.style.left = pixelValue(randomInteger(0, screenWidth-100));
     
     /* Randomly choose a spin animation */
     var spinAnimationName = (Math.random() < 0.5) ? 'clockwiseSpin' : 'counterclockwiseSpinAndFlip';
