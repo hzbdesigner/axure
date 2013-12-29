@@ -12,17 +12,45 @@
 <script src="../youhui_res/wei_webapp_v2_common_v1.7.2.js"></script>
 <script type="text/javascript">
 $(function(){
-  $('#click_btn').click(function(){ 
+
+$('#click_btn').bind("click",function(){ 
       $.blockUI({ message: $('#mobile_box') }); 
       $('.blockOverlay').click($.unblockUI); 
       $('.close').click($.unblockUI);
 }); 
-  $(".sendButton").click(function(){
-      
-      MLoading.show('发送中...');
-      
 
-})
+  $(".sendButton").bind("click",function(){
+     var tel= $("#mobileNum").attr("value");
+      if(/^((((13[5-9]{1})|(15[0,1,2,7,8,9]{1})|(188)){1}\d{1})|((134[0-8]{1}){1})){1}\d{7}$/.test(tel)){
+          //alert("手机号正确");
+          MLoading.show('发送中...');
+
+          //判断发送成功或者其他；
+           var sendData=0;
+            if(sendData == 0){
+                  alert('已成功发送~');
+                  //成功发券
+                  window.location.reload(); 
+                 
+              }else{
+                  //发券失败或者发完了
+                  if(sendData== 1){
+                  //发送失败
+                      alert('网络服务器忙，等等再试试吧~');
+                       MLoading.hide();
+                  }else{
+                  //其他异常
+                     
+                  }
+          }
+        
+        }else{
+          alert(tel+"手机号错误或非移动号");
+        }
+
+
+  })
+
 })
 </script>
 </head>
@@ -77,7 +105,7 @@ $(function(){
        
         <h3>请输入手机号：</h3>
         
-        <input id="mobileNum" class="mobileNum" type="text"/>
+        <input id="mobileNum" class="mobileNum" type="text">
         <a href="javascript:void" class="sendButton"  >发送</a>
         <!--<a href="javascript:void" class="close">关闭</a>-->
   </fieldset>
