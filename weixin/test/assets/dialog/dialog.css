@@ -1,5 +1,5 @@
 /* dialog */
-.ui-dialog{ display:none; position:fixed; _position:absolute; top:50%; left:50%; z-index:1000;  margin:-250px 0 0 -180px; padding:4px; border-radius:4px; background:#fbde89; }
+.ui-dialog{ display:none; position:fixed; _position:absolute; top:50%; left:50%; z-index:1000; width:360px; margin:-250px 0 0 -180px; padding:4px; border-radius:4px; background:#fbde89; }
 .ui-dialog-in{ padding:1px; border:1px solid #fdbe89; background:#fffcf7}
 .ui-dialog-hd{ *zoom:1; position:relative; padding-left:14px; background:#f3f3f3}
 .ui-dialog-title-draggable{ cursor:move}
@@ -11,7 +11,7 @@
 .bt-ui-dialog:hover{ color:#fff; text-decoration:none; border-color:#ff4800; background:#ff4800; cursor:pointer}
 .ui-blocker{ display:none; position:fixed; _position:absolute; top:0; left:0; z-index:999; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50)}
 .input-radio{ box-sizing:border-box; *width:13px; *height:13px; margin:2px 5px 6px 0; vertical-align:middle}
-.bt-ui-dialog-submit,.bt-ui-dialog-cancel{ width:76px; height:30px;margin-top:20px;margin-right:10px;line-height:30px; background-position:0 -38px}
+.bt-ui-dialog-submit,.bt-ui-dialog-cancel{ width:76px; height:30px;margin-top:20px;margin-right:10px;line-height:30px\9; background-position:0 -38px}
 .dialog-note-error{ clear:both; color:#ff4800}
 .ui-dialog-ft{ padding-bottom:25px}
 .ui-dialog-bt-box{ text-align: center;}
