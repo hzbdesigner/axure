@@ -5,25 +5,29 @@
 <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="format-detection" content="telephone=yes">
 <link type="text/css" href="css/theme.css?123" rel="stylesheet">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/dialog/main.css">
+<link rel="stylesheet" type="text/css" href="assets/dialog/dialog.css">
+<script src="assets/jquery/jquery-1.4.4.min.js"></script>
 
-<link rel="stylesheet" href="../youhui_res/wei_dialog_v1.2.1.css">
-<script src="../youhui_res/wei_webapp_v2_common_v1.7.2.js"></script>
 <script type="text/javascript">
 $(function(){
 
 $('#click_btn').bind("click",function(){ 
-      $.blockUI({ message: $('#mobile_box') }); 
-      $('.blockOverlay').click($.unblockUI); 
-      $('.close').click($.unblockUI);
+    var fn_cb = function () {
+        console.log(this.result);
+    };
+    new Dialog.Prompt({
+        title: '请输入手机号码',
+        content: '请输入手机号码',
+        defaultValue: '手机号码'
+    }, fn_cb);
 }); 
-
+/*
   $(".sendButton").bind("click",function(){
      var tel= $("#mobileNum").attr("value");
       if(/^((((13[5-9]{1})|(15[0,1,2,7,8,9]{1})|(188)){1}\d{1})|((134[0-8]{1}){1})){1}\d{7}$/.test(tel)){
           //alert("手机号正确");
-          MLoading.show('发送中...');
+         
 
           //判断发送成功或者其他；
            var sendData=0;
@@ -50,6 +54,7 @@ $('#click_btn').bind("click",function(){
 
 
   })
+  */
 
 })
 </script>
@@ -110,6 +115,7 @@ $('#click_btn').bind("click",function(){
         <!--<a href="javascript:void" class="close">关闭</a>-->
   </fieldset>
 </div>
+<script src="assets/dialog/dialog.min.js"></script>
 </body>
 
 </html>
