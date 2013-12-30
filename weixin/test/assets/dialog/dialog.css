@@ -1,8 +1,8 @@
 /* dialog */
-.ui-dialog{ display:none; position:fixed; _position:absolute;top:50%; left:50%; z-index:1000; width:70%; margin:-250px 0 0 -180px; padding:4px; border-radius:4px; background:#fbde89; }
-.ui-dialog-in{ padding:1px; border:1px solid #fdbe89; background:#fffcf7}
-.ui-dialog-hd{ *zoom:1; position:relative; padding-left:14px; background:#f3f3f3}
-.ui-dialog-title-draggable{ cursor:move}
+.ui-dialog{ display:none; position:fixed; _position:absolute;top:50%; left:50%; z-index:1000; width:82%; margin:-250px 0 0 -180px; padding:4px; border-radius:4px; background:#fbde89; }
+.ui-dialog-in{ }
+.ui-dialog-hd{ *zoom:1; position:relative; padding-left:14px; }
+.ui-dialog-title-draggable{ }
 .ui-dialog-tit{ line-height:30px}
 .ui-dialog-close{ position:absolute; top:0; right:0; width:30px; height:30px; font:normal 20px/28px Verdana; text-align:center; color:#b4b4b4}
 .ui-dialog-close:hover{ color:#b4b4b4; text-decoration:none}
