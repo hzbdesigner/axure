@@ -123,7 +123,7 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 #mobile_box h3{color:#525863; font-size: 18px;}
 fieldset{ border: none;}
 
-.sendButton,.close {
+.sendButton{
 		
 		display:inline-block;
         color:#fff;
@@ -136,7 +136,7 @@ fieldset{ border: none;}
         border:none;border-radius:1em;
        
 		
-		margin:10px 0 0 0;
+		margin:10px 0 0 10px;
 
         
     }
