@@ -1,5 +1,5 @@
 /* dialog */
-.ui-dialog{ display:none; position:fixed; _position:absolute; top:50%; left:50%; z-index:1000; width:360px; margin:-250px 0 0 -180px; padding:4px; border-radius:4px; background:#fbde89; }
+.ui-dialog{ display:none; position:fixed; _position:absolute; top:50%; left:50%; z-index:1000; width:70%; margin:-250px 0 0 -180px; padding:4px; border-radius:4px; background:#fbde89; }
 .ui-dialog-in{ padding:1px; border:1px solid #fdbe89; background:#fffcf7}
 .ui-dialog-hd{ *zoom:1; position:relative; padding-left:14px; background:#f3f3f3}
 .ui-dialog-title-draggable{ cursor:move}

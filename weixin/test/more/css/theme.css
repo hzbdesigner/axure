@@ -60,10 +60,6 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 .downloadButton:hover {
        
         background:#e42c00;
-        
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6d04', endColorstr='#fbb450',GradientType=0);
-        
-        background-color:#ff6d04;
     }
 .downloadButton:active {
 		
@@ -145,7 +141,10 @@ fieldset{ border: none;}
         
     }
     .mobileNum{
-   		border: 1px #525863 solid;
-   		height: 30px;
+   		border: 1px #FF9900 solid;
+		height: 30px;
+		border-radius: 10px;
+		margin: 10px 10px 0 15px;
+		box-shadow: 0px 0px 3px rgba(0,0,0,0.8) inset;
 
     }
