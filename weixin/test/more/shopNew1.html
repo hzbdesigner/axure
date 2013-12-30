@@ -66,9 +66,26 @@ $(".sendButton").live("click",function(){
                         var result = $.parseJSON(obj.result);
                         if(result.respCode == "-1" || result.respCode == "0")
                         {
-                            //new Dialog(result.respDesc);
-                            alert(result.respDesc);
-                            setTimeout(location.reload(),2000);
+                            new Dialog({
+                                content: result.respDesc,
+                                close: false,
+                                title: false,
+                                timeout: 5,
+                                showTimer:false,
+                                buttons: {
+
+                                        确定: function () {
+                                            //console.log('确定');
+                                            this.close();
+                                            location.reload();
+                                            }
+                                    }
+                                
+                                });
+
+
+                           // alert(result.respDesc);
+                           // setTimeout(location.reload(),2000);
                         }
                         
                     }
@@ -81,11 +98,11 @@ $(".sendButton").live("click",function(){
                 error: function(json)
                 {
                     var obj = $.parseJSON(json);
-                    //$("#loadingimg").hide();
-                    //$("#alertP").html(obj.msg);
+                    $("#loadingimg").hide();
+                    $("#alertP").html(obj.msg);
                    
                     
-                    alert(obj.msg);
+                    //alert(obj.msg);
                     //MLoading.hide();
                     return;
                 }
