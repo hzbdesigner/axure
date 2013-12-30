@@ -5,11 +5,11 @@
 <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="format-detection" content="telephone=yes">
 <link type="text/css" href="css/theme.css?123" rel="stylesheet">
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="../assets/jquery/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="js/jquery.blockUI.js"></script>
+<link rel="stylesheet" type="text/css" href="../assets/dialog/main.css">
+<link rel="stylesheet" type="text/css" href="../assets/dialog/dialog.css">
 
-<link rel="stylesheet" href="../youhui_res/wei_dialog_v1.2.1.css">
-<script src="../youhui_res/wei_webapp_v2_common_v1.7.2.js"></script>
 <script type="text/javascript">
 
 
@@ -34,7 +34,7 @@ return rtrim(ltrim(s));
   $(".sendButton").click(function(){
 		if($.trim($("#recvNbr").val())== "" || $.trim($("#recvNbr").val()) == null )
 		{
-			alert("请输入手机号码!");
+			new Dialog.Alert('-_-！输入的手机号码有误!');
 			return;
 		}
 		var tel= $("#recvNbr").attr("value");
@@ -81,7 +81,8 @@ return rtrim(ltrim(s));
 		}
 		else
 		{
-			alert(tel+"手机号错误或非移动号");
+            new Dialog.Alert('-_-！手机号错误或非移动号!');
+			//alert(tel+"手机号错误或非移动号");
 		}
 
 })
@@ -180,6 +181,7 @@ return rtrim(ltrim(s));
         <!--<a href="javascript:void" class="close">关闭</a>-->
   </fieldset>
 </div>
+<script src="../assets/dialog/dialog.min.js"></script>
 </body>
 
 </html>
