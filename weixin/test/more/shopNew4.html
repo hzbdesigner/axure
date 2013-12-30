@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>12580-元旦福利大派送</title>
+<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=yes">
+<link type="text/css" href="css/theme.css?123" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+
+<link rel="stylesheet" href="../youhui_res/wei_dialog_v1.2.1.css">
+<script src="../youhui_res/wei_webapp_v2_common_v1.7.2.js"></script>
+<script type="text/javascript">
+
+
+$(function(){
+
+function ltrim(s){
+return s.replace( /^s*/, "");
+}
+  
+function rtrim(s){
+return s.replace( /s*$/, "");
+}
+  
+function trim(s){
+return rtrim(ltrim(s));
+}
+  $('#click_btn').click(function(){ 
+      $.blockUI({ message: $('#mobile_box') }); 
+      $('.blockOverlay').click($.unblockUI); 
+      $('.close').click($.unblockUI);
+}); 
+  $(".sendButton").click(function(){
+		if($.trim($("#recvNbr").val())== "" || $.trim($("#recvNbr").val()) == null )
+		{
+			alert("请输入手机号码!");
+			return;
+		}
+		var tel= $("#recvNbr").attr("value");
+		if(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/.test(tel))
+		{
+				var params = {
+					recvNbr : $("#recvNbr").val(),
+					couponId : $("#couponId").val()
+				};
+				MLoading.show('发送中...');
+			  $.ajax({
+				type: "POST",
+				//url: "http://10.46.108.16:8091/bsc12580/webcoupon/sendCoupon.action",
+				url:"http://218.207.182.80:8091/bsc12580/webcoupon/sendCoupon.action",
+				data: params,
+				dataType:"text", 
+				success: function(json)
+				{
+					var obj = $.parseJSON(json);  //使用这个方法解析json
+					if(obj.type == "send")
+					{
+						var result = $.parseJSON(obj.result);
+						if(result.respCode == "-1" || result.respCode == "0")
+						{
+							alert(result.respDesc);
+							setTimeout(location.reload(),2000);
+						}
+						
+					}
+					//console.log(obj);
+					//console.log(obj.result);
+					
+					//console.log(result.respCode);
+					//console.log(obj.result[0].respDesc);
+				},
+				error: function(json)
+				{
+					var obj = $.parseJSON(json);
+					alert(obj.msg);
+					MLoading.hide();
+					return;
+				}
+			  });
+		}
+		else
+		{
+			alert(tel+"手机号错误或非移动号");
+		}
+
+})
+})
+</script>
+</head>
+
+<body>
+
+      <div class="goodsPic"><img src="../youhui_res/4.jpg" style="width:100%;"   alt="商户商品"><h3>【莆田】 正菜满138元立减50元优惠</h3><div class="toBuy"><span>本券免费下载</span><a href="javascript:void;" id="click_btn" class="downloadButton" >我要下载</a></div></div>
+
+      <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" > 0594-2351717</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
+      <div class="wrapBox"><h3>本单详情</h3><p>
+            有效期：即日起至2014年1月31日<br/>
+            优惠内容：凭此券到嘉陵传奇可享受全场正价菜金消费满138元立减50元优惠。请于点餐前出示。
+      </p></div>
+      <div class="wrapBox"><h3>商户信息</h3><p>
+            商户名称： 嘉陵传奇<br/>
+            商户地质： 莆田市城厢区万达广场室内步行街三层3033<br/>
+
+
+      </p></div>
+
+      <p class="wei_copy"><i>12580惠生活</i><span class="huiCopy">©中国移动福建分公司</span></p>
+      <script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        window.shareData = {  
+			//分享图片http://218.207.182.80:8091/12580/more/shopNe
+            "imgUrl": "http://218.207.182.80:8091/12580/youhui_res/bag2.png", 
+			//朋友圈访问地址
+            "timeLineLink": "http://218.207.182.80:8091/12580/index.html",
+			//发送给好友访问地址
+            "sendFriendLink": "http://218.207.182.80:8091/12580/index.html",
+			//微博分享地址
+            "weiboLink": "http://218.207.182.80:8091/12580/index.html",
+			//朋友圈标题
+            "tTitle": "12580元旦福利大派送！",
+			//朋友圈内容--貌似没用
+            "tContent": "12580元旦福利大派送,优惠多多，福利多多！",
+			//发送给朋友标题
+            "fTitle": "12580元旦福利大派送！",
+			//发送给朋友内容
+            "fContent": "12580元旦福利大派送,优惠多多，福利多多！",
+			//微博内容
+            "wContent": "12580元旦福利大派送,优惠多多，福利多多！" 
+			
+        };
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', { 
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.fContent,
+                "title": window.shareData.fTitle
+            }, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                _report('timeline', res.err_msg);
+            });
+        });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.wContent,
+                "url": window.shareData.weiboLink,
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+        }, false)
+</script>
+<div style="display:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000225892'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000225892' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<div id="mobile_box" style="display:none;">
+    <fieldset>
+        <h3>请输入手机号：</h3>
+        <input id="recvNbr" name="recvNbr" class="mobileNum" type="text"/>
+        <a href="javascript:void" class="sendButton"  >发送</a>
+		<input type="hidden" id="couponId" name="couponId" value="100117554087"/>
+        <!--<a href="javascript:void" class="close">关闭</a>-->
+  </fieldset>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>12580-元旦福利大派送</title>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+    <link rel="stylesheet" type="text/css" href="res/style.css">
+    <!-- The leaves.css file animates the leaves-->
+    <link rel="stylesheet" href="res/leaves.css" type="text/css" media="screen" charset="utf-8"> 
+    <!-- The leaves.js file creates the leaves -->
+     <script src="res/leaves.js" type="text/javascript" charset="utf-8"></script>
+   <style>
+
+
+   body{ 
+    background: #000 url('res/images/bak.jpg') no-repeat top center;
+    background-size:100% auto;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+  }
+  .container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+    .title{
+       position:absolute;
+       top:5px;
+       z-index: 88;
+       text-align: center;
+       width: 100%;
+
+}
+.eye{
+       position:absolute;
+       top:2px;
+       z-index: 99;
+       width: 100%;
+
+}
+   </style>
+
+   </head>
+  <body>
+    <div class="eye"><img class="eye" src="res/images/eye.gif" width=96%></div>
+    <div class="title"><img src="res/images/title.png" width=96% /></div>
+    <div id="container" class="container">
+      <div id="leafContainer">
+      
+      <!-- its appearance, dimensions, and position are defined using its id selector in leaves.css -->
+    
+      </div>
+
+     <!--  <div style="width:640px;margin:10px auto 20px auto; padding:0 0 0 380px;overflow:hidden"> !-->
+      <section class="main">
+        <a href="youhui.htm">
+          <div id="ballWrapper">
+          <div id="ball"></div>
+         <!--  <div id="ballShadow"></div>    -->
+          </div> 
+         </a>       
+      </section>
+      <!--   </div>！-->
+<script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        window.shareData = {  
+			//分享图片http://218.207.182.80:8091/12580/more/shopNe
+            "imgUrl": "http://218.207.182.80:8091/12580/youhui_res/bag2.png", 
+			//朋友圈访问地址
+            "timeLineLink": "http://218.207.182.80:8091/12580/index.html",
+			//发送给好友访问地址
+            "sendFriendLink": "http://218.207.182.80:8091/12580/index.html",
+			//微博分享地址
+            "weiboLink": "http://218.207.182.80:8091/12580/index.html",
+			//朋友圈标题
+            "tTitle": "12580元旦福利大派送！",
+			//朋友圈内容--貌似没用
+            "tContent": "12580元旦福利大派送,优惠多多，福利多多！",
+			//发送给朋友标题
+            "fTitle": "12580元旦福利大派送！",
+			//发送给朋友内容
+            "fContent": "12580元旦福利大派送,优惠多多，福利多多！",
+			//微博内容
+            "wContent": "12580元旦福利大派送,优惠多多，福利多多！" 
+			
+        };
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', { 
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.fContent,
+                "title": window.shareData.fTitle
+            }, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                _report('timeline', res.err_msg);
+            });
+        });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.wContent,
+                "url": window.shareData.weiboLink,
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+        }, false)
+</script>
+<div style="display:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000225892'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000225892' type='text/javascript'%3E%3C/script%3E"));</script>
+</div></body>
+</html>

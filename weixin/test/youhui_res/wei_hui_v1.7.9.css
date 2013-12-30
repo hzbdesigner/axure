@@ -1,0 +1,31 @@
+body,article,section,h1,h2,hgroup,p,a,ul,ol,li,em,div,small,span,footer,canvas,figure,figcaption,input,dl,dd,dt{margin:0;padding:0;}
+body{background-color:#f3f5f6;-webkit-user-select:none;font-family:"microsoft yahei";color:#525863;}
+img{border:none;}
+*[hidden]{display:none!important;}
+a{color:#555;text-decoration:none;cursor:pointer;}
+ul,li,dl,dt,dd{list-style-type:none;}
+small,small em{font-size:15px;}
+.center{width:320px;margin:0 auto;position:relative;}
+#coupou{text-align:center;}
+#coupou p.selectedCoupou{width:295px;line-height:30px;padding-top:15px;text-align:left;margin:0 auto;}
+section.coupouWp{width:277px;min-height:134px;padding:10px;margin:10px;border:1px #fdbe89 solid;background:#fffcf7;}
+section.coupouWp img{width:270px;}
+.coupouDl{position:relative;line-height:28px;text-align:left;}
+.coupouDl dt{height:28px;font-size:15px;font-weight:bold;}
+.coupouDl dd{font-size:11px;line-height:18px;color:#7d7f8a;}
+.coupouDl dd i{font-size:13px;color:#666;font-style:normal;}
+.red{color:red;}
+body#GiftsBuy{background:#ffecd0 url("images/listbak2.jpg");text-align:center;}
+#GiftsBuy .takeit{position:relative;height:50px;padding:20px 12px 0 12px;text-align:left;}
+#GiftsBuy .takeit p{float:left;width:126px;height:92px;font-size:12px;text-align:center;}
+#GiftsBuy .takeit p img{width:90px;height:90px;margin-top: -10px}
+#GiftsBuy .takeit p i{display:inline-block;width:100%;height:22px;font-style:normal;font-size:13px;overflow:hidden;}
+#GiftsBuy .takeit article{position:absolute;right:12px;top:54px;width:185px;height:22px;line-height:22px;overflow:hidden;font-size:14px;color:#f36d00;}
+#GiftsBuy .takeit article.hiForyou{top:24px;padding-bottom:3px;border-bottom:1px #cbb38f solid;color:#dc2200;font-size:18px;font-family:"microsoft yahei";font-weight:bold;}
+#GiftsBuy .suitCity{position:absolute;right:0;bottom:0;width:170px;padding:10px 20px 0;line-height:30px;color:#b2a58a;font-size:12px;text-align:center;}
+#GiftsBuy .suitCity select{margin:0 5px;padding:5px 10px;line-height:normal;border:1px #ccc solid;border-radius:18px;color:#000;font-size:14px;background:#f2f2f2;}
+#GiftsBuy .suitCity select option{opacity:1;}
+#GiftsBuy .beIt{position:absolute;right:5px;bottom:3px;width:83px;height:30px;border:none;border-radius:2em;background:#ffa800;font-size:14px;color:#fff;cursor:pointer;}
+.wei_copy{position:relative;width:100%;height:30px;line-height:30px;text-align:center;color:#fff;font-size:12px;}
+.wei_copy .huiCopy{display:inline-block;position:absolute;right:12px;top:0;color:#ad907e;}
+.wei_copy i{display:inline-block;width:100px;height:14px;float:left; color:#ad907e;}
