@@ -5,7 +5,7 @@
 <meta name="format-detection" content="telephone=no">
 <title>12580-元旦福利大派送</title>
 <link rel="stylesheet" type="text/css" href="youhui_res/wei_hui_v1.7.9.css">
-<script src="youhui_res/wei_webapp_v2_common_v1.7.2.js"></script><style>abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,fieldset,figure,figcaption,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,small,time,video,legend{display:block;}</style>
+<script src="youhui_res/wei_webapp_v2_common_v1.7.2.js"></script>
 <link rel="stylesheet" href="youhui_res/wei_dialog_v1.2.1.css">
 </head>
 <body id="GiftsBuy">
@@ -14,21 +14,7 @@
          <p><img src="youhui_res/bag2.png"></p>
             <article class="hiForyou">元旦福利大派啦！</article>
             <article>从下边的礼券里选一张吧</article>
-            <!--
-            <div class="suitCity"><span style="color:#9b2724">点击切换</span>
-            <select onchange="chooseCity(this);" style="text-align: center;">
-                                <option value="110000" selected="">福州</option>
-                                <option value="310000">厦门</option>
-                                <option value="440100">漳州</option>
-                                <option value="440300">泉州</option>
-                                <option value="510100">龙岩</option>
-                                <option value="130600">莆田</option>
-                                <option value="220100">三明</option>
-                                <option value="500000">宁德</option>
-                                <option value="430100">南平</option>
-                            </select>
-            </div>
--->
+           
         </div>
                     
                         <section class="coupouWp">
@@ -115,93 +101,7 @@
         -->
         <p class="wei_copy"><i>12580惠生活</i><span class="huiCopy">©中国移动福建分公司</span></p>
  	</div>
-   <!--
-<script>
-var ticket = 'GfZCKEMBAACo5bNS'; 
-var tplId = '2'; 
-var wxuin = '350613835'; 
-var appId = 'wx2ab90e75a21662b0';
-var imgUrl = 'http://life.qq.com/misc/images/st_201312sdj/abm_s.png';
-var title = '新春快乐！';
-var content = 'jackliu请了神秘嘉宾祝你新春快乐！！';
-var sendFriendLink = '';
-var timeLineLink = '';
-
-
-var sendAppMessageFun = function(argv){
-	sendFriendLink = 'http://life.qq.com/weixin/r/festival/receive/' + wxuin + '/' + (new Date().getTime()) + '/' + tplId;
-    var linkKey = '10';
-    if(argv == 'isButton'){
-        linkKey = '7';
-    }
-    _doAjax('/weixin/festival/statics','get',{linkKey:linkKey, tplId:tplId, wxuin:wxuin},function(sendData){
-                              if(sendData.code == 0){
-                              //成功
-                              }
-                            });
-    WeixinJSBridge.invoke('sendAppMessage',{
-                          "appid":appId,
-                          "img_url":imgUrl,
-                          "img_width":"640",
-                          "img_height":"640",
-                          "link":sendFriendLink,
-                          "desc":content,
-                          "title":title
-                          }, function(res) {
-                          if(res.err_msg != 'send_app_msg:cancel' && argv == 'isButton'){
-                          //      location.href = '/weixin/festival/sendOk?tplId=' + tplId + '&ticket=' + ticket;
-                                }
-                            _report('send_msg', res.err_msg);
-                          })
-};
-
-var sendTimelineFun = function(argv){
-	timeLineLink = 'http://life.qq.com/weixin/r/festival/receive/' + wxuin + '/' + (new Date().getTime()) + '/' + tplId ;
-    var linkKey = '8';
-    if(argv == 'isButton'){
-        linkKey = '9';
-    }
-    _doAjax('/weixin/festival/statics','get',{linkKey:linkKey, tplId:tplId, wxuin:wxuin},function(sendData){
-                                    if(sendData.code == 0){
-                                        //成功
-                                    }
-                                });
-
-	WeixinJSBridge.invoke('shareTimeline',{
-                          "img_url":imgUrl,
-                          "img_width":"640",
-                          "img_height":"640",
-                          "link":timeLineLink,
-                          "desc":content,
-                          "title":content
-                          }, function(res) {
-                            _report('timeline', res.err_msg);
-                          });
-};
-
-//微信分享
-document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-
-    // 发送给好友
-    WeixinJSBridge.on('menu:share:appmessage', sendAppMessageFun);
-
-    // 分享到朋友圈
-    WeixinJSBridge.on('menu:share:timeline', sendTimelineFun);
-
-    // 分享到微博
-    WeixinJSBridge.on('menu:share:weibo', function(argv){
-        WeixinJSBridge.invoke('shareWeibo',{
-                              "content":content,
-                              "url":'http://life.qq.com/weixin',
-                              }, function(res) {
-                                _report('weibo', res.err_msg);
-                              });
-    });
-
-}, false);
-
-</script>
--->
+   
 <script>
 window.shareData = {  
       //分享图片
@@ -226,51 +126,12 @@ window.shareData = {
         };
 </script>
 <script>
-var linkKey = '3';
-var srcWxuin = '1';
-var linkKey = '3';
-var url = "?ticket="+ticket+"&linkKey="+linkKey+"&tplId="+tplId+"&srcWxuin="+srcWxuin;
 
-function chooseCity(obj){
-    MLoading.show('加载中...');
-    var cid = obj.value;
-    window.location.href="/weixin/festival/choose"+url+"&cid="+cid+"&wxuin="+wxuin+"#wechat_webview_type=1";
-}
+
 function go(qrcode, activityId){
     MLoading.show('加载中...');
      window.location.href="more/shopNew.html";
-    //如果关注了 则发券 不关注则在跳转关注后发券
-    /*//if(subscribe){
-        _doAjax('/weixin/festival/sendCoupon','get',{linkKey:linkKey, tplId:tplId, ticket:ticket, srcWxuin:srcWxuin, qrcode:qrcode, activityId:activityId},function(sendData){
-            if(sendData.code == 0){
-                //成功发券
-                window.location.href="../12580HTML/shopNew.html";
-               // window.location.href="/qr/"+qrcode;
-            }else{
-                //发券失败或者发完了
-                if(sendData.code == 1){
-                //发光了
-                    alert('礼品券被抢光了呢，去看看其他券吧~');
-                    window.location.href="../12580HTML/shopNew.html";
-                }else{
-                //同一个链接领过券了
-                    if(sendData.code == 3){
-                        window.location.href="../12580HTML/shopNew.html"
-                    }else{
-                        if(sendData.code == 2){
-                            alert('系统繁忙');
-                        }else{
-                            window.location.href="../12580HTML/shopNew.html";
-                        }
-                    }
-                }
-            }
-        });
-   // }
-    else{
-        //关注页面
-        window.location.href="/weixin/festival/use"+url+"&qrcode="+qrcode+"&activityId="+activityId+"#wechat_webview_type=1";
-    }*/
+    
 }
 
 </script>
