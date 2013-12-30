@@ -29,3 +29,4 @@ body#GiftsBuy{background:#ffecd0 url("images/listbak2.jpg");text-align:center;}
 .wei_copy{position:relative;width:100%;height:30px;line-height:30px;text-align:center;color:#fff;font-size:12px;}
 .wei_copy .huiCopy{display:inline-block;position:absolute;right:12px;top:0;color:#ad907e;}
 .wei_copy i{display:inline-block;width:100px;height:14px;float:left; color:#ad907e;}
+.local{color: #f36d00;}

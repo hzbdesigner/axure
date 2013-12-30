@@ -30,11 +30,9 @@ return rtrim(ltrim(s));
   $('#click_btn').click(function(){ 
       var fn_ok = function () {
         console.log(this.result);
-        
+     };
 
-    };
-
-    new Dialog({content: "<p id='alertP' style='color:red;margin:10px 0 10px 10px'></p><p><input id='recvNbr' name='recvNbr' class='mobileNum' type='text'/><a href='javascript:void' class='sendButton' >发送</a></p>",
+    new Dialog({content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 10px 10px'></p><p><input id='recvNbr' name='recvNbr' class='mobileNum' type='text'/><a href='javascript:void' class='sendButton' >发送</a></p>",
     blocker: true,lockLocation: true,title:'请输入手机号'
     });
 }); 
@@ -43,7 +41,7 @@ $(".sendButton").live("click",function(){
 
 
         var tel= $("#recvNbr").val();
-      
+        
         
         if(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/.test(tel))
         {
@@ -51,7 +49,9 @@ $(".sendButton").live("click",function(){
                     recvNbr : tel,
                     couponId : $("#couponId").val()
                 };
-                //MLoading.show('发送中...');
+
+              $("#loadingimg").show();
+            
               $.ajax({
                 type: "POST",
                 //url: "http://10.46.108.16:8091/bsc12580/webcoupon/sendCoupon.action",
@@ -66,7 +66,8 @@ $(".sendButton").live("click",function(){
                         var result = $.parseJSON(obj.result);
                         if(result.respCode == "-1" || result.respCode == "0")
                         {
-                            alert(result.respDesc);
+                            new Dialog(result.respDesc);
+                            //alert(result.respDesc);
                             setTimeout(location.reload(),2000);
                         }
                         
@@ -80,8 +81,12 @@ $(".sendButton").live("click",function(){
                 error: function(json)
                 {
                     var obj = $.parseJSON(json);
-                    alert(obj.msg);
-                    MLoading.hide();
+                    $("#loadingimg").hide();
+                    $("#alertP").html(obj.msg);
+                   
+                    
+                    //alert(obj.msg);
+                    //MLoading.hide();
                     return;
                 }
               });
