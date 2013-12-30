@@ -35,7 +35,7 @@ return rtrim(ltrim(s));
     };
 
     new Dialog({content: "<p id='alertP' style='color:red;margin:10px 0 10px 10px'></p><p><input id='recvNbr' name='recvNbr' class='mobileNum' type='text'/><a href='javascript:void' class='sendButton' >发送</a></p>",
-    blocker: true
+    blocker: true,lockLocation: true,title:'请输入手机号'
     });
 }); 
 
@@ -105,9 +105,11 @@ $(".sendButton").live("click",function(){
 
 <body>
 
-      <div class="goodsPic"><img src="../youhui_res/1.jpg" style="width:100%;"   alt="商户商品"><h3>【宁德】 元旦好礼，奥菲牛排优惠券</h3><div class="toBuy"><span>本券免费下载</span><a href="javascript:void;" id="click_btn" class="downloadButton" >我要下载</a></div></div>
-
+      <div class="goodsPic"><img src="../youhui_res/1.jpg" style="width:100%;"   alt="商户商品"><h3>元旦好礼，奥菲牛排优惠券</h3><div class="toBuy"><span>仅限宁德地区</span><a href="javascript:void;" id="click_btn" class="downloadButton" >我要下载</a></div></div>
+<!--电话信息
       <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
+  -->
+
       <div class="wrapBox"><h3>本单详情</h3><p>
             有效期：即日起至2014年06月30日<br/>
             优惠内容：宁德市豪客来东门店可享受原价69元的澳菲牛排只需49元，原价79元的雪花牛排只需58元，原价89元的雪龙牛排只需68元。（任意消费一次就还送8折学生卡）
