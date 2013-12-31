@@ -26,7 +26,7 @@ function trim(s){
 return rtrim(ltrim(s));
 }
 
-
+/*
   $('#click_btn').click(function(){ 
       var fn_ok = function () {
         console.log(this.result);
@@ -36,6 +36,7 @@ return rtrim(ltrim(s));
     blocker: true,lockLocation: true,title:'请输入手机号'
     });
 }); 
+*/
 
 $(".sendButton").live("click",function(){
 
@@ -145,7 +146,7 @@ content: result.respDesc,
 
 <body>
 
-      <div class="goodsPic"><img src="../youhui_res/12.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动用户均可参与订购</span><!--<a href="javascript:void;" id="click_btn" class="downloadButton" >我要下载</a>--></div></div>
+      <div class="goodsPic"><img src="../youhui_res/12.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="sms:10086?body=806" id="click_btn" class="downloadButton" >发送806到10086</a></div></div>
 <!--电话信息
       <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
   -->

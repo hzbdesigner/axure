@@ -66,28 +66,28 @@
       <!--   </div>！-->
 <script>
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-        window.shareData = {  
-			//分享图片http://218.207.182.80:8091/12580/more/shopNe
+       window.shareData = {  
+      //分享图片http://218.207.182.80:8091/12580/more/shopNe
             "imgUrl": "http://218.207.182.80:8091/12580/youhui_res/bag2.png", 
-			//朋友圈访问地址
+      //朋友圈访问地址
             "timeLineLink": "http://218.207.182.80:8091/12580/index.html",
-			//发送给好友访问地址
+      //发送给好友访问地址
             "sendFriendLink": "http://218.207.182.80:8091/12580/index.html",
-			//微博分享地址
+      //微博分享地址
             "weiboLink": "http://218.207.182.80:8091/12580/index.html",
-			//朋友圈标题
-            "tTitle": "新年好礼，马上有“惠”！",
+      //朋友圈标题
+            "tTitle": "新年好运，和你一起过年！",
  
  
-			//朋友圈内容--貌似没用
-            "tContent": "马年第一天，马上找个“对象”一起分享美食吧！",
-			//发送给朋友标题
-            "fTitle": "新年好礼，马上有“惠”！",
-			//发送给朋友内容
-            "fContent": "马年第一天，马上找个“对象”一起分享美食吧！",
-			//微博内容
-            "wContent": "马年第一天，马上找个“对象”一起分享美食吧！"
-			
+      //朋友圈内容--貌似没用
+            "tContent": "点击“和”袋，马上选个对象吧～",
+      //发送给朋友标题
+            "fTitle": "新年好运，和你一起过年！",
+      //发送给朋友内容
+            "fContent": "点击“和”袋，马上选个对象吧～",
+      //微博内容
+            "wContent": "点击“和”袋，马上选个对象吧～" 
+      
         };
         // 发送给好友
         WeixinJSBridge.on('menu:share:appmessage', function (argv) {
