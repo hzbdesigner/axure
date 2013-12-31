@@ -18,10 +18,10 @@ section.coupouWp img{width:270px;}
 body#GiftsBuy{background:#ffecd0 url("images/listbak2.jpg");text-align:center;}
 #GiftsBuy .takeit{position:relative;height:50px;padding:20px 12px 0 12px;text-align:left;}
 #GiftsBuy .takeit p{float:left;width:126px;height:92px;font-size:12px;text-align:center;}
-#GiftsBuy .takeit p img{width:90px;height:90px;margin-top: -10px}
+#GiftsBuy .takeit p img{width:90px;height:90px;margin-top: -10px;margin-left: -30px;}
 #GiftsBuy .takeit p i{display:inline-block;width:100%;height:22px;font-style:normal;font-size:13px;overflow:hidden;}
-#GiftsBuy .takeit article{position:absolute;right:12px;top:54px;width:185px;height:22px;line-height:22px;overflow:hidden;font-size:14px;color:#f36d00;}
-#GiftsBuy .takeit article.hiForyou{top:24px;padding-bottom:3px;border-bottom:1px #cbb38f solid;color:#dc2200;font-size:18px;font-family:"microsoft yahei";font-weight:bold;}
+#GiftsBuy .takeit article{text-align: right;position:absolute;right:12px;top:54px;width:220px;height:22px;line-height:22px;overflow:hidden;font-size:14px;color:#f36d00;}
+#GiftsBuy .takeit article.hiForyou{top:24px;padding-bottom:3px;border-bottom:0px #cbb38f solid;color:#dc2200;font-size:18px;font-family:"microsoft yahei";font-weight:bold;}
 #GiftsBuy .suitCity{position:absolute;right:0;bottom:0;width:170px;padding:10px 20px 0;line-height:30px;color:#b2a58a;font-size:12px;text-align:center;}
 #GiftsBuy .suitCity select{margin:0 5px;padding:5px 10px;line-height:normal;border:1px #ccc solid;border-radius:18px;color:#000;font-size:14px;background:#f2f2f2;}
 #GiftsBuy .suitCity select option{opacity:1;}
