@@ -126,12 +126,12 @@ fieldset{ border: none;}
 
 .sendButton{
 		
-		display:inline-block;
+		/*display:inline-block;*/
         color:#fff;
         font-family:Trebuchet MS;
         font-size:14px;
         
-        padding:8px 20px;
+        padding:18px 20px;
         text-decoration:none;
         background-color:#ffa800;
         border:none;border-radius:1em;
