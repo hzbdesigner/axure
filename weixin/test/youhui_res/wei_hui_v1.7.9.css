@@ -30,3 +30,5 @@ body#GiftsBuy{background:#ffecd0 url("images/listbak2.jpg");text-align:center;}
 .wei_copy .huiCopy{display:inline-block;position:absolute;right:12px;top:0;color:#ad907e;}
 .wei_copy i{display:inline-block;width:100px;height:14px;float:left; color:#ad907e;}
 .local{color: #f36d00;}
+.coupouWp{position: relative;}
+.tag{position: absolute;left: -16px; top:-8px; width:140px;}

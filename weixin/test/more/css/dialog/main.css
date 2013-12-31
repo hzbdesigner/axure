@@ -16,7 +16,7 @@ li a{font-size:16px;}
 dl{margin:0;padding:0;}
 dt{padding:16px 16px 0;font-weight:bold;}
 dd{margin:0;padding:0 16px 16px;border-bottom:1px dotted #999;}
-p{color:#999;font-size:14px;font-style:italic;}
+p{color:#999;font-size:14px;}
 pre{display:block;margin:16px 0 0;padding:8px;width:600px;border:1px solid #999;background:#fff;color:#666;font-family:Courier New, monospace;font-size:14px;font-weight:normal;resize:none;}
 textarea{display:block;margin:16px 0 0;padding:8px;width:600px;border:1px solid #999;background:#fff;font-family:Courier New, monospace;font-size:14px;font-weight:normal;resize:none;overflow:hidden;}
 button{margin:-1px 0 0;padding:4px 32px;border:1px solid #999;background:#ccc;text-align:left;vertical-align:top;font-weight:bold;cursor:pointer;}button:hover{background:#eee;}

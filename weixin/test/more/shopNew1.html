@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>12580-元旦福利大派送</title>
+<title>新年好礼，马上有“惠”！</title>
 <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="format-detection" content="telephone=yes">
 <link type="text/css" href="css/theme.css?123" rel="stylesheet">
@@ -41,7 +41,7 @@ $(".sendButton").live("click",function(){
 
 
         var tel= $("#recvNbr").val();
-        $("#alertP").hide();
+        
         
         if(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/.test(tel))
         {
@@ -71,6 +71,7 @@ $(".sendButton").live("click",function(){
                                 Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "^_^发送成功！",
+                                    
                                     blocker: true,
                                     timeout: 5,
                                     showTimer:false,
@@ -88,8 +89,8 @@ $(".sendButton").live("click",function(){
                             }else{
                                 Dialog.close('sendDiv');
                                 new Dialog({
-                                    content: result.respDesc,
                                     blocker: true,
+                                    content: result.respDesc,
                                     buttons: {
 
                                             确定: function () {
@@ -128,8 +129,6 @@ $(".sendButton").live("click",function(){
         else if($.trim(tel)== "" || $.trim(tel) == null){
             $("#alertP").show().html("-_-！请输入的手机号码!");
             //new Dialog.Alert('-_-！请输入的手机号码!');
-            //Dialog.close('sendDiv');
-           
 
         }
         else
@@ -152,11 +151,15 @@ $(".sendButton").live("click",function(){
   -->
 
       <div class="wrapBox"><h3>本单详情</h3><p>
-            有效期：即日起至2014年06月30日<br/>
-            优惠内容：宁德市豪客来东门店可享受原价69元的澳菲牛排只需49元，原价79元的雪花牛排只需58元，原价89元的雪龙牛排只需68元。（任意消费一次就还送8折学生卡）
+            1、	原价69元的奥菲牛排套餐仅需49元！<br/>
+2、	原价79元的雪花牛排套餐仅需58元！<br/>
+3、	原价89元的雪龙牛排套餐仅需68元！<br/>
+ （任意消费一次就送8折学生卡）<br/>
+有效期：即日起至2014年06月30日<br/>
+使用范围：宁德市豪客来东门店<br/>
       </p></div>
       <div class="wrapBox"><h3>商户信息</h3><p>
-            商户名称： 豪客来东门店<br/>
+            商家电话：13599837308<br/>
             商户地质： 宁德市蕉城区北环城东路东门商城二层19号<br/>
 
 
@@ -175,15 +178,17 @@ $(".sendButton").live("click",function(){
 			//微博分享地址
             "weiboLink": "http://218.207.182.80:8091/12580/index.html",
 			//朋友圈标题
-            "tTitle": "12580元旦福利大派送！",
+            "tTitle": "新年好礼，马上有“惠”！",
+ 
+ 
 			//朋友圈内容--貌似没用
-            "tContent": "12580元旦福利大派送,优惠多多，福利多多！",
+            "tContent": "马年第一天，马上找个“对象”一起分享美食吧！",
 			//发送给朋友标题
-            "fTitle": "12580元旦福利大派送！",
+            "fTitle": "新年好礼，马上有“惠”！",
 			//发送给朋友内容
-            "fContent": "12580元旦福利大派送,优惠多多，福利多多！",
+            "fContent": "马年第一天，马上找个“对象”一起分享美食吧！",
 			//微博内容
-            "wContent": "12580元旦福利大派送,优惠多多，福利多多！" 
+            "wContent": "马年第一天，马上找个“对象”一起分享美食吧！"
 			
         };
         // 发送给好友
