@@ -1,123 +1,14 @@
 <!DOCTYPE html>
+<!-- Created with Adobe(R) technology -->
 <html>
-<head>
-<meta charset="UTF-8">
-<title>horse_html</title>
+  <head>
+    <meta charset="utf-8"></meta>
     <link href="css/horse.css" type="text/css" rel="stylesheet"></link>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/horse.js"></script>
-<style>
-body{ 
-  margin: 0px;
-  padding: 0px;
-}
-.content{
-
-  margin:0 auto;
-  padding: 0px;
-  width: 480px;
-  height:800px;
-  background:url(images/background.png);
-  overflow: hidden;
-  position: relative;
-}
-#canvas{
-  z-index: 999;
-  position: absolute;;
-  bottom: 100px;
-  left:20px;
-
-}
-.title{ 
-  width: 267px;
-  height: 250px;
-  margin-left:-133px ;
-  position: absolute;
-  left:240px;
-
-}
-.banger1{
-  position: absolute;
-  left:-10px;
-  top:-250px;
-}
-.banger2{
-  position: absolute;
-  right:-20px;
-  top:-250px;
-}
-.word{
-  position: absolute;
-  width: 10%;
-  height: 10%;
-  opacity: 0;
-  left:190px;
-  bottom: 10px;
-
-}
-@-webkit-keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 100% 0; }
-}
-.cloud{
-  position: absolute;
-  bottom: 0px;
-  background: url("images/cloud.png");
-  background-position: 0px 0px;
-  background-repeat: repeat-x;
-
-  -webkit-animation: animatedBackground 3s linear infinite;
-  width: 480px;
-  height: 280px;
-  opacity: 0.8;
-
-}
-
-</style>
-
-<script>
-$(function(){
-
- $('.banger1,.banger2').animate({
-    top: "+=200px"
-  }, 500, function() {
-              
-    // Animation complete.
-  });
-
-            $('.title').animate({
-              top: "+=110px"
-              }, 500, function() {
-                // Animation complete.
-                $('.word').animate({opacity:1,width:"386px",height:"196px",left:"-65px"},500);
-              });
-
-})
-
-var canvas, stage, exportRoot;
-
-function init() {
-  canvas = document.getElementById("canvas");
-  exportRoot = new lib.horse_html();
-
-  stage = new createjs.Stage(canvas);
-  stage.addChild(exportRoot);
-  stage.update();
-
-  createjs.Ticker.setFPS(lib.properties.fps);
-  createjs.Ticker.addEventListener("tick", stage);
-}
-</script>
-</head>
-
-<body onload="init();" style="background-color:#D4D4D4">
-  <div class="content" >
-    <div class="banger1"><img src="images/banger.png"></div>
-    <div class="banger2"><img src="images/banger.png"></div>
-    
-    <div class="title"><img src="images/wordbak.png"><img class="word" src="images/word.png"></div>
-    <!--horse start-->
-  <div class="wlby_movie">
+  </head>
+  <body>
+    <div class="wlby_movie">
       <div class="wlby_1 wlby_sprite">
         <div class="wlby_2 wlby_fs">
           <div class="wlby_3">
@@ -261,8 +152,5 @@ function init() {
         </div>
       </div>
     </div>
-    <!--end horse-->
-  <div class="cloud"></div>
-  </div>
-</body>
+  </body>
 </html>
