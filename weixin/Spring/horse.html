@@ -66,6 +66,10 @@ body{
   bottom: 10px;
 
 }
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
 @-webkit-keyframes animatedBackground {
   from { background-position: 0 0; }
   to { background-position: 100% 0; }
@@ -103,6 +107,9 @@ body{
   background-position: 0px 0px;
   background-repeat: repeat-x;
 
+  animation: animatedBackground 3s linear infinite;
+  animation-play-state: pause;
+
   -webkit-animation: animatedBackground 3s linear infinite;
   -webkit-animation-play-state: pause;
   width: 100%;
@@ -115,6 +122,10 @@ body{
 
 <script>
 $(function(){
+
+
+  $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
+  $(".cloud").css({ "-webkit-animation-play-state": "paused"});
   //设置高度
   var wheight=$(window).height();
   var wwidth=$(window).width();

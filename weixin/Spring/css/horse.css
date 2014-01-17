@@ -30,6 +30,10 @@ a.wlby_tlf-link:visited { color: inherit; text-decoration: none; }
 .wlby_button:active > .wlby_button_hover { visibility: hidden; }
 .wlby_button:active > .wlby_button_active { visibility: visible; }
 
+@keyframes wlby_frameset-animation {
+	from { }
+	to { }
+}
 @-webkit-keyframes wlby_frameset-animation {
 	from { }
 	to { }
@@ -37,6 +41,7 @@ a.wlby_tlf-link:visited { color: inherit; text-decoration: none; }
 
 .wlby_fs, .wlby_graphic 
 {
+	animation-name: wlby_frameset-animation;
 	-webkit-animation-name: wlby_frameset-animation;
 }
 
@@ -54,150 +59,176 @@ a.wlby_tlf-link:visited { color: inherit; text-decoration: none; }
 
 .wlby_sprite 
 {
+	animation-name: wlby_frameset-animation;
+	animation-iteration-count: infinite;
 	-webkit-animation-name: wlby_frameset-animation;
 	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-play-state: pause;
+
 }
 
 .wlby_42
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -229.4, -104.686);
 	-webkit-transform: matrix(1, 0, 0, 1, -229.4, -104.686);
 }
 
 .wlby_38
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -226.6, -107.367);
 	-webkit-transform: matrix(1, 0, 0, 1, -226.6, -107.367);
 }
 
 .wlby_40
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -226.35, -106.3);
 	-webkit-transform: matrix(1, 0, 0, 1, -226.35, -106.3);
 }
 
 .wlby_8
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -225.4, -105.392);
 	-webkit-transform: matrix(1, 0, 0, 1, -225.4, -105.392);
 }
 
 .wlby_12
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -225.2, -118.6);
 	-webkit-transform: matrix(1, 0, 0, 1, -225.2, -118.6);
 }
 
 .wlby_4
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -224.4, -103.939);
 	-webkit-transform: matrix(1, 0, 0, 1, -224.4, -103.939);
 }
 
 .wlby_6
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -222.75, -107.392);
 	-webkit-transform: matrix(1, 0, 0, 1, -222.75, -107.392);
 }
 
 .wlby_10
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -219.3, -125.089);
 	-webkit-transform: matrix(1, 0, 0, 1, -219.3, -125.089);
 }
 
 .wlby_18
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -217.05, -119.1);
 	-webkit-transform: matrix(1, 0, 0, 1, -217.05, -119.1);
 }
 
 .wlby_16
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -216.75, -119.35);
 	-webkit-transform: matrix(1, 0, 0, 1, -216.75, -119.35);
 }
 
 .wlby_26
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -216.1, -107.979);
 	-webkit-transform: matrix(1, 0, 0, 1, -216.1, -107.979);
 }
 
 .wlby_20
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -214.65, -117.85);
 	-webkit-transform: matrix(1, 0, 0, 1, -214.65, -117.85);
 }
 
 .wlby_14
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -214.55, -122.405);
 	-webkit-transform: matrix(1, 0, 0, 1, -214.55, -122.405);
 }
 
 .wlby_32
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -213.85, -108.077);
 	-webkit-transform: matrix(1, 0, 0, 1, -213.85, -108.077);
 }
 
 .wlby_34
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -213.75, -107.851);
 	-webkit-transform: matrix(1, 0, 0, 1, -213.75, -107.851);
 }
 
 .wlby_24
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -212.65, -116.85);
 	-webkit-transform: matrix(1, 0, 0, 1, -212.65, -116.85);
 }
 
 .wlby_30
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -212.65, -107.893);
 	-webkit-transform: matrix(1, 0, 0, 1, -212.65, -107.893);
 }
 
 .wlby_28
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -210.55, -110.337);
 	-webkit-transform: matrix(1, 0, 0, 1, -210.55, -110.337);
 }
 
 .wlby_22
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -209.2, -117.1);
 	-webkit-transform: matrix(1, 0, 0, 1, -209.2, -117.1);
 }
 
 .wlby_36
 {
 	position: absolute;
+	transform: matrix(1, 0, 0, 1, -207.45, -106.784);
 	-webkit-transform: matrix(1, 0, 0, 1, -207.45, -106.784);
 }
 
 .wlby_2
 {
+	animation-duration: 0.0416667s;
 	-webkit-animation-duration: 0.0416667s;
 }
 
 .wlby_5
 {
+	animation-duration: 0.0416667s;
 	-webkit-animation-duration: 0.0416667s;
 	display: none;
 }
 
 .wlby_1
 {
+	animation-duration: 0.833333s;
 	-webkit-animation-duration: 0.833333s;
 }
 
 .wlby_3
 {
 	position: absolute;
+	transform:matrix(1,0,0,1,230,130);
 	-webkit-transform:matrix(1,0,0,1,230,130);
 }
 
