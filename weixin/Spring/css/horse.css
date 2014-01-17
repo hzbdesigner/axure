@@ -2,7 +2,7 @@ div.wlby_movie
 {
 	overflow: hidden;
 	position: absolute;
-	left: 5%;
+	left: 0;
 	bottom: 10%;
 	width: 100%;
 	height: 40%;
@@ -42,7 +42,7 @@ a.wlby_tlf-link:visited { color: inherit; text-decoration: none; }
 
 .wlby_graphic 
 {
-	-webkit-animation-duration: 1s;
+	
 }
 
 .wlby_masked 
@@ -56,6 +56,7 @@ a.wlby_tlf-link:visited { color: inherit; text-decoration: none; }
 {
 	-webkit-animation-name: wlby_frameset-animation;
 	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-play-state: pause;
 }
 
 .wlby_42
