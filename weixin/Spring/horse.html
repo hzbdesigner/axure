@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <title>horse_html</title>
     <link href="css/horse.css" type="text/css" rel="stylesheet"></link>
+    <link rel="stylesheet" type="text/css" href="assets/dialog/main.css">
+<link rel="stylesheet" type="text/css" href="assets/dialog/dialog.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/horse.js"></script>
+
 <style>
 body{ 
   background:url(images/background.jpg)no-repeat top center;
@@ -83,9 +86,10 @@ body{
 
 <script>
 $(function(){
-
+  //设置高度
   var wheight=$(window).height();
   var wwidth=$(window).width();
+
 
 
  $(".content").height(wheight);
@@ -104,12 +108,15 @@ $(function(){
               top: "12%"
               }, 500, function() {
                 // Animation complete.
-                $('.word').animate({opacity:1,width:"80%",height:"100%",left:"-65px"},500);
+                $('.word').animate({opacity:1,width:"90%",height:"100%",left:"-15%"},500);
               });
 
-         //设置高度
+       
 
     
+
+     new Dialog("窗口宽度："+wwidth+"<br>窗口高度："+wheight);
+
 
 })
 
@@ -272,5 +279,6 @@ $(function(){
     <!--end horse-->
   <div class="cloud"></div>
   </div>
+  <script src="assets/dialog/dialog.min.js"></script>
 </body>
 </html>

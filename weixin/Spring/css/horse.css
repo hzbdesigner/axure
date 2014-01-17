@@ -3,9 +3,9 @@ div.wlby_movie
 	overflow: hidden;
 	position: absolute;
 	left: 5%;
-	bottom: 18%;
+	bottom: 10%;
 	width: 100%;
-	height: 30%;
+	height: 40%;
 	z-index: 999;
 }
 .wlby_text p { padding: 0; margin: 0; }

@@ -1,0 +1,44 @@
+/* dialog */
+.ui-dialog{ display:none; position:fixed; _position:absolute;top:50%; left:50%; z-index:1000; width:82%; margin:-250px 0 0 -180px; padding:4px; border-radius:4px; background:#fff; }
+.ui-dialog-in{ }
+.ui-dialog-bd{padding:10px; }
+.ui-dialog-hd{ *zoom:1; position:relative; padding-left:14px; }
+.ui-dialog-bd p{ margin: 10px 0 0 0}
+.ui-dialog-title-draggable{ }
+.ui-dialog-tit{ line-height:30px}
+.ui-dialog-close{ position:absolute; top:0; right:0; width:30px; height:30px; font:normal 20px/28px Verdana; text-align:center; color:#b4b4b4}
+.ui-dialog-close:hover{ color:#b4b4b4; text-decoration:none}
+.ui-dialog-titless .ui-dialog-close { right:-16px; top:-16px;}
+.bt-ui-dialog{ display:inline-block; padding:10px; border-radius: 5px; color:#fff; border:1px solid #e1e1e1; background:#ffa800}
+.bt-ui-dialog:hover{ color:#fff; text-decoration:none; border-color:#ff4800; background:#ff4800; cursor:pointer}
+.ui-blocker{ display:none; position:fixed; _position:absolute; top:0; left:0; z-index:999; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50)}
+.input-radio{ box-sizing:border-box; *width:13px; *height:13px; margin:2px 5px 6px 0; vertical-align:middle}
+.bt-ui-dialog-submit,.bt-ui-dialog-cancel{ width:76px; height:30px;margin-top:20px;margin-right:10px;line-height:30px\9; background-position:0 -38px}
+.dialog-note-error{ clear:both; color:#ff4800}
+.ui-dialog-ft{ padding-bottom:10px}
+.ui-dialog-bt-box{ text-align: center;}
+.ui-dialog-bt-box .bt-ui-dialog{ margin:0 5px;}
+
+/*dialog common*/
+.dialog-comm-box{ padding:20px 25px; text-align: center;}
+.dialog-comm-box .txt{ font:normal 16px/1.3 "\5fae\8f6f\96c5\9ed1";}
+
+/*dialog login box*/
+.dialog-login-box{ padding:25px}
+.dialog-login-box .input-item{ overflow:hidden; *zoom:1; height:28px; margin-bottom:10px; padding-right:5px; border:1px solid #d5d5d5; border-radius:2px}
+.dialog-login-box .input-item-error{ border-color:#ffb091}
+.dialog-login-box .tit{ float:left; width:50px; padding-right:6px; margin-right:5px; color:#a4a4a4; line-height:28px; text-align:center; }
+.dialog-login-box .con{ display:block; overflow:hidden; *zoom:1}
+.dialog-login-box .con input{ width:100%; height:28px; font-family:Verdana; font-size:14px; line-height:28px\9; border:0}
+.dialog-login-box .bt-box{ overflow:hidden; *zoom:1; line-height:23px}
+.dialog-login-box .login-radio{ float:left; margin-right:10px; *margin-top:2px}
+.dialog-login-box .bt-ui-dialog{ float:left; width:76px; height:23px; margin-right:10px; line-height:23px\9; background-position:0 -38px}
+.dialog-login-box .dialog-note-error{ margin-bottom:10px}
+
+/*dialog upload box*/
+.dialog-upload-box{ padding:25px; text-align:center}
+.dialog-upload-box .bt-ui-dialog{ width:133px; height:33px; font:normal 18px/33px "\5fae\8f6f\96c5\9ed1"}
+.dialog-upload-box .bt-ui-dialog i{ display:inline-block; overflow:hidden; width:16px; height:17px; margin:0 5px 3px 0; _margin:8px 5px 8px 0;  vertical-align:middle}
+.dialog-upload-box .bt-dialog-upv:hover i{ background-position:-17px 0}
+.dialog-upload-box .bt-dialog-upm i{ background-position:-34px 0}
+.dialog-upload-box .bt-dialog-upm:hover i{ background-position:-51px 0}
