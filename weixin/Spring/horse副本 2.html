@@ -8,51 +8,39 @@
     <script type="text/javascript" src="js/horse.js"></script>
 <style>
 body{ 
-  background:url(images/background.jpg)no-repeat top center;
-  background-size:100% auto;
-  
   margin: 0px;
   padding: 0px;
+  background:url(images/background.jpg) no-repeat top center;
+  background-size:cover;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.content{
-  float: left;
-
-  width: 100%;
-  height: 100%;
-  position: relative;
 }
 
+#canvas{
+  z-index: 999;
+  position: absolute;;
+  bottom: 100px;
+  left:20px;
+
+}
 .title{ 
-  width: 100%;
-  height: 30%;
+  width: 267px;
+  height: 250px;
+  margin-left:-133px ;
   position: absolute;
-}
-.title img{ 
-  width: 60%;
-  margin-left: 20%;
-}
+  left:240px;
 
+}
 .banger1{
   position: absolute;
   left:-10px;
   top:-250px;
-  width:30%;
 }
 .banger2{
   position: absolute;
   right:-20px;
   top:-250px;
-  width:30%;
 }
-.banger1 img,.banger2 img{
-  width:100%;
-
-}
-.title .word{
+.word{
   position: absolute;
   width: 10%;
   height: 10%;
@@ -73,8 +61,8 @@ body{
   background-repeat: repeat-x;
 
   -webkit-animation: animatedBackground 3s linear infinite;
-  width: 100%;
-  height: 30%;
+  width: 480px;
+  height: 280px;
   opacity: 0.8;
 
 }
@@ -84,15 +72,6 @@ body{
 <script>
 $(function(){
 
-  var wheight=$(window).height();
-  var wwidth=$(window).width();
-
-
- $(".content").height(wheight);
- $(".wlby_3 img").width(wwidth*0.8);
-
-
-
  $('.banger1,.banger2').animate({
     top: "+=200px"
   }, 500, function() {
@@ -101,25 +80,20 @@ $(function(){
   });
 
             $('.title').animate({
-              top: "12%"
+              top: "+=110px"
               }, 500, function() {
                 // Animation complete.
-                $('.word').animate({opacity:1,width:"80%",height:"100%",left:"-65px"},500);
+                $('.word').animate({opacity:1,width:"386px",height:"196px",left:"-65px"},500);
               });
 
-         //设置高度
-
-    
-
 })
-
 
 
 </script>
 </head>
 
 <body >
-  <div class="content" >
+
     <div class="banger1"><img src="images/banger.png"></div>
     <div class="banger2"><img src="images/banger.png"></div>
     
@@ -271,6 +245,6 @@ $(function(){
     </div>
     <!--end horse-->
   <div class="cloud"></div>
-  </div>
+ 
 </body>
 </html>
