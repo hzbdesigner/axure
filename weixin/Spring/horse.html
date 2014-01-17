@@ -71,7 +71,7 @@ body{
   to { background-position: 100% 0; }
 }
 .button_start{ 
-    width: 300px;
+    width: 200px;
     height:100px;
     background: #ff00ff;
     color: #fff;
@@ -79,20 +79,20 @@ body{
     bottom: 10%;
     left: 50%;
     z-index: 1000;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     line-height: 100px;
 }
 .button_stop{ 
-    width: 300px;
+    width: 200px;
     height:100px;
     background: #ff00ff;
     color: #fff;
     position: absolute;
     bottom: 10%;
-    left: 10%;
+    left: 20%;
     z-index: 1000;
-    font-size: 50px;
+    font-size: 40px;
      text-align: center;
     line-height: 100px;
 }
@@ -151,7 +151,7 @@ $(function(){
   $(".button_stop").bind("click",function(){
       $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
       $(".cloud").css({ "-webkit-animation-play-state": "paused"});
-     new Dialog("点了--------------"+$(".cloud").css("-webkit-animation-play-state"));
+    // new Dialog("点了--------------"+$(".cloud").css("-webkit-animation-play-state"));
   })
 
      //new Dialog("窗口宽度："+wwidth+"<br>窗口高度："+wheight);
