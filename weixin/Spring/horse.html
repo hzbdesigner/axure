@@ -98,7 +98,8 @@ body{
     width: 90%;
     height:130px;
     
-    color: #bc0004;
+    
+    
     position: absolute;
     bottom: 10%;
     left: 5%;
@@ -106,21 +107,35 @@ body{
     font-size: 80px;
      text-align: center;
     line-height: 130px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
+.button_stop a{
+  
+  text-shadow: 0 1px 0 #F8F6B9, 0 2px 0 #FFA606, 0 3px 0 #CE4848, 0 4px 0 #b9b9b9, 0 5px 0 #F02E2E, 0 6px 1px rgba(207, 30, 30, 0.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+  opacity: 0.6;
+
+   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4d67e), to(#e3661b));
+   color:transparent;
+   -webkit-background-clip:text;
+
+
+}
+.button_stop a:active{
+    opacity: 1;
+ }
 .button_stop_bak{
 
     border-radius: 28px;
     -webkit-border-radius: 28;
-     background:#fff ;
-     opacity: 0.5;
+     background: #fff600;
+     opacity: 0.1;
      width: 90%;
      height:130px;
      position: absolute;
      bottom: 10%;
      left: 5%;
      z-index: 998;
-     display: none;
+    
 }
 .cloud{
   position: absolute;
@@ -142,11 +157,11 @@ body{
 
 @-webkit-keyframes buttonAnimation /* Safari 和 Chrome */
 {
-  from {-webkit-box-shadow: 0 0 15px #df0004;}
-  25% {-webkit-box-shadow: 0 0 15px #df3400;}
-  50% {-webkit-box-shadow: 0 0 15px #f79700;}
-  75% {-webkit-box-shadow: 0 0 15px #f9d300;}
-  to {-webkit-box-shadow: 0 0 15px #fe6c01;}
+  from {-webkit-box-shadow: 0 0 15px #feef00;}
+  25% {-webkit-box-shadow: 0 0 15px #feb300;}
+  50% {-webkit-box-shadow: 0 0 15px #fe4800;}
+  75% {-webkit-box-shadow: 0 0 15px #feb900;}
+  to {-webkit-box-shadow: 0 0 15px #fead00;}
 }
 
 </style>
@@ -204,7 +219,9 @@ function getRandom(n){
         //做你想做的事
          $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
          $(".cloud").css({ "-webkit-animation-play-state": "paused"});
-        // new Dialog("点了--------------"+$(".cloud").css("-webkit-animation-play-state"));
+        new Dialog({id: "sendDiv",content: "<p>马蹄声声震乾坤，不觉已经入新春。瑞雪飘扬禾苗旺，梅花吐蕊绽芳香。温暖祝福送君旁，工资翻番不断涨。事业腾飞放光芒，爱情甘甜心芬芳。马年快乐！<br/><img src='images/red.png' width='60%' style='margin-top:10px'><br/><a href='' style='width:80%;height:1em;background:#ffff69;color:#f6d57b;font-size:2.5em;'>点击领取</a></p>",
+    blocker: true,lockLocation: true,title:'砺行突破，马到成功！'
+    });
           clearTimeout(timer);
       },timeVar);
    
@@ -226,7 +243,7 @@ function getRandom(n){
     <div class="banger2"><img src="images/banger.png"></div>
     <div class="title"><img src="images/wordbak.png"><img class="word" src="images/word.png"></div>
   
-    <div class="button_stop">点击试试你的马力</div>
+    <div class="button_stop"><a href="javascript:void(0)">点击试试你的马力</a></div>
   <div class="button_stop_bak"></div>
       <!--horse start-->
   <div class="wlby_movie">

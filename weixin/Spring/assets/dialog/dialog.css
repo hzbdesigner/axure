@@ -1,11 +1,11 @@
 /* dialog */
-.ui-dialog{ display:none; position:fixed; _position:absolute;top:50%; left:50%; z-index:1000; width:82%; margin:-250px 0 0 -180px; padding:4px; border-radius:4px; background:#fff; }
+.ui-dialog{ display:none; position:fixed; _position:absolute;top:50%; left:50%; z-index:1000; width:82%; margin:-250px 0 0 -180px; padding:4px; border-radius:32px; background:#610105; -webkit-box-shadow: 10px 10px 0px #4b0002;}
 .ui-dialog-in{ }
 .ui-dialog-bd{padding:10px; }
 .ui-dialog-hd{ *zoom:1; position:relative; padding-left:14px; }
-.ui-dialog-bd p{ margin: 10px 0 0 0}
+.ui-dialog-bd p{ margin: 10px 0 0 0;color: #f9e492;margin-left: 0.5em;}
 .ui-dialog-title-draggable{ }
-.ui-dialog-tit{ line-height:30px}
+.ui-dialog-tit{ line-height: 0.1em;font-size: 4em;color: #ffff69;margin-left: 10px;margin-bottom: 0.4em;text-shadow: rgb(189, 12, 54) 0 8px 0;}
 .ui-dialog-close{ position:absolute; top:0; right:0; width:30px; height:30px; font:normal 20px/28px Verdana; text-align:center; color:#b4b4b4}
 .ui-dialog-close:hover{ color:#b4b4b4; text-decoration:none}
 .ui-dialog-titless .ui-dialog-close { right:-16px; top:-16px;}
