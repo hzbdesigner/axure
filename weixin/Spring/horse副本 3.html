@@ -91,22 +91,21 @@ body{
     
     border-radius: 28px;
     -webkit-border-radius: 28;
-    
+    background-image: -webkit-linear-gradient(top, #ffd500, #ff0000);
 
-    -webkit-animation: buttonAnimation 1s linear infinite;
+    -webkit-animation: buttonAnimation 0.5s linear infinite;
 
-    width: 90%;
-    height:130px;
+    width: 180px;
+    height:200px;
     
-    color: #bc0004;
+    color: #fff;
     position: absolute;
     bottom: 10%;
     left: 5%;
     z-index: 1000;
-    font-size: 80px;
+    font-size: 40px;
      text-align: center;
-    line-height: 130px;
-    opacity: 0.8;
+    line-height: 100px;
 }
 .button_stop_bak{
 
@@ -115,12 +114,11 @@ body{
      background:#fff ;
      opacity: 0.5;
      width: 90%;
-     height:130px;
+     height:200px;
      position: absolute;
      bottom: 10%;
      left: 5%;
      z-index: 998;
-     display: none;
 }
 .cloud{
   position: absolute;
@@ -142,11 +140,9 @@ body{
 
 @-webkit-keyframes buttonAnimation /* Safari 和 Chrome */
 {
-  from {-webkit-box-shadow: 0 0 15px #df0004;}
-  25% {-webkit-box-shadow: 0 0 15px #df3400;}
-  50% {-webkit-box-shadow: 0 0 15px #f79700;}
-  75% {-webkit-box-shadow: 0 0 15px #f9d300;}
-  to {-webkit-box-shadow: 0 0 15px #fe6c01;}
+  from {width:1%;background:#6cd100}
+  50% {width:90%;background:#ffd500}
+  to {width:1%;background:#6cd100}
 }
 
 </style>
@@ -155,8 +151,8 @@ body{
 $(function(){
 
 
-  $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
-  $(".cloud").css({ "-webkit-animation-play-state": "paused"});
+  // $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
+  //$(".cloud").css({ "-webkit-animation-play-state": "paused"});
   //设置高度
   var wheight=$(window).height();
   var wwidth=$(window).width();
@@ -187,19 +183,12 @@ $(function(){
 
  },100);
        
-function getRandom(n){
-        return Math.floor(Math.random()*n+1)
-        }
+
 
 
   $(".button_stop,.button_stop_bak").bind("click",function(){
-      $(".button_stop,.button_stop_bak").hide();
-      //$(".button_stop").css({ "-webkit-animation-play-state": "running"});
-
-      $(".wlby_sprite").css({ "-webkit-animation-play-state": "running"});
-      $(".cloud").css({ "-webkit-animation-play-state": "running"});
-
-      var timeVar=Math.round(getRandom(100)*200);
+      $(".button_stop").css({ "-webkit-animation-play-state": "paused"});
+      var timeVar=Math.round(($(".button_stop").width()/$(".button_stop_bak").width())*30000);
     timer = setTimeout(function(){
         //做你想做的事
          $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
@@ -226,7 +215,7 @@ function getRandom(n){
     <div class="banger2"><img src="images/banger.png"></div>
     <div class="title"><img src="images/wordbak.png"><img class="word" src="images/word.png"></div>
   
-    <div class="button_stop">点击试试你的马力</div>
+    <div class="button_stop"> </div>
   <div class="button_stop_bak"></div>
       <!--horse start-->
   <div class="wlby_movie">
