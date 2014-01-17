@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测测你的机子</title>
+ <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+<link rel="stylesheet" type="text/css" href="assets/dialog/main.css">
+<link rel="stylesheet" type="text/css" href="assets/dialog/dialog.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<style>
+body{ background: #000;}
+</style>
+<script type="text/javascript">  
+$(function(){
+var bForcepc = fGetQuery("dv") == "pc";  
+function fBrowserRedirect(){  
+    var sUserAgent = navigator.userAgent.toLowerCase();  
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";    
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";  
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";  
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";  
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";  
+    var bIsAndroid = sUserAgent.match(/ android /i) == "android";  
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";  
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";  
+    if(bIsIpad){  
+          
+        if(!bForcepc){  
+          
+            new Dialog("我是IPAD");
+        }  
+    }  
+    if(bIsIphoneOs){  
+            
+        if(!bForcepc){  
+             new Dialog("我是IPHONE"); 
+        }  
+    }  
+    if(bIsAndroid){  
+            
+        if(!bForcepc){  
+            new Dialog("我是ANDROID"); 
+        }  
+    } 
+    if(bIsMidp||bIsUc7||bIsUc||bIsCE||bIsWM){  
+         
+        if(!bForcepc){  
+             new Dialog("我是其他机子"); 
+        }  
+    }  
+}  
+function fGetQuery(name){//获取参数值  
+    var sUrl = window.location.search.substr(1);  
+    var r = sUrl.match(new RegExp("(^|&)" + name + "=([^&]*)(&|$)"));  
+    return (r == null ? null : unescape(r[2]));  
+}  
+function fShowVerBlock(){     
+    if(bForcepc){  
+        document.getElementById("dv_block").style.display = "block";  
+    }  
+    else{  
+        document.getElementById("ad_block").style.display = "block";  
+    }  
+}  
+fBrowserRedirect();  
+});
+</script>
+
+</head>
+
+<body >
+ 
+  <script src="assets/dialog/dialog.min.js"></script>
+</body>
+</html>

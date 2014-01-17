@@ -2,9 +2,9 @@ div.wlby_movie
 {
 	overflow: hidden;
 	position: absolute;
-	left: 0;
+	left: 5%;
 	bottom: 10%;
-	width: 100%;
+	width: 90%;
 	height: 40%;
 	z-index: 999;
 }
