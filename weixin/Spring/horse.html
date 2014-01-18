@@ -163,12 +163,51 @@ body{
   75% {-webkit-box-shadow: 0 0 15px #feb900;}
   to {-webkit-box-shadow: 0 0 15px #fead00;}
 }
+#loading{
 
+  position: absolute;
+  left:40%;
+  top:300px;
+}
+@-webkit-keyframes blockerAnimation /* Safari 和 Chrome */
+{
+  from {background: #856000}
+  25% {background: #BD8A05}
+  50% {background: #9C7409}
+  75% {background: #C4AD06}
+  to {background: #BD8A05}
+}
+.ui-blocker{
+  -webkit-animation: blockerAnimation 3s linear infinite;
+
+}
+.getbutton{
+  vertical-align: top;
+  border-radius: 4px;
+  border: none;
+  padding: 0.9em 0;
+  box-shadow: #c46d00 0 6px 0px, rgba(0, 0, 0, 0.3) 0 10px 3px;
+  background: linear-gradient(to bottom, rgba(255,183,0,1) 0%,rgba(255,140,0,1) 100%);
+
+  font-size: 34px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+   width: 100%;
+
+  
+  text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  margin: 0.5em 0;
+}
 </style>
 
 <script>
 $(function(){
 
+  $("#loading").hide();
 
   $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
   $(".cloud").css({ "-webkit-animation-play-state": "paused"});
@@ -219,7 +258,7 @@ function getRandom(n){
         //做你想做的事
          $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
          $(".cloud").css({ "-webkit-animation-play-state": "paused"});
-        new Dialog({id: "sendDiv",content: "<p>马蹄声声震乾坤，不觉已经入新春。瑞雪飘扬禾苗旺，梅花吐蕊绽芳香。温暖祝福送君旁，工资翻番不断涨。事业腾飞放光芒，爱情甘甜心芬芳。马年快乐！<br/><img src='images/red.png' width='60%' style='margin-top:10px'><br/><a href='' style='width:80%;height:1em;background:#ffff69;color:#f6d57b;font-size:2.5em;'>点击领取</a></p>",
+        new Dialog({id: "sendDiv",content: "<p>马蹄声声震乾坤，不觉已经入新春。瑞雪飘扬禾苗旺，梅花吐蕊绽芳香。温暖祝福送君旁，工资翻番不断涨。事业腾飞放光芒，爱情甘甜心芬芳。马年快乐！<br/><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div><br/><a class='getbutton' href=''>点击领取</a></p>",
     blocker: true,lockLocation: true,title:'砺行突破，马到成功！'
     });
           clearTimeout(timer);
@@ -238,7 +277,9 @@ function getRandom(n){
 </head>
 
 <body >
+  <div id="loading"><img src="images/loading.gif" ></div>
   <div class="content" >
+    <canvas id="canvas" style="width:100%;height:100%; z-index:888" ></canvas>
     <div class="banger1"><img src="images/banger.png"></div>
     <div class="banger2"><img src="images/banger.png"></div>
     <div class="title"><img src="images/wordbak.png"><img class="word" src="images/word.png"></div>
@@ -393,6 +434,95 @@ function getRandom(n){
     <!--end horse-->
   <div class="cloud"></div>
   </div>
+
+
+<script type="text/javascript">
+    var c = document.getElementById('canvas');
+    if (!c.getContext) {
+
+    }
+    else (function (c, cvs) {
+        //随着窗口调整画布大小
+        var W, H;
+        var up = 0;
+        (onresize = function() {
+            c.width = W = document.documentElement.clientWidth;
+            c.height = H = document.documentElement.clientHeight;
+          })();
+        //c.width = W = 616;
+        //c.height = H = 400;
+        //生成一个烟花
+        function createPT(x, y, r, g, b) {
+            return {
+                r: r, g: g, b: b,
+                x: x, y: y,
+                //轨迹序列
+                pl: [],
+                dx: rnd(20) - 10,
+                dy: rnd(10) - 7,
+                life: 30 + rnd(30),
+                //移动函数，修改加速度和坐标
+                move: function () {
+                    this.dx *= .98;
+                    this.dy *= .98;
+                    this.dy += .22;
+                    this.x += this.dx;
+                    this.y += this.dy;
+                    this.pl.push([this.x, this.y]);
+                    //保持轨迹长度
+                    if (this.pl.length > 10) this.pl.shift();
+                    this.life--;
+                }
+            };
+        }
+        //总烟火数组
+        var B = [];
+        //在x,y位置创建一个烟火
+        function createBoom(x, y) {
+            var q = [],
+r = rnd(255) | 0,
+g = rnd(255) | 0,
+b = rnd(255) | 0;
+            for (var i = 0; i < rnd(16) + 15; i++) q.push(createPT(x, y, r, g, b));
+            B.push(q);
+        }
+        setInterval(function () {
+            cvs.clearRect(0, 0, W, H);
+            //依次绘制烟火
+            for (var n = 0; n < B.length; n++) {
+                var q = B[n];
+                for (var i = 0; i < q.length; i++) {
+                    var pt = q[i];
+                    pt.move();
+                    dq(pt.pl, pt.life / 30, pt.r, pt.g, pt.b);
+                    //超过生存周期就消失  
+                    if (pt.life <= 0) q.splice(i, 1);
+                }
+                //当一个烟火包含的烟花个数为零，则消灭这个烟火
+                if (!B[n].length) B.splice(n, 1);
+            }
+            //每隔一段时间添加一个新烟火
+            if (new Date - up < 2000 + rnd(2000)) return;
+            up = new Date;
+            createBoom(rnd(W / 2) + W / 4, rnd(50) + 50);
+        }, 20);
+        function rnd(n) {
+            return (n || 1) * Math.random();
+        }
+        function dq(ar, z, r, g, b) {
+            cvs.save();
+            //绘制轨迹。思路是每次都绘制一条透明的轨迹，叠加起来形成一条渐变的样子
+            for (var i = 0; i < ar.length; i++) {
+                cvs.strokeStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + Math.abs(.2 * z) + ')';
+                cvs.lineWidth = Math.min(i + 1, 4) * 2;
+                cvs.beginPath();
+                cvs.moveTo(ar[i][0], ar[i][1]);
+                for (var j = i + 1; j < ar.length; j++) cvs.lineTo(ar[j][0], ar[j][1]);
+                cvs.stroke();
+            }
+            cvs.restore();
+        }
+    })(c, c.getContext('2d'));</script>
   <script src="assets/dialog/dialog.min.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 /* dialog */
-.ui-dialog{ display:none; position:fixed; _position:absolute;top:50%; left:50%; z-index:1000; width:82%; margin:-250px 0 0 -180px; padding:4px; border-radius:32px; background:#610105; -webkit-box-shadow: 10px 10px 0px #4b0002;}
+.ui-dialog{ display:none; position:fixed; _position:absolute;top:50%; left:50%; z-index:1000; width:80%; margin:-250px 0 0 -180px; padding:4px; border-radius:32px; background:#610105; -webkit-box-shadow: 10px 10px 0px #4b0002;}
 .ui-dialog-in{ }
 .ui-dialog-bd{padding:10px; }
 .ui-dialog-hd{ *zoom:1; position:relative; padding-left:14px; }
@@ -11,7 +11,7 @@
 .ui-dialog-titless .ui-dialog-close { right:-16px; top:-16px;}
 .bt-ui-dialog{ display:inline-block; padding:10px; border-radius: 5px; color:#fff; border:1px solid #e1e1e1; background:#ffa800}
 .bt-ui-dialog:hover{ color:#fff; text-decoration:none; border-color:#ff4800; background:#ff4800; cursor:pointer}
-.ui-blocker{ display:none; position:fixed; _position:absolute; top:0; left:0; z-index:999; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50)}
+.ui-blocker{ display:none; position:fixed; _position:absolute; top:0; left:0; z-index:999; width:100%; height:100%; background:#C58E00; opacity:.5; filter:alpha(opacity=50)}
 .input-radio{ box-sizing:border-box; *width:13px; *height:13px; margin:2px 5px 6px 0; vertical-align:middle}
 .bt-ui-dialog-submit,.bt-ui-dialog-cancel{ width:76px; height:30px;margin-top:20px;margin-right:10px;line-height:30px\9; background-position:0 -38px}
 .dialog-note-error{ clear:both; color:#ff4800}
