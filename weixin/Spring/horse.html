@@ -9,6 +9,9 @@
 <link rel="stylesheet" type="text/css" href="assets/dialog/dialog.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/horse.js"></script>
+    <script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js" type="text/ecmascript"></script>
+
+
 
 <style>
 body{ 
@@ -240,11 +243,26 @@ $(function(){
 
 
  },100);
+
+function getIpPlace() {
+  alert(remote_ip_info["city"])
+} 
        
 function getRandom(n){
         return Math.floor(Math.random()*n+1)
         }
+  $(".getbutton").live("click",function(){
 
+
+        if(remote_ip_info["city"]=="福州"){
+          
+          window.location.href="fuzhou.html";
+        }else{
+
+          alert(remote_ip_info["city"]);
+        }
+
+  })
 
   $(".button_stop,.button_stop_bak").bind("click",function(){
       $(".button_stop,.button_stop_bak").hide();
@@ -258,7 +276,7 @@ function getRandom(n){
         //做你想做的事
          $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
          $(".cloud").css({ "-webkit-animation-play-state": "paused"});
-        new Dialog({id: "sendDiv",content: "<p>马蹄声声震乾坤，不觉已经入新春。瑞雪飘扬禾苗旺，梅花吐蕊绽芳香。温暖祝福送君旁，工资翻番不断涨。事业腾飞放光芒，爱情甘甜心芬芳。马年快乐！<br/><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div><br/><a class='getbutton' href=''>点击领取</a></p>",
+        new Dialog({id: "sendDiv",content: "<p>马蹄声声震乾坤，不觉已经入新春。瑞雪飘扬禾苗旺，梅花吐蕊绽芳香。温暖祝福送君旁，工资翻番不断涨。事业腾飞放光芒，爱情甘甜心芬芳。马年快乐！<br/><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",
     blocker: true,lockLocation: true,title:'砺行突破，马到成功！'
     });
           clearTimeout(timer);
