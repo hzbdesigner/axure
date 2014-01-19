@@ -1,5 +1,5 @@
 body,article,section,h1,h2,hgroup,p,a,ul,ol,li,em,div,small,span,footer,canvas,figure,figcaption,input,dl,dd,dt{margin:0;padding:0;}
-body{background-color:#f3f5f6;-webkit-user-select:none;font-family:"microsoft yahei";color:#525863;}
+body{background-color:#dd1216;-webkit-user-select:none;font-family:"microsoft yahei";color:#525863;}
 img{border:none;}
 *[hidden]{display:none!important;}
 a{color:#555;text-decoration:none;cursor:pointer;}
@@ -15,7 +15,7 @@ section.coupouWp img{width:270px;}
 .coupouDl dd{font-size:11px;line-height:18px;color:#7d7f8a;}
 .coupouDl dd i{font-size:13px;color:#666;font-style:normal;}
 .red{color:red;}
-body#GiftsBuy{background:#ffecd0 url("images/listbak2.jpg");text-align:center;}
+body#GiftsBuy{background:#990003;text-align:center;}
 #GiftsBuy .takeit{position:relative;height:50px;padding:20px 12px 0 12px;text-align:left;}
 #GiftsBuy .takeit p{float:left;width:126px;height:92px;font-size:12px;text-align:center;}
 #GiftsBuy .takeit p img{width:90px;height:90px;margin-top: -10px;margin-left: -30px;}

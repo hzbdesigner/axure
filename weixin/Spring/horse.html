@@ -177,8 +177,8 @@ body{
   from {background: #856000}
   25% {background: #BD8A05}
   50% {background: #9C7409}
-  75% {background: #C4AD06}
-  to {background: #BD8A05}
+  75% {background: #856000}
+  to {background: #856000}
 }
 .ui-blocker{
   -webkit-animation: blockerAnimation 3s linear infinite;
@@ -188,11 +188,11 @@ body{
   vertical-align: top;
   border-radius: 4px;
   border: none;
-  padding: 0.9em 0;
+  padding: 0.4em 0;
   box-shadow: #c46d00 0 6px 0px, rgba(0, 0, 0, 0.3) 0 10px 3px;
   background: linear-gradient(to bottom, rgba(255,183,0,1) 0%,rgba(255,140,0,1) 100%);
 
-  font-size: 34px;
+  font-size: 4em;
   color: #fff;
   text-decoration: none;
   display: inline-block;
@@ -204,7 +204,24 @@ body{
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
   margin: 0.5em 0;
+  border-radius: 20px
 }
+#award{
+  font-size: 3em;
+  color: #F5F5B5;
+  margin: 1em 0 0 0;
+
+}
+#award h3{
+  font-size: 1.3em;
+  color: #F5F5B5;
+  margin: 0;
+
+}
+#award span{
+  font-size: 0.9em;
+  color: #FF0000;
+ }
 </style>
 
 <script>
@@ -270,15 +287,54 @@ function getRandom(n){
 
       $(".wlby_sprite").css({ "-webkit-animation-play-state": "running"});
       $(".cloud").css({ "-webkit-animation-play-state": "running"});
-
-      var timeVar=Math.round(getRandom(100)*200);
-    timer = setTimeout(function(){
+      var ranVar=getRandom(9);
+      var timeVar=Math.round(ranVar*2000);
+          timer = setTimeout(function(){
         //做你想做的事
          $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
          $(".cloud").css({ "-webkit-animation-play-state": "paused"});
-        new Dialog({id: "sendDiv",content: "<p>马蹄声声震乾坤，不觉已经入新春。瑞雪飘扬禾苗旺，梅花吐蕊绽芳香。温暖祝福送君旁，工资翻番不断涨。事业腾飞放光芒，爱情甘甜心芬芳。马年快乐！<br/><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",
-    blocker: true,lockLocation: true,title:'砺行突破，马到成功！'
-    });
+         
+       alert(ranVar);
+
+          if(ranVar==0){
+
+             new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪情振笔歌新岁,骏马加鞭奔坦途。\"</h3><br/><span>噢噢!你的⻢马⼉儿没吃早餐吗?快给它喂点好料吧!</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'跑了1里，-_-！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              
+          }
+          else if(ranVar==1){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"爆⽵千家俱欢颜,骏⻢奔腾天地间。梅花吐蕊春意浓,⼀片祝福在心中。\"</h3><br/><span>⼀里⼆里三四里,再来⼀次奔千里!给你的宝⻢洗澡吧</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'不错，跑了10里！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else if(ranVar==2){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"吉祥如意伴⾝身旁,⻢马年顺利⼼心⻜飞扬。\"</h3><br/><span>不积跬步无以至千里,开房休息⽚刻！</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'跑了1里，-_-！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else if(ranVar==3){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"策⻢马扬鞭奔前程,爱情甜蜜沐春⻛风。\"</h3><br/><span>千里之行以过百,是否油量不足⾏?客官,加油吧！</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'Cool,跑了100里',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else if(ranVar==4){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"春风初度马蹄扬,⼤地神州皆欢畅。我有祝福心中藏,欢欢喜喜送君旁。\"</h3><br/><span>四爷,离您的成功⼤业只差⼀个会泡茶的⻢尔泰若曦了。来⼀个吧</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'赞！跑了200里',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else if(ranVar==5){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"一缕梅⾹绕⻢蹄,万家欢畅皆喜⽓气。春光⽆无限天地间,金⻩⼤道添平安。\"</h3><br/><span>您跑的这样好,您的家人知道吗?快充点话费加点油,欢快地跑起来吧!</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'Wow！跑了300里',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else if(ranVar==6){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"骏马奔驰任我行,张灯结彩好⻛风景。锣⿎声传心地,化作祝福伴随你!\"</h3><br/><span>不要问我嫌你有多深,看你肥肉有⼏层。过年过节注意运动健⾝哦亲!</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'yahoo,500里了',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else if(ranVar==7){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"骏马腾⻜春来报,梅花绽放祝福到。\"</h3><br/><span>读书破万卷,下笔如有神。读书千万卷,不如出⻔门⾛走！</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'当-当-当,600里了',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else if(ranVar==8){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪情振笔歌新岁,骏马加鞭奔坦途。\"</h3><br/><span>噢噢!你的⻢马⼉儿没吃早餐吗?快给它喂点好料吧!</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'超赞！700里耶',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else if(ranVar==9){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪情振笔歌新岁,骏马加鞭奔坦途。\"</h3><br/><span>噢噢!你的⻢马⼉儿没吃早餐吗?快给它喂点好料吧!</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'哈哈！800里',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else if(ranVar==10){
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪情振笔歌新岁,骏马加鞭奔坦途。\"</h3><br/><span>噢噢!你的⻢马⼉儿没吃早餐吗?快给它喂点好料吧!</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'1000里！！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+          else{
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪情振笔歌新岁,骏马加鞭奔坦途。\"</h3><br/><span>噢噢!你的⻢马⼉儿没吃早餐吗?快给它喂点好料吧!</span><div style='text-align:center'><img src='images/red.png' width='40%' style='margin-top:10px'></div></div><br/><a class='getbutton' href='javascript:void'>点击领取</a></p>",blocker: true,lockLocation: true,title:'看到这的话你是神人了',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+          }
+
           clearTimeout(timer);
       },timeVar);
    
@@ -302,7 +358,7 @@ function getRandom(n){
     <div class="banger2"><img src="images/banger.png"></div>
     <div class="title"><img src="images/wordbak.png"><img class="word" src="images/word.png"></div>
   
-    <div class="button_stop"><a href="javascript:void(0)">点击试试你的马力</a></div>
+    <div class="button_stop"><a href="javascript:void(0)">点此让您的骏马跑起来</a></div>
   <div class="button_stop_bak"></div>
       <!--horse start-->
   <div class="wlby_movie">
