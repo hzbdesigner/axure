@@ -268,15 +268,51 @@ function getIpPlace() {
 function getRandom(n){
         return Math.floor(Math.random()*n+1)
         }
-  $(".getbutton").live("click",function(){
+
+//根据地域IP领优惠券；
+$(".getbutton").live("click",function(){
 
 
         if(remote_ip_info["city"]=="福州"){
           
-          window.location.href="fuzhou.html";
+          window.location.href="city/fuzhou.html";
+
+        }else if(remote_ip_info["city"]=="厦门"){
+
+          window.location.href="city/fuzhou.html";
+
+
+        }else if(remote_ip_info["city"]=="漳州"){
+
+          window.location.href="city/fuzhou.html";
+
+        }else if(remote_ip_info["city"]=="龙岩"){
+
+          window.location.href="city/fuzhou.html";
+
+        }else if(remote_ip_info["city"]=="三明"){
+
+          window.location.href="city/fuzhou.html";
+
+        }else if(remote_ip_info["city"]=="泉州"){
+
+          window.location.href="city/fuzhou.html";
+
+        }else if(remote_ip_info["city"]=="宁德"){
+
+          window.location.href="city/fuzhou.html";
+
+        }else if(remote_ip_info["city"]=="莆田"){
+
+          window.location.href="city/fuzhou.html";
+
+        }else if(remote_ip_info["city"]=="南平"){
+
+          window.location.href="city/fuzhou.html";
+
         }else{
 
-          alert(remote_ip_info["city"]);
+          alert("仅限福建地域内访问，"+remote_ip_info["city"]+"暂不支持");
         }
 
   })
