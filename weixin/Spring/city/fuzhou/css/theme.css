@@ -20,7 +20,9 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 	-webkit-box-shadow: 1px 1px 10px #620518
 }
 .goodsPic h3{margin:0px; bottom:0px; left:0px; height:auto; background:#a71500;opacity: 0.8; color:#fff; line-height:28px; font-size:14px; padding:5px;}
-
+.mobileNumTitle{
+	font-size: 1em;
+}
 .downloadButton {
 		float:right;
 		display:inline-block;
