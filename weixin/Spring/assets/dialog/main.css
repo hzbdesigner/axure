@@ -17,7 +17,7 @@ li a{font-size:16px;}
 dl{margin:0;padding:0;}
 dt{padding:16px 16px 0;font-weight:bold;}
 dd{margin:0;padding:0 16px 16px;}
-p{font-size: 2.5em;line-height: 1.2em;}
+p{font-size: 1em;line-height: 1.2em;}
 pre{display:block;margin:16px 0 0;padding:8px;width:600px;border:1px solid #999;background:#fff;color:#666;font-family:Courier New, monospace;font-size:14px;font-weight:normal;resize:none;}
 textarea{display:block;margin:16px 0 0;padding:8px;width:600px;border:1px solid #999;background:#fff;font-family:Courier New, monospace;font-size:14px;font-weight:normal;resize:none;overflow:hidden;}
 
