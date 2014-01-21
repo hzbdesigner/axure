@@ -1,0 +1,163 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	background: #AD1735 url('bak.png');
+	margin:0px;
+	padding:0px;
+	}
+
+h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
+.goodsPic{ 
+	position:relative;
+	
+	margin:10px;
+	padding: 8px 10px 8px 10px;
+	
+	border-left: 2px #AD1735 dotted;
+	border-right: 2px #AD1735 dotted;
+	background: #fffcf7;
+	box-shadow: 1px 1px 10px #620518;
+	-webkit-box-shadow: 1px 1px 10px #620518
+}
+.goodsPic h3{margin:0px; bottom:0px; left:0px; height:auto; background:#a71500;opacity: 0.8; color:#fff; line-height:28px; font-size:14px; padding:5px;}
+.mobileNumTitle{
+	font-size: 1em;
+}
+.downloadButton {
+		float:right;
+		display:inline-block;
+        color:#ffffff;
+        font-family:Trebuchet MS;
+        font-size:14px;
+        
+        padding:8px 30px;
+        text-decoration:none;
+        background-color:#ffa800;
+        border:none;border-radius:2em;
+        /*
+      
+		border-top:1px solid #ffcd47;
+		
+		-webkit-box-shadow: 0px 1px 2px #666666;
+        
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fbb450), color-stop(1, #ff6d04));
+        background:-moz-linear-gradient(top, #fbb450 5%, #ff6d04 100%);
+        background:-webkit-linear-gradient(top, #fbb450 5%, #ff6d04 100%);
+        background:-o-linear-gradient(top, #fbb450 5%, #ff6d04 100%);
+        background:-ms-linear-gradient(top, #fbb450 5%, #ff6d04 100%);
+        background:linear-gradient(to bottom, #fbb450 5%, #ff6d04 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#ff6d04',GradientType=0);
+        
+        
+        
+        -moz-border-radius:10px;
+        -webkit-border-radius:10px;
+        border-radius:10px;
+        
+        
+        
+      
+        
+        text-shadow:0px -1px 0px #d17d08;
+        */
+		
+		margin:10px 0 0 0;
+
+        
+    }
+.downloadButton:hover {
+       
+        background:#e42c00;
+    }
+.downloadButton:active {
+		
+        position:relative;
+        top:1px;
+    }
+.toBuy{background:#fffcf7;  height:46px;}
+.toBuy span{ font-size:22px; color:#ff8a1b; line-height:56px; padding-left:0px;}
+.toBuy span em{font-size:16px; color:#c3c3c3; text-decoration:line-through;}
+.wrapBox{
+	/*-webkit-box-shadow: 0px 1px 2px #666666;*/
+	
+	
+	margin:10px;
+	
+	
+	padding: 8px 10px 8px 10px;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 0px;
+	background: #fffcf7;
+	position:relative;
+	box-shadow: 1px 1px 10px #620518;
+	-webkit-box-shadow: 1px 1px 10px #620518;
+	}
+.callHeight{ height:33px;}
+.callIco{
+	/*border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;*/
+	background:#ffa800;
+	position:absolute;
+	right:0px;
+	top:0px;
+	padding:0px 15px;
+	height:49px;
+	}
+.callIco:hover{
+	background:#e69a05;
+	}
+.callIco img{ margin-top:12px;}
+.numTitle{
+	font-size:18px;
+	color:##525863;
+	line-height:33px;
+	}
+.num{
+
+	color:##525863;
+	
+	
+	}
+.wrapBox h3{ font-size:16px; border-bottom:dotted 2px #dadada; padding-bottom:10px; padding-left:0px; position:relative; color:#36210f;}
+.wrapBox h3 img{ position:absolute; left:0px; top:-2px}
+.wrapBox p{ font-size:14px; color:#666; line-height:16px;}
+
+.notice_wrap{ border-radius:10px; margin:100px auto; width:90%; background:#FFF; text-align:center;-webkit-box-shadow: 0px 2px 5px #666666; }
+.notice_wrap h3{ padding:10px; line-height:22px; word-break:break-all;}
+.wei_copy{position:relative;width:100%;height:30px;line-height:30px;text-align:center;color:#fff;font-size:12px;}
+.wei_copy .huiCopy{display:inline-block;position:absolute;right:12px;top:0;color:#FFBA90;}
+.wei_copy i{display:inline-block;width:100px;height:14px;float:left; color:#FFBA90;}
+#mobile_box{ padding: 10px;}
+#mobile_box h3{color:#525863; font-size: 18px;}
+fieldset{ border: none;}
+
+.sendButton{
+		
+		display:inline-block;
+        color:#fff;
+        font-family:Trebuchet MS;
+        font-size:14px;
+        
+        padding:18px 12px;
+        text-decoration:none;
+        background-color:#ffa800;
+        border:none;border-radius:1em;
+       
+		
+		margin:14px 0 0 10px;
+
+        
+    }
+    .mobileNum{
+   		border: 1px #FF9900 solid;
+		height: 40px;
+		font-size: 14px;
+		font-weight:bold;
+		border-radius: 10px;
+		margin: 10px 0px 0 15px;
+		box-shadow: 0px 0px 3px rgba(0,0,0,0.8) inset;
+		width:135px;
+
+    }
