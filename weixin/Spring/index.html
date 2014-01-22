@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>骏马送祝福</title>
+<title>马上送祝福，和你一起过新年！</title>
  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="css/horse.css" type="text/css" rel="stylesheet"></link>
     <link rel="stylesheet" type="text/css" href="assets/dialog/main.css">
@@ -230,6 +230,19 @@ body{
 <script>
 $(function(){
 
+  function is_weixn(){
+    var ua = navigator.userAgent.toLowerCase();
+    alert(ua);
+     if(ua.match(/micromessenger/i)=="micromessenger") {
+        return true;
+
+    } else {
+        window.location.replace("error.html");
+         return false;
+    }
+  }
+  is_weixn();
+
   $("#loading").hide();
 
   $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
@@ -453,7 +466,7 @@ $(".getbutton").live("click",function(){
     <div class="banger2"><img src="images/banger.png"></div>
     <div class="title"><img src="images/wordbak.png"><img class="word" src="images/word.png"></div>
   
-    <div class="button_stop"><a href="javascript:void(0)">点此让您的骏马跑起来</a></div>
+    <div class="button_stop"><a href="javascript:void(0)">点此让马跑起来</a></div>
   <div class="button_stop_bak"></div>
       <!--horse start-->
   <div class="wlby_movie">
@@ -603,7 +616,70 @@ $(".getbutton").live("click",function(){
     <!--end horse-->
   <div class="cloud"></div>
   </div>
+ <script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        window.shareData = {  
+      //分享图片http://218.207.182.80:8091/12580/more/shopNe
+            "imgUrl": "http://218.207.182.80:8091/12580/youhui_res/bag2.png", 
+      //朋友圈访问地址
+            "timeLineLink": "http://218.207.182.80:8091/12580/index.html",
+      //发送给好友访问地址
+            "sendFriendLink": "http://218.207.182.80:8091/12580/index.html",
+      //微博分享地址
+            "weiboLink": "http://218.207.182.80:8091/12580/index.html",
+      //朋友圈标题
+            "tTitle": "2014骏马奔腾！跑马送祝福咯！",
+ 
+ 
+      //朋友圈内容--貌似没用
+            "tContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停啦！",
+      //发送给朋友标题
+            "fTitle": "2014骏马奔腾！跑马送祝福咯！",
+      //发送给朋友内容
+            "fContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停啦！",
+      //微博内容
+            "wContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停啦！" 
+      
+        };
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', { 
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.fContent,
+                "title": window.shareData.fTitle
+            }, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
 
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                _report('timeline', res.err_msg);
+            });
+        });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.wContent,
+                "url": window.shareData.weiboLink,
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+        }, false)
+</script>
 <!--
 <script type="text/javascript">
     var c = document.getElementById('canvas');

@@ -39,7 +39,7 @@ return rtrim(ltrim(s));
 
 
 $(".sendButton").live("click",function(){
-
+        
 
         var tel= $("#recvNbr").val();
         
@@ -61,6 +61,7 @@ $(".sendButton").live("click",function(){
                 success: function(json)
                 {
                     alert("----"+data);
+
                     /*
                     var obj = $.parseJSON(json);  //使用这个方法解析json
                     if(obj.type == "send")
@@ -82,7 +83,7 @@ $(".sendButton").live("click",function(){
                                             确定: function () {
                                                 //console.log('确定');
                                                 this.close();
-                                                window.location.reload();
+                                                window.location.replace("../../index.html")
                                                 }
                                         }
                                     
@@ -98,7 +99,7 @@ content: result.respDesc,
                                             确定: function () {
                                                 //console.log('确定');
                                                 this.close();
-                                                window.location.reload();
+                                                window.location.replace("../../index.html")
                                                 }
                                         }
                                 })
@@ -157,15 +158,10 @@ content: result.respDesc,
       <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
   -->
 
-      <div class="wrapBox"><h3>产品介绍</h3><p>
+      <div class="wrapBox"><h3>流量包介绍</h3><p>
 
-1、60元半年流量套餐仅限10元以下流量套餐客户参与，120元半年流量套餐仅限10元及以下流量套餐的客户参与，套餐办理后次月生效，所需费用将同步扣除，若客户近3个月来曾使用过或已订购过同项业务的包月套餐则无法参与本活动。<br><br>
-2、半年流量套餐或流量升级活动优惠到期后，自动转为同档次的包月套餐，不再另行提醒。<br><br>
-
-3、“免费领取450M流量礼包”、“套餐升级就送450M流量”、“办理半年流量套餐就送电子券”活动不能同时参与，且每位客户仅限参与一次。<br>
-4、赠送的5元夜间流量套餐内含省内500M（使用时间：凌晨0:00-早上8:00），若客户已开通夜间流量包，则不再赠送5元夜间流量包，夜间流量包到期后将与客户确认订购，客户如若不确认订购则自动失效。<br><br>
-5、手机支付电子券在客户办理成功后即下发至客户参与活动时所登录的手机号码的手机支付帐户上，有效期为90天，且不可转让与赠送。请确保开通手机支付功能，并在有效期内使用，编辑短信“2131”至10086即可查看手机支付电子券使用说明。
-
+1.获赠的免费流量包当月生效（2月1日-15日）、次月生效（1月30、31日两天获得用户）<br/>
+2.同一个号码最多能领取三次免费流量包<br/>
 
       </p></div>
 

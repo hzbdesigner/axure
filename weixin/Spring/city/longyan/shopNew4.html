@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>2014骏⻢奔腾!跑⻢送祝福咯!</title>
+<title>马上送祝福，和你一起过新年！</title>
 <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="format-detection" content="telephone=yes">
 <link type="text/css" href="../city_res/theme.css" rel="stylesheet">
@@ -32,7 +32,7 @@ return rtrim(ltrim(s));
         console.log(this.result);
      };
 
-    new Dialog({id: "sendDiv",content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 0 10px;display:none'></p><p><p class='mobileNumTitle'>请输入手机号</p><input id='recvNbr' name='recvNbr' class='mobileNum' type='number'  /><a href='javascript:void' class='sendButton' >发送</a></p>",
+    new Dialog({id: "sendDiv",content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 0 10px;display:none'></p><p><p class='mobileNumTitle'>请输入要接收的手机号</p><input id='recvNbr' name='recvNbr' class='mobileNum' type='number'  /><a href='javascript:void' class='sendButton' >发送</a></p>",
     blocker: true,lockLocation: true,title:''
     });
 }); 
@@ -147,7 +147,7 @@ $(".sendButton").live("click",function(){
 
 <body>
 
-      <div class="goodsPic"><img src="../city_res/longyan/4.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>仅限龙岩地区</span><a href="javascript:void;" id="click_btn" class="downloadButton" >我要下载</a></div></div>
+      <div class="goodsPic"><img src="../city_res/longyan/4.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>仅限龙岩地区</span><a href="javascript:void;" id="click_btn" class="downloadButton" >点击下载</a></div></div>
 <!--电话信息
       <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
   -->
@@ -168,25 +168,25 @@ $(".sendButton").live("click",function(){
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
         window.shareData = {  
 			//分享图片http://218.207.182.80:8091/12580/more/shopNe
-            "imgUrl": "http://218.207.182.80:8091/12580/youhui_res/bag2.png", 
+            "imgUrl": "http://218.207.182.80:8088/wx12580/images/weixin.png", 
 			//朋友圈访问地址
-            "timeLineLink": "http://218.207.182.80:8091/12580/index.html",
+            "timeLineLink": "http://218.207.182.80:8088/wx12580/index.html",
 			//发送给好友访问地址
-            "sendFriendLink": "http://218.207.182.80:8091/12580/index.html",
+            "sendFriendLink": "http://218.207.182.80:8088/wx12580/index.html",
 			//微博分享地址
-            "weiboLink": "http://218.207.182.80:8091/12580/index.html",
+            "weiboLink": "http://218.207.182.80:8088/wx12580/index.html",
 			//朋友圈标题
-            "tTitle": "新年好运，和你一起过年！",
+            "tTitle": "2014骏马奔腾！跑马送祝福咯！",
  
  
 			//朋友圈内容--貌似没用
-            "tContent": "点击“和”袋，马上选个对象吧～",
+            "tContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停啦！",
 			//发送给朋友标题
-            "fTitle": "新年好运，和你一起过年！",
+            "fTitle": "2014骏马奔腾！跑马送祝福咯！",
 			//发送给朋友内容
-            "fContent": "点击“和”袋，马上选个对象吧～",
+            "fContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停啦！",
 			//微博内容
-            "wContent": "点击“和”袋，马上选个对象吧～" 
+            "wContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停啦！" 
 			
         };
         // 发送给好友
