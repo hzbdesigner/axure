@@ -32,7 +32,7 @@ return rtrim(ltrim(s));
         console.log(this.result);
      };
 
-    new Dialog({id: "sendDiv",content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 0 10px;display:none'></p><p><p class='mobileNumTitle'>请输入接收流量的手机号</p><input id='recvNbr' name='recvNbr' class='mobileNum' type='number'/><a href='javascript:void' class='sendButton' >发送</a></p>",
+    new Dialog({id: "sendDiv",content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 0 10px;display:none'></p><p><p class='mobileNumTitle'>请输入要领取手机号</p><input id='recvNbr' name='recvNbr' class='mobileNum' type='number'/><a href='javascript:void' class='sendButton' >发送</a></p>",
     blocker: true,lockLocation: true,title:''
     });
 }); 
@@ -151,7 +151,7 @@ content: result.respDesc,
 
 <body>
 
-      <div class="goodsPic"><img src="../city_res/liuliang.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="http://www.fj.10086.cn/ljyx/czll/index.jsp" id="click_btn" class="downloadButton" >去看看</a></div></div>
+      <div class="goodsPic"><img src="../city_res/liuliang.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="javascript:void;" id="click_btn" class="downloadButton" >点击领取</a></div></div>
 <!--电话信息
       <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
   -->
