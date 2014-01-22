@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	function ltrim(s){
+	return s.replace( /^s*/, "");
+	}
+	  
+	function rtrim(s){
+	return s.replace( /s*$/, "");
+	}
+	  
+	function trim(s){
+	return rtrim(ltrim(s));
+	}
+	
+	$("#lqBtn").click(function(){
+		var tel = $("#mobile").val();
+		if($.trim(tel)== "" || $.trim(tel) == null )
+		{
+			alert("请输入手机号码!");
+			return;
+		}
+		if(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/.test(tel))
+		{
+			//jsondata = 	'{"mobile":"'+tel+'","value":"' + this.value + '"}';
+			jsondata = 	'{"act":27,"prmIn":{"object_info":{"home_city":591,"obj_id":"+'tel'+","obj_type":0},"send_sms":1,"user_product_list":{"user_product":{"inure_type":1,"opr_code":1,"product_id":1000210041}}},"version":1}';
+			$.ajax({
+				url:"http://218.207.217.37/IVBSYS/spring/ivb",
+				type: "POST",
+				dataType: "json",
+				contentType: "application/json",
+				data: jsondata,
+				cache: false,
+				error: function (jqXHR) {
+					 alert(" ---error" +jqXHR.statusText);
+				},
+				 success: function (data) {
+					 alert("----"+data);
+				 }
+			});	
+		}
+		else
+		{
+			alert(tel+"手机号错误或非移动号");
+		}
+		
+	});
+});
+</script>
+</head>
+<body>
+	<form id="form" action="" method="post">
+		<input id="mobile" name="mobile" width="30px"/><br/>
+		<input id="lqBtn" type="button" value="领取"/>
+	</form>
+</body>
+</html>
