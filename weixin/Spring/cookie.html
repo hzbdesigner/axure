@@ -53,12 +53,19 @@ else
         visits = parseInt(visits) + 1
 setCookie("counter", visits, now)
 document.write("欢迎您的第" + visits + "次光临！")
+
+
 // -->
+
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+WeixinJSBridge.call('hideToolbar');
+});
 </script>
 
 </head>
 
 <body >
   
+
 </body>
 </html>
