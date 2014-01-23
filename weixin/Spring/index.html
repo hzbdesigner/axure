@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>马上送祝福，和你一起过新年！</title>
+<title>马上送祝福</title>
  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="css/horse.css" type="text/css" rel="stylesheet"></link>
     <link rel="stylesheet" type="text/css" href="assets/dialog/main.css">
@@ -241,7 +241,8 @@ $(function(){
          return false;
     }
   }
-  is_weixn();
+  //是否微信内置浏览器
+  //is_weixn();
 
   $("#loading").hide();
 
@@ -616,160 +617,8 @@ $(".getbutton").live("click",function(){
     <!--end horse-->
   <div class="cloud"></div>
   </div>
- <script>
-    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-        window.shareData = {  
-      //分享图片http://218.207.182.80:8091/12580/more/shopNe
-            "imgUrl": "http://218.207.182.80:8091/12580/youhui_res/bag2.png", 
-      //朋友圈访问地址
-            "timeLineLink": "http://218.207.182.80:8091/12580/index.html",
-      //发送给好友访问地址
-            "sendFriendLink": "http://218.207.182.80:8091/12580/index.html",
-      //微博分享地址
-            "weiboLink": "http://218.207.182.80:8091/12580/index.html",
-      //朋友圈标题
-            "tTitle": "2014骏马奔腾！跑马送祝福咯！",
- 
- 
-      //朋友圈内容--貌似没用
-            "tContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停啦！",
-      //发送给朋友标题
-            "fTitle": "2014骏马奔腾！跑马送祝福咯！",
-      //发送给朋友内容
-            "fContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停啦！",
-      //微博内容
-            "wContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停啦！" 
-      
-        };
-        // 发送给好友
-        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
-            WeixinJSBridge.invoke('sendAppMessage', { 
-                "img_url": window.shareData.imgUrl,
-                "img_width": "640",
-                "img_height": "640",
-                "link": window.shareData.sendFriendLink,
-                "desc": window.shareData.fContent,
-                "title": window.shareData.fTitle
-            }, function (res) {
-                _report('send_msg', res.err_msg);
-            })
-        });
-
-        // 分享到朋友圈
-        WeixinJSBridge.on('menu:share:timeline', function (argv) {
-            WeixinJSBridge.invoke('shareTimeline', {
-                "img_url": window.shareData.imgUrl,
-                "img_width": "640",
-                "img_height": "640",
-                "link": window.shareData.timeLineLink,
-                "desc": window.shareData.tContent,
-                "title": window.shareData.tTitle
-            }, function (res) {
-                _report('timeline', res.err_msg);
-            });
-        });
-
-        // 分享到微博
-        WeixinJSBridge.on('menu:share:weibo', function (argv) {
-            WeixinJSBridge.invoke('shareWeibo', {
-                "content": window.shareData.wContent,
-                "url": window.shareData.weiboLink,
-            }, function (res) {
-                _report('weibo', res.err_msg);
-            });
-        });
-        }, false)
-</script>
-<!--
-<script type="text/javascript">
-    var c = document.getElementById('canvas');
-    if (!c.getContext) {
-
-    }
-    else (function (c, cvs) {
-        //随着窗口调整画布大小
-        var W, H;
-        var up = 0;
-        (onresize = function() {
-            c.width = W = document.documentElement.clientWidth;
-            c.height = H = document.documentElement.clientHeight;
-          })();
-        //c.width = W = 616;
-        //c.height = H = 400;
-        //生成一个烟花
-        function createPT(x, y, r, g, b) {
-            return {
-                r: r, g: g, b: b,
-                x: x, y: y,
-                //轨迹序列
-                pl: [],
-                dx: rnd(20) - 10,
-                dy: rnd(10) - 7,
-                life: 30 + rnd(30),
-                //移动函数，修改加速度和坐标
-                move: function () {
-                    this.dx *= .98;
-                    this.dy *= .98;
-                    this.dy += .22;
-                    this.x += this.dx;
-                    this.y += this.dy;
-                    this.pl.push([this.x, this.y]);
-                    //保持轨迹长度
-                    if (this.pl.length > 10) this.pl.shift();
-                    this.life--;
-                }
-            };
-        }
-        //总烟火数组
-        var B = [];
-        //在x,y位置创建一个烟火
-        function createBoom(x, y) {
-            var q = [],
-r = rnd(255) | 0,
-g = rnd(255) | 0,
-b = rnd(255) | 0;
-            for (var i = 0; i < rnd(16) + 15; i++) q.push(createPT(x, y, r, g, b));
-            B.push(q);
-        }
-        setInterval(function () {
-            cvs.clearRect(0, 0, W, H);
-            //依次绘制烟火
-            for (var n = 0; n < B.length; n++) {
-                var q = B[n];
-                for (var i = 0; i < q.length; i++) {
-                    var pt = q[i];
-                    pt.move();
-                    dq(pt.pl, pt.life / 30, pt.r, pt.g, pt.b);
-                    //超过生存周期就消失  
-                    if (pt.life <= 0) q.splice(i, 1);
-                }
-                //当一个烟火包含的烟花个数为零，则消灭这个烟火
-                if (!B[n].length) B.splice(n, 1);
-            }
-            //每隔一段时间添加一个新烟火
-            if (new Date - up < 2000 + rnd(2000)) return;
-            up = new Date;
-            createBoom(rnd(W / 2) + W / 4, rnd(50) + 50);
-        }, 20);
-        function rnd(n) {
-            return (n || 1) * Math.random();
-        }
-        function dq(ar, z, r, g, b) {
-            cvs.save();
-            //绘制轨迹。思路是每次都绘制一条透明的轨迹，叠加起来形成一条渐变的样子
-            for (var i = 0; i < ar.length; i++) {
-                cvs.strokeStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + Math.abs(.2 * z) + ')';
-                cvs.lineWidth = Math.min(i + 1, 4) * 2;
-                cvs.beginPath();
-                cvs.moveTo(ar[i][0], ar[i][1]);
-                for (var j = i + 1; j < ar.length; j++) cvs.lineTo(ar[j][0], ar[j][1]);
-                cvs.stroke();
-            }
-            cvs.restore();
-        }
-    })(c, c.getContext('2d'));</script>
--->
-
+<script type="text/javascript" src="city/city_res/fenxiang.js"></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000225892'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000225892' type='text/javascript'%3E%3C/script%3E"));</script>
   <script src="assets/dialog/dialog.min.js"></script>
 </body>
 </html>
