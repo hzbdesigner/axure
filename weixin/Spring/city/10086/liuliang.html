@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>2014骏⻢奔腾!跑⻢送祝福咯!</title>
+<title>马上送祝福</title>
 <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="format-detection" content="telephone=yes">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
 <link type="text/css" href="../city_res/theme.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../../assets/dialog/main.css">
 <link rel="stylesheet" type="text/css" href="../../assets/dialog/dialog.css">
@@ -41,99 +42,84 @@ return rtrim(ltrim(s));
 $(".sendButton").live("click",function(){
         
 
-        var tel= $("#recvNbr").val();
-        
-        
-        if(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/.test(tel))
-        {
-                //手机号码；
-                //jsondata ='{"act":27,"prmIn":{"object_info":{"home_city":591,"obj_id":"'+tel+'","obj_type":0},"send_sms":1,"user_product_list":{"user_product":{"inure_type":1,"opr_code":1,"product_id":1000210041}}},"version":1}';
-                jsondata ='{"act":27,"prmIn":{"object_info":{"home_city":590,"obj_id":"'+tel+'","obj_type":0},"send_sms":1,"user_product_list":{"user_product":{"inure_type":1,"opr_code":1,"product_id":6003}}},"version":1}';
+            var tel= $("#recvNbr").val();
+            
+            
+            if(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/.test(tel))
+            {
+                    
+                var params = {
+                    mobile : tel,
+                };
 
               $("#loadingimg").show();
             
               $.ajax({
-                url:"http://218.207.217.37/IVBSYS/spring/ivb",
                 type: "POST",
-                dataType: "text",
-                //contentType: "application/json",
-                data: jsondata,
-                cache: false,
+                url:"http://218.207.182.80:8088/bsc12580/webcoupon/queryAreaCode.action",
+                data: params,
+                dataType:"text", 
                 success: function(json)
                 {
-                    alert("----"+data);
+                        var result = $.parseJSON(json);
+                        if(result.success == true)
+                        {
+                            
 
-                    /*
-                    var obj = $.parseJSON(json);  //使用这个方法解析json
-                    if(obj.type == "send")
-                    {
-                        var result = $.parseJSON(obj.result);
-                        if(result.respCode == "-1" || result.respCode == "0")
-                        {   
+                            alert(result.areacode);
 
-                            if(result.respDesc.indexOf("已经提交")>=0){
-                                Dialog.close('sendDiv');
-                                new Dialog({
-                                    content: "^_^发送成功！",
-                                  
-                                    blocker: true,
-                                    timeout: 5,
-                                    showTimer:false,
-                                    buttons: {
+                            //下发流量包部分
+                            jsondata ='{"act":61,"prmln":{“obj_id":"'+tel+'","home_city":"'+result.areacode+'" },"version":1}';
 
-                                            确定: function () {
-                                                //console.log('确定');
-                                                this.close();
-                                                window.location.replace("../../index.html")
-                                                }
-                                        }
-                                    
-                                    });
+                              
+                            
+                              $.ajax({
+                                url:"http://218.207.217.37/IVBSYS/spring/ivb",
+                                type: "POST",
+                                dataType: "json",
+                                //contentType: "application/json",
+                                data: jsondata,
+                                cache: false,
+                                success: function(json)
+                                {
+                                    alert("----"+data);
 
-                            }else{
-                                Dialog.close('sendDiv');
-                                new Dialog({
-                                    blocker: true,
-content: result.respDesc,
-                                    buttons: {
+                                 
+                                },
+                                error: function(jqXHR)
+                                {
+                                   
+                                    alert(" ---error" +jqXHR.statusText);
 
-                                            确定: function () {
-                                                //console.log('确定');
-                                                this.close();
-                                                window.location.replace("../../index.html")
-                                                }
-                                        }
-                                })
+                                }
+                              });
+                        //下发流量包部分完
 
-                            }
-                           // alert(result.respDesc);
-                           // setTimeout(location.reload(),2000);
+
+
                         }
-                        
-                    }
-                    */
                     //console.log(obj);
                     //console.log(obj.result);
                     
                     //console.log(result.respCode);
                     //console.log(obj.result[0].respDesc);
                 },
-                error: function(jqXHR)
+                error: function(json)
                 {
-                    /*
                     var obj = $.parseJSON(json);
-                    $("#loadingimg").hide();
+                    //$("#loadingimg").hide();
                     $("#alertP").show().html(obj.msg);
-                   
-                    
-                    //alert(obj.msg);
-                    //MLoading.hide();
                     return;
-                    */
-                    alert(" ---error" +jqXHR.statusText);
-
                 }
               });
+
+
+
+
+
+        
+
+
         }
         else if($.trim(tel)== "" || $.trim(tel) == null){
             $("#alertP").show().html("-_-！请输入手机号码!");
@@ -154,7 +140,7 @@ content: result.respDesc,
 
 <body>
 
-      <div class="goodsPic"><img src="../city_res/liuliang.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="javascript:void;" id="click_btn" class="downloadButton" >点击领取</a></div></div>
+      <div class="goodsPic"><div style="height:30px;text-align:right;color:#e7aaaa">点击右上角还可分享此免费流量包↑</div><img src="../city_res/liuliang.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="javascript:void;" id="click_btn" class="downloadButton" >点击领取</a></div></div>
 <!--电话信息
       <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
   -->
