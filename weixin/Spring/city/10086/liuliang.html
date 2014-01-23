@@ -46,6 +46,7 @@ $(".sendButton").live("click",function(){
         
         if(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/.test(tel))
         {
+                //手机号码；
                 //jsondata ='{"act":27,"prmIn":{"object_info":{"home_city":591,"obj_id":"'+tel+'","obj_type":0},"send_sms":1,"user_product_list":{"user_product":{"inure_type":1,"opr_code":1,"product_id":1000210041}}},"version":1}';
                 jsondata ='{"act":27,"prmIn":{"object_info":{"home_city":590,"obj_id":"'+tel+'","obj_type":0},"send_sms":1,"user_product_list":{"user_product":{"inure_type":1,"opr_code":1,"product_id":6003}}},"version":1}';
 
