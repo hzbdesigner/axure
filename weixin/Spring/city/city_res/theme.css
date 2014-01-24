@@ -25,19 +25,19 @@ h3{margin:0px; padding:0px; font-style:normal; font-weight:normal;}
 }
 @-webkit-keyframes shareTxtAnimation /* Safari 和 Chrome */
 {
-  from {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de;}
-  25% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #c600ff, 0 0 70px #c600ff;}
-  50% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff7200, 0 0 70px #ff7200;}
-  75% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #f92900, 0 0 70px #f92900;}
-  to {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff00a2, 0 0 70px #ff00a2;}
+  from {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de;}
+  25% {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #c600ff, 0 0 30px #c600ff;}
+  50% {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #ff7200, 0 0 30px #ff7200;}
+  75% {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #f92900, 0 0 30px #f92900;}
+  to {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #ff00a2, 0 0 30px #ff00a2;}
 }
 @keyframes shareTxtAnimation /* Safari 和 Chrome */
 {
-  from {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de;}
-  25% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #c600ff, 0 0 70px #c600ff;}
-  50% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff7200, 0 0 70px #ff7200;}
-  75% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #f92900, 0 0 70px #f92900;}
-  to {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff00a2, 0 0 70px #ff00a2;}
+  from {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de;}
+  25% {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #c600ff, 0 0 30px #c600ff;}
+  50% {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #ff7200, 0 0 30px #ff7200;}
+  75% {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #f92900, 0 0 30px #f92900;}
+  to {text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 20px #ff00a2, 0 0 30px #ff00a2;}
 }
 .mobileNumTitle{
 	font-size: 1em;
