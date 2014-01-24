@@ -309,9 +309,10 @@ function getRandom(n){
         return Math.floor(Math.random()*n+1)
         }
 function goUrl(ranVarId){
-   
-      
-      window.location.href="city/"+addVarId+"/shopNew"+ranVarId+1+".html";
+     // alert(ranVarId);
+      var  goUrlVar=ranVarId+1;
+      //alert(goUrlVar);
+      window.location.href="city/"+addVarId+"/shopNew"+goUrlVar+".html";
 
       /* //美食优惠劵
       if(ranVarId==0){
@@ -448,24 +449,24 @@ $(".getbutton").live("click",function(){
           }
           else if(ranVar==6){
             //茶馆
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"百花齐放 万马奔腾\"</h3><span>50十步笑百步，说的一定不是你。快去12580惠生活来点好料，淡定前行!</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'Yahoo！,500里了',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"百花齐放 万马奔腾\"</h3><span>50十步笑百步，说的一定不是你。快去12580惠生活来点好料，淡定前行!</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'太棒了！,500里了',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
         
           else if(ranVar==7){
             //健身
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"国家安庆 人寿年丰\"</h3><span>读书破万卷，下笔如有神。读书千万卷，不如出门走一圈。邀上三五好友去优哉游哉吧!</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'超赞！900里了',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"国家安庆 人寿年丰\"</h3><span>读书破万卷，下笔如有神。读书千万卷，不如出门走一圈。邀上三五好友去优哉游哉吧!</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'超赞！600里了',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==8){
             //旅行
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪春风及第 喜气盈门\"</h3><span>哇！您已跑过了60%的人。高兴时分，主人快去12580惠生活吃好喝好高歌一曲吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'大神！1000里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪春风及第 喜气盈门\"</h3><span>哇！您已跑过了60%的人。高兴时分，主人快去12580惠生活吃好喝好高歌一曲吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'振旗鼓！700里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==9){
             //旅行
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"百花齐放 万马奔腾\"</h3><span>不要问我爱你有多深，听我的歌声有多真。一起去12580惠生活领券好好乐一乐吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'大神！1000里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"百花齐放 万马奔腾\"</h3><span>不要问我爱你有多深，听我的歌声有多真。一起去12580惠生活领券好好乐一乐吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'厉害思密达！800里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==10){
             //旅行
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"阖家幸福，万事如意\"</h3><span>如果你是电影里的主角，一定可以一日千里，练成绝世神功，快去12580惠生活看看属于你的精彩生活吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'大神！1000里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"阖家幸福，万事如意\"</h3><span>如果你是电影里的主角，一定可以一日千里，练成绝世神功，快去12580惠生活看看属于你的精彩生活吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'您真是天才，“900里”！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==11){
             //旅行
