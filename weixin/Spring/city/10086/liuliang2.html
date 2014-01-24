@@ -4,6 +4,7 @@
 <title>马上送祝福</title>
 <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="format-detection" content="telephone=yes">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
 <link type="text/css" href="../city_res/theme.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../../assets/dialog/main.css">
 <link rel="stylesheet" type="text/css" href="../../assets/dialog/dialog.css">
@@ -65,21 +66,43 @@ $(".sendButton").live("click",function(){
                         {
                             
 
-                            if(result.status == 0)
-							{
-								alert("领取成功");
-							}
-							if(result.status == 1)
-							{
-								alert("该流量包已失效");
-							}
-							if(result.status == 2)
-							{
-								alert("已领取");
-							}
+                            alert(result.areacode);
+
+                            //下发流量包部分
+                            jsondata ='{"act":61,"prmln":{“obj_id":"'+tel+'","home_city":"'+result.areacode+'" },"version":1}';
+
+                              
+                            
+                              $.ajax({
+                                url:"http://218.207.217.37/IVBSYS/spring/ivb",
+                                type: "POST",
+                                dataType: "json",
+                                //contentType: "application/json",
+                                data: jsondata,
+                                cache: false,
+                                success: function(json)
+                                {
+                                    alert("----"+data);
+
+                                 
+                                },
+                                error: function(jqXHR)
+                                {
+                                   
+                                    alert(" ---error" +jqXHR.statusText);
+
+                                }
+                              });
+                        //下发流量包部分完
+
+
 
                         }
-
+                    //console.log(obj);
+                    //console.log(obj.result);
+                    
+                    //console.log(result.respCode);
+                    //console.log(obj.result[0].respDesc);
                 },
                 error: function(json)
                 {
@@ -89,6 +112,13 @@ $(".sendButton").live("click",function(){
                     return;
                 }
               });
+
+
+
+
+
+        
+
 
         }
         else if($.trim(tel)== "" || $.trim(tel) == null){
@@ -118,9 +148,7 @@ $(".sendButton").live("click",function(){
       <div class="wrapBox"><h3>流量包介绍</h3><p>
 
 1.获赠的免费流量包当月生效（2月1日-15日）、次月生效（1月30、31日两天获得用户）<br/>
-2.一人最多能领取三次免费流量包（你可以自己使用或者转赠朋友）<br/>
-
-
+2.同一个号码最多能领取三次免费流量包<br/>
 
       </p></div>
 
@@ -131,30 +159,30 @@ $(".sendButton").live("click",function(){
       </p></div>
 
       <p class="wei_copy"><i>12580惠生活</i><span class="huiCopy">©中国移动福建分公司</span></p>
-       <script>
+      <script>
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
         window.shareData = {  
-            //分享图片http://218.207.182.80:8091/12580/more/shopNe
-            "imgUrl": "http://218.207.182.80:8088/wx12580/images/weixin.png", 
-            //朋友圈访问地址
-            "timeLineLink": "http://218.207.182.80:8088/wx12580/city/fuzhou/shopNew1.html",
-            //发送给好友访问地址
-            "sendFriendLink": "http://218.207.182.80:8088/wx12580/city/fuzhou/shopNew1.html",
-            //微博分享地址
-            "weiboLink": "http://218.207.182.80:8088/wx12580/city/fuzhou/shopNew1.html",
-            //朋友圈标题
-            "tTitle": "马上送祝福，赢100M流量好礼！",
+			//分享图片http://218.207.182.80:8091/12580/more/shopNe
+            "imgUrl": "http://218.207.182.80:8091/12580/youhui_res/bag2.png", 
+			//朋友圈访问地址
+            "timeLineLink": "http://218.207.182.80:8091/12580/index.html",
+			//发送给好友访问地址
+            "sendFriendLink": "http://218.207.182.80:8091/12580/index.html",
+			//微博分享地址
+            "weiboLink": "http://218.207.182.80:8091/12580/index.html",
+			//朋友圈标题
+            "tTitle": "新年好运，和你一起过年！",
  
  
-            //朋友圈内容--貌似没用
-            "tContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停！更有万份流量包免费等你领取！(数量有限，快来哦～)",
-            //发送给朋友标题
-            "fTitle": "马上送祝福，赢100M流量好礼！",
-            //发送给朋友内容
-            "fContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停！更有万份流量包免费等你领取！(数量有限，快来哦～)",
-            //微博内容
-            "wContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停！更有万份流量包免费等你领取！(数量有限，快来哦～)" 
-            
+			//朋友圈内容--貌似没用
+            "tContent": "点击“和”袋，马上选个对象吧～",
+			//发送给朋友标题
+            "fTitle": "新年好运，和你一起过年！",
+			//发送给朋友内容
+            "fContent": "点击“和”袋，马上选个对象吧～",
+			//微博内容
+            "wContent": "点击“和”袋，马上选个对象吧～" 
+			
         };
         // 发送给好友
         WeixinJSBridge.on('menu:share:appmessage', function (argv) {
