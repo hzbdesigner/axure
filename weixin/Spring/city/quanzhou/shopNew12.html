@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>马上送祝福</title>
+<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=yes">
+<link type="text/css" href="../city_res/theme.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../assets/dialog/main.css">
+<link rel="stylesheet" type="text/css" href="../../assets/dialog/dialog.css">
+<script src="../../assets/jquery/jquery-1.4.4.min.js"></script>
+
+<script type="text/javascript">
+
+
+$(function(){
+var weixinURL="http://218.207.182.80:8088/wx12580/city/quanzhou/shopNew12.html";
+function ltrim(s){
+return s.replace( /^s*/, "");
+}
+  
+function rtrim(s){
+return s.replace( /s*$/, "");
+}
+  
+function trim(s){
+return rtrim(ltrim(s));
+}
+
+
+  $('#click_btn').click(function(){ 
+      var fn_ok = function () {
+        console.log(this.result);
+     };
+
+    new Dialog({id: "sendDiv",content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 0 10px;display:none'></p><p><p class='mobileNumTitle'>请输入要接收的手机号</p><input id='recvNbr' name='recvNbr' class='mobileNum' type='number'  /><a href='javascript:void' class='sendButton' >发送</a></p>",
+    blocker: true,lockLocation: true,title:''
+    });
+}); 
+
+
+
+$(".sendButton").live("click",function(){
+
+
+        var tel= $("#recvNbr").val();
+        
+        
+        if(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/.test(tel))
+        {
+                var params = {
+                    recvNbr : tel,
+                    couponId : $("#couponId").val()
+                };
+
+              $("#loadingimg").show();
+            
+              $.ajax({
+                type: "POST",
+                //url: "http://10.46.108.16:8091/bsc12580/webcoupon/sendCoupon.action",
+                url:"http://218.207.182.80:8088/bsc12580/webcoupon/sendCoupon.action",
+                data: params,
+                dataType:"text", 
+                success: function(json)
+                {
+                    var obj = $.parseJSON(json);  //使用这个方法解析json
+                    if(obj.type == "send")
+                    {
+                        var result = $.parseJSON(obj.result);
+                        if(result.respCode == "-1" || result.respCode == "0")
+                        {   
+
+                            if(result.respDesc.indexOf("已经提交")>=0){
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>^_^发送成功！</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.reload();
+                                                }
+                                        }
+                                    
+                                    });
+
+                            }else{
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    blocker: true,
+                                    content: result.respDesc,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.reload();
+                                                }
+                                        }
+                                })
+
+                            }
+                           // alert(result.respDesc);
+                           // setTimeout(location.reload(),2000);
+                        }
+                        
+                    }
+                    //console.log(obj);
+                    //console.log(obj.result);
+                    
+                    //console.log(result.respCode);
+                    //console.log(obj.result[0].respDesc);
+                },
+                error: function(json)
+                {
+                    var obj = $.parseJSON(json);
+                    $("#loadingimg").hide();
+                    $("#alertP").show().html(obj.msg);
+                   
+                    
+                    //alert(obj.msg);
+                    //MLoading.hide();
+                    return;
+                }
+              });
+        }
+        else if($.trim(tel)== "" || $.trim(tel) == null){
+            $("#alertP").show().html("-_-！请输入的手机号码!");
+            //new Dialog.Alert('-_-！请输入的手机号码!');
+
+        }
+        else
+        {
+            $("#alertP").show().html("-_-！输入的手机号码有误!");
+           // new Dialog.Alert('-_-！输入的手机号码有误!');
+        }
+
+})
+
+})
+</script>
+</head>
+
+<body>
+
+      <div class="goodsPic"><div class="shareTxt">点击右上角还可赠送他人↑</div><img src="../city_res/quanzhou/8.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>仅限泉州地区</span><a href="javascript:void;" id="click_btn" class="downloadButton" >点击领取</a><a href="../../index.html" class="againButton">再跑一次</a></div></div>
+<!--电话信息
+      <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
+  -->
+
+      <div class="wrapBox"><h3>本单详情</h3><p>
+        优惠内容：<br/>
+           2014年2月16日前，19元换购浦西万达影城2D通票，凭券至浦西万达广场4楼万达影城，可兑换2D通票一张，转发无效。
+      </p></div>
+      <div class="wrapBox"><h3>商户信息</h3><p>
+            电话：4000806060<br/>
+地址：泉州浦西万达广场4楼
+
+
+      </p></div>
+
+      <p class="wei_copy"><i>12580惠生活</i><span class="huiCopy">©中国移动福建分公司</span></p>
+      <script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        window.shareData = {  
+			//分享图片http://218.207.182.80:8091/12580/more/shopNe
+            "imgUrl": "http://218.207.182.80:8088/wx12580/images/weixin.png", 
+			//朋友圈访问地址
+            "timeLineLink": weixinURL,
+			//发送给好友访问地址
+            "sendFriendLink": weixinURL,
+			//微博分享地址
+            "weiboLink": weixinURL,
+			//朋友圈标题
+            "tTitle": "100M流量免费送，优惠好礼等你拿！",
+ 
+ 
+			//朋友圈内容--貌似没用
+            "tContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停！更有万份流量包免费等你领取！(数量有限，快来哦～)",
+			//发送给朋友标题
+            "fTitle": "100M流量免费送，优惠好礼等你拿！",
+			//发送给朋友内容
+            "fContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停！更有万份流量包免费等你领取！(数量有限，快来哦～)",
+			//微博内容
+            "wContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停！更有万份流量包免费等你领取！(数量有限，快来哦～)" 
+			
+        };
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', { 
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.fContent,
+                "title": window.shareData.fTitle
+            }, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                _report('timeline', res.err_msg);
+            });
+        });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.wContent,
+                "url": window.shareData.weiboLink,
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+        }, false)
+</script>
+<div style="display:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000225892'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000225892' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<input type="hidden" id="couponId" name="couponId" value="105199"/>
+ 
+<script src="../../assets/dialog/dialog.min.js"></script>
+</body>
+
+</html>
