@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="assets/dialog/dialog.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/horse.js"></script>
+    <script type="text/javascript" src="js/imagesjs.js"></script>
     <script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js" type="text/ecmascript"></script>
 
 
@@ -73,6 +74,7 @@ body{
   from { background-position: 0 0; }
   to { background-position: 100% 0; }
 }
+
 @-webkit-keyframes animatedBackground {
   from { background-position: 0 0; }
   to { background-position: 100% 0; }
@@ -111,6 +113,7 @@ body{
      text-align: center;
     line-height: 2em;
     opacity: 0.9;
+    display: none;
 }
 .button_stop a{
   
@@ -138,6 +141,7 @@ body{
      bottom: 10%;
      left: 5%;
      z-index: 998;
+      display: none;
     
 }
 .cloud{
@@ -169,8 +173,9 @@ body{
 #loading{
 
   position: absolute;
-  left:40%;
-  top:300px;
+  left:10%;
+  top:100px;
+  z-index: 9999;
 }
 @-webkit-keyframes blockerAnimation /* Safari 和 Chrome */
 {
@@ -225,6 +230,10 @@ body{
   color: #F5C508;
   line-height: 1.2em;
  }
+ .wlby_movie{
+
+    display: none;
+ }
 </style>
 
 <script>
@@ -243,40 +252,54 @@ $(function(){
   }
   //是否微信内置浏览器
   //is_weixn();
-
-  $("#loading").hide();
-
-  $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
-  $(".cloud").css({ "-webkit-animation-play-state": "paused"});
   //设置高度
   var wheight=$(window).height();
   var wwidth=$(window).width();
   var ranVarId;
   var addVarId;
 
- $(".content").height(wheight);
- $(".wlby_3 img").width(wwidth*0.8);
+  $("img").imgLoad({
+    time:10000000,//设置足够大 须等待图片载入完成，但是404的时候就杯具了...
+    callback:function(){
+      //alert("载入完成") 
+      $("#loading").hide();
+
+      $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
+      $(".cloud").css({ "-webkit-animation-play-state": "paused"});
+
+       $(".content").height(wheight);
+       $(".wlby_3 img").width(wwidth*0.8);
 
 
 
- $('.banger1,.banger2').animate({
-    top: "+=240px"
-  }, 500, function() {
-              
-    // Animation complete.
-  });
+       $('.banger1,.banger2').animate({
+          top: "+=240px"
+        }, 500, function() {
+                    
+                    $('.title').animate({
+                          top: "12%"
+                      }, 500, function() {
+                         // Animation complete.
+                         $('.word').animate({opacity:1,width:"90%",height:"100%",left:"-15%"},500);
+                         $('.wlby_movie').show("slow","linear",function(){ $(".button_stop,.button_stop_bak").show()});
+                      });
+                         // Animation complete.
+                      });
 
-            $('.title').animate({
-              top: "12%"
-              }, 500, function() {
-                // Animation complete.
-                $('.word').animate({opacity:1,width:"90%",height:"100%",left:"-15%"},500);
-              });
-
- buttontimer = setTimeout(function(){
+       
+    }//图片加载完成回调；
+  }); 
 
 
- },100);
+
+
+
+
+  
+
+
+
+
 
 function getIpPlace() {
   alert(remote_ip_info["city"])
@@ -467,7 +490,7 @@ $(".getbutton").live("click",function(){
     <div class="banger2"><img src="images/banger.png"></div>
     <div class="title"><img src="images/wordbak.png"><img class="word" src="images/word.png"></div>
   
-    <div class="button_stop"><a href="javascript:void(0)">点此让马跑起来</a></div>
+    <div class="button_stop"><a href="javascript:void(0)">让 马 跑 起 来</a></div>
   <div class="button_stop_bak"></div>
       <!--horse start-->
   <div class="wlby_movie">
@@ -620,7 +643,7 @@ $(".getbutton").live("click",function(){
 <script>
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 
-      WeixinJSBridge.call('hideToolbar');
+      //WeixinJSBridge.call('hideToolbar');
         window.shareData = {  
       //分享图片http://218.207.182.80:8091/12580/more/shopNe
             "imgUrl": "http://218.207.182.80:8088/wx12580/images/weixin.png", 
