@@ -113,6 +113,7 @@ body{
      text-align: center;
     line-height: 2em;
     opacity: 0.9;
+    display: none;
 }
 .button_stop a{
   
@@ -140,6 +141,7 @@ body{
      bottom: 10%;
      left: 5%;
      z-index: 998;
+      display: none;
     
 }
 .cloud{
@@ -228,6 +230,10 @@ body{
   color: #F5C508;
   line-height: 1.2em;
  }
+ .wlby_movie{
+
+    display: none;
+ }
 </style>
 
 <script>
@@ -257,6 +263,7 @@ $(function(){
     callback:function(){
       //alert("载入完成") 
       $("#loading").hide();
+
       $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
       $(".cloud").css({ "-webkit-animation-play-state": "paused"});
 
@@ -274,6 +281,7 @@ $(function(){
                       }, 500, function() {
                          // Animation complete.
                          $('.word').animate({opacity:1,width:"90%",height:"100%",left:"-15%"},500);
+                         $('.wlby_movie').show("slow","linear",function(){ $(".button_stop,.button_stop_bak").show()});
                       });
                          // Animation complete.
                       });
