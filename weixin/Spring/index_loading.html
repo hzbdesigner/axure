@@ -245,14 +245,40 @@ $(function(){
   }
   //是否微信内置浏览器
   //is_weixn();
-
+  //设置高度
+  var wheight=$(window).height();
+  var wwidth=$(window).width();
+  var ranVarId;
+  var addVarId;
 
   $("img").imgLoad({
     time:10000000,//设置足够大 须等待图片载入完成，但是404的时候就杯具了...
     callback:function(){
-      alert("载入完成") 
+      //alert("载入完成") 
       $("#loading").hide();
-    }
+      $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
+      $(".cloud").css({ "-webkit-animation-play-state": "paused"});
+
+       $(".content").height(wheight);
+       $(".wlby_3 img").width(wwidth*0.8);
+
+
+
+       $('.banger1,.banger2').animate({
+          top: "+=240px"
+        }, 500, function() {
+                    
+                    $('.title').animate({
+                          top: "12%"
+                      }, 500, function() {
+                         // Animation complete.
+                         $('.word').animate({opacity:1,width:"90%",height:"100%",left:"-15%"},500);
+                      });
+                         // Animation complete.
+                      });
+
+       
+    }//图片加载完成回调；
   }); 
 
 
@@ -260,37 +286,11 @@ $(function(){
 
 
 
-  $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
-  $(".cloud").css({ "-webkit-animation-play-state": "paused"});
-  //设置高度
-  var wheight=$(window).height();
-  var wwidth=$(window).width();
-  var ranVarId;
-  var addVarId;
-
- $(".content").height(wheight);
- $(".wlby_3 img").width(wwidth*0.8);
+  
 
 
 
- $('.banger1,.banger2').animate({
-    top: "+=240px"
-  }, 500, function() {
-              
-    // Animation complete.
-  });
 
-            $('.title').animate({
-              top: "12%"
-              }, 500, function() {
-                // Animation complete.
-                $('.word').animate({opacity:1,width:"90%",height:"100%",left:"-15%"},500);
-              });
-
- buttontimer = setTimeout(function(){
-
-
- },100);
 
 function getIpPlace() {
   alert(remote_ip_info["city"])
