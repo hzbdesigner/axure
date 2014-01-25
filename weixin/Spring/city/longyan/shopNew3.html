@@ -170,17 +170,17 @@ $(".sendButton").live("click",function(){
       <script>
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
         
-        var weixinURL = window.location;
+        //var weixinURL = ;
 
         window.shareData = {  
 			//分享图片http://218.207.182.80:8091/12580/more/shopNe
             "imgUrl": "http://218.207.182.80:8088/wx12580/images/weixin.png", 
 			//朋友圈访问地址
-            "timeLineLink": "http://buildcold.github.io/axure/weixin/Spring/city/longyan/shopNew4.html",
+            "timeLineLink": window.location,
 			//发送给好友访问地址
-            "sendFriendLink": "http://buildcold.github.io/axure/weixin/Spring/city/longyan/shopNew4.html",
+            "sendFriendLink": window.location,
 			//微博分享地址
-            "weiboLink": "http://buildcold.github.io/axure/weixin/Spring/city/longyan/shopNew4.html",
+            "weiboLink": window.location,
 			//朋友圈标题
             "tTitle": "100M流量免费送，优惠好礼等你拿！",
  
