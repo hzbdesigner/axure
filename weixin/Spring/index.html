@@ -281,7 +281,7 @@ $(function(){
                       }, 500, function() {
                          // Animation complete.
                          $('.word').animate({opacity:1,width:"90%",height:"100%",left:"-15%"},500);
-                         $('.wlby_movie').show("slow","linear",function(){ $(".button_stop,.button_stop_bak").show()});
+                         $('.wlby_movie').fadeIn("slow",function(){ $(".button_stop,.button_stop_bak").show()});
                       });
                          // Animation complete.
                       });
@@ -427,17 +427,17 @@ $(".getbutton").live("click",function(){
 
           if(ranVar==0){
 
-             new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"新年快乐，前程似锦\"</h3><span>噢噢！你的马儿没吃早餐吗？快去12580惠生活它喂点好料吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'一定是没吃饱，只跑了“1里”',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+             new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"新年快乐 前程似锦\"</h3><span>噢噢！你的马儿没吃早餐吗？快去12580惠生活它喂点好料吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'呀，只跑了“1里”',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
               
           }
           else if(ranVar==1){
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"吉星高照，财运亨通\"</h3><span>不积跬步无以至千里，快去12580惠生活吃饱喝足，跑起来！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'\“5里地\”再跑一次吧',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"吉星高照 财运亨通\"</h3><span>不积跬步无以至千里，快去12580惠生活吃饱喝足，跑起来！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'\“5里地\”再跑一次吧',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==2){
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"合家欢乐，飞黄腾达\"</h3><span>千里之行以过百，是否油量不足行？客官，快去12580惠生活补充电能量吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'努力哦，\“10里\"',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"合家欢乐 飞黄腾达\"</h3><span>千里之行以过百，是否油量不足行？客官，快去12580惠生活补充电能量吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'努力哦，\“10里\"',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==3){
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"事事顺心，万事如意\"</h3><span>四爷，离您的成功大业只差一个会做饭的马尔泰若曦了。快去12580惠生活来一个吧!</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'往前冲，\“30里\"',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"事事顺心 万事如意\"</h3><span>四爷，离您的成功大业只差一个会做饭的马尔泰若曦了。快去12580惠生活来一个吧!</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'往前冲，\“30里\"',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==4){
               new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"万事如意 四时平安\"</h3><span>您跑的这样好，您的家人知道吗？快快去12580惠生活和您的家人一起聚餐庆祝一下吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'加油,跑了50里',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
@@ -458,19 +458,19 @@ $(".getbutton").live("click",function(){
           }
           else if(ranVar==8){
             //旅行
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪春风及第 喜气盈门\"</h3><span>哇！您已跑过了60%的人。高兴时分，主人快去12580惠生活吃好喝好高歌一曲吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'振旗鼓！700里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪春及第 喜气盈门\"</h3><span>哇！您已跑过了60%的人。高兴时分，主人快去12580惠生活吃好喝好高歌一曲吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'振旗鼓！700里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==9){
             //旅行
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"百花齐放 万马奔腾\"</h3><span>不要问我爱你有多深，听我的歌声有多真。一起去12580惠生活领券好好乐一乐吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'厉害思密达！800里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"百花齐放 万马奔腾\"</h3><span>不要问我爱你有多深，听我的歌声有多真。一起去12580惠生活领券好好乐一乐吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'厉害！800里！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==10){
             //旅行
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"阖家幸福，万事如意\"</h3><span>如果你是电影里的主角，一定可以一日千里，练成绝世神功，快去12580惠生活看看属于你的精彩生活吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'您真是天才，“900里”！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"阖家幸福 万事如意\"</h3><span>如果你是电影里的主角，一定可以一日千里，练成绝世神功，快去12580惠生活看看属于你的精彩生活吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'天才，“900里”！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else if(ranVar==11){
             //旅行
-              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪春风及第 喜气盈门\"</h3><span>未来的美好在于此刻的拼搏，看看你的油量有多少吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'大神！1000里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
+              new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\"豪春及第 喜气盈门\"</h3><span>未来的美好在于此刻的拼搏，看看你的油量有多少吧！</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'大神！1000里！！',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
           }
           else{
               new Dialog({id: "sendDiv",content: "<p><div id='award'><h3>\" MY GOD! MY GOD!\"</h3><span>这个是神人页面，你看到说明你今年财运亨通</span><div style='text-align:center'><img src='images/red.png' width='30%' style='margin-top:10px'></div></div><a class='getbutton' href='javascript:void'>点击查看</a></p>",blocker: true,lockLocation: true,title:'看到这的话，你是神人了',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false});
