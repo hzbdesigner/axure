@@ -13,7 +13,21 @@
 
 
 $(function(){
-var weixinURL="http://218.207.182.80:8088/wx12580/city/putian/shopNew1.html";
+
+  function is_weixn(){
+    var ua = navigator.userAgent.toLowerCase();
+    //alert(ua);
+     if(ua.match(/micromessenger/i)=="micromessenger") {
+        return true;
+
+    } else {
+        window.location.replace("../../error.html");
+         return false;
+    }
+  }
+  //是否微信内置浏览器
+  is_weixn();
+
 function ltrim(s){
 return s.replace( /^s*/, "");
 }
@@ -167,7 +181,8 @@ $(".sendButton").live("click",function(){
       <p class="wei_copy"><i>12580惠生活</i><span class="huiCopy">©中国移动福建分公司</span></p>
       <script>
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-        window.shareData = {  
+       var weixinURL = window.location;
+       window.shareData = {  
 			//分享图片http://218.207.182.80:8091/12580/more/shopNe
             "imgUrl": "http://218.207.182.80:8088/wx12580/images/weixin.png", 
 			//朋友圈访问地址
