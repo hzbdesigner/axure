@@ -169,7 +169,7 @@ $(".sendButton").live("click",function(){
       <p class="wei_copy"><i>12580惠生活</i><span class="huiCopy">©中国移动福建分公司</span></p>
       <script>
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-        var uri = window.location.search;
+        var uri = window.location;
         alert(uri);
         var weixinURL="http://218.207.182.80:8088/wx12580/city/longyan/shopNew1.html";
         window.shareData = {  
