@@ -33,10 +33,12 @@ return rtrim(ltrim(s));
       var fn_ok = function () {
         console.log(this.result);
      };
-
+     /*
     new Dialog({id: "sendDiv",content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 0 10px;display:none'></p><p><p class='mobileNumTitle'>请输入要接收的手机号</p><input id='recvNbr' name='recvNbr' class='mobileNum' type='number'  /><a href='javascript:void' class='sendButton' >发送</a></p>",
     blocker: true,lockLocation: true,title:''
     });
+    */
+    alert(window.shareData.sendFriendLink);
 }); 
 
 
@@ -170,7 +172,7 @@ $(".sendButton").live("click",function(){
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
         
         var weixinURL = window.location;
-        alert(weixinURL);
+
         window.shareData = {  
 			//分享图片http://218.207.182.80:8091/12580/more/shopNe
             "imgUrl": "http://218.207.182.80:8088/wx12580/images/weixin.png", 
