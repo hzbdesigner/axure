@@ -170,17 +170,17 @@ $(".sendButton").live("click",function(){
       <script>
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
         
-        //var weixinURL = ;
+        var weixinURL = window.location;
 
         window.shareData = {  
 			//分享图片http://218.207.182.80:8091/12580/more/shopNe
             "imgUrl": "http://218.207.182.80:8088/wx12580/images/weixin.png", 
 			//朋友圈访问地址
-            "timeLineLink": window.location,
+            "timeLineLink": "'"+weixinURL+"'",
 			//发送给好友访问地址
-            "sendFriendLink": window.location,
+            "sendFriendLink": "'"+weixinURL+"'",
 			//微博分享地址
-            "weiboLink": window.location,
+            "weiboLink": "'"+weixinURL+"'",
 			//朋友圈标题
             "tTitle": "100M流量免费送，优惠好礼等你拿！",
  
