@@ -14,6 +14,19 @@
 
 $(function(){
 
+
+//获得参数的方法
+var request ={
+QueryString : function(val){
+    var uri = window.location.search;
+    var re = new RegExp("" +val+ "=([^&?]*)", "ig");
+    return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
+    }
+}    
+//调用方法获得参数
+var awardID = request.QueryString("award");
+var weixinURL="http://218.207.182.80:8088/wx12580/city/10086/liuliang.html?award="+awardID;
+
 function ltrim(s){
 return s.replace( /^s*/, "");
 }
@@ -139,13 +152,13 @@ $(".sendButton").live("click",function(){
             //分享图片http://218.207.182.80:8091/12580/more/shopNe
             "imgUrl": "http://218.207.182.80:8088/wx12580/images/weixin.png", 
             //朋友圈访问地址
-            "timeLineLink": "http://218.207.182.80:8088/wx12580/city/fuzhou/shopNew1.html",
+            "timeLineLink": weixinURL,
             //发送给好友访问地址
-            "sendFriendLink": "http://218.207.182.80:8088/wx12580/city/fuzhou/shopNew1.html",
+            "sendFriendLink": weixinURL,
             //微博分享地址
-            "weiboLink": "http://218.207.182.80:8088/wx12580/city/fuzhou/shopNew1.html",
+            "weiboLink": weixinURL,
             //朋友圈标题
-            "tTitle": "马上送祝福，赢100M流量好礼！",
+            "tTitle": "100M流量免费送，优惠好礼等你拿！",
  
  
             //朋友圈内容--貌似没用

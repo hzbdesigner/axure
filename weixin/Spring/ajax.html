@@ -1,0 +1,29 @@
+<!DOCTYPE html >
+<html >
+<head>
+	<meta charset="UTF-8">
+  <title>孟宪会之AJAX跨域请求测试</title>
+
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+	$(function(){              
+      
+         var url="http:\/\/218.207.182.80:8088\/wx12580\/city\/10086\/liuliang.html?award=1134";
+        $('#validateCustom').click(function(){  
+            var str="http:\/\/218.207.182.80:8088\/wx12580\/city\/10086\/liuliang.html?award=1134";   
+            var es=/award=/;   
+            es.exec(str);   
+            var right=RegExp.rightContext;  
+            alert(right);
+        });  
+    });  
+</script>
+
+</head>
+<body>
+<span style="color:blue; text-decoration:underline; cursor:pointer;" id="validateCustom">点此完成定制</span>
+</body>
+</html>
