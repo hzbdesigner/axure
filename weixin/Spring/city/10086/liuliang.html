@@ -28,7 +28,16 @@ $(function(){
   //是否微信内置浏览器
   is_weixn();
 
-
+        //获得参数的方法
+        var request ={
+        QueryString : function(val){
+            var uri = window.location.search;
+            var re = new RegExp("" +val+ "=([^&?]*)", "ig");
+            return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
+            }
+        }    
+        //调用方法获得参数
+        var awardID = request.QueryString("award");
 
 
 function ltrim(s){
@@ -66,6 +75,7 @@ $(".sendButton").live("click",function(){
                     
                 var params = {
                     mobile : tel,
+                    award: awardID
                 };
 
               $("#loadingimg").show();
@@ -78,31 +88,94 @@ $(".sendButton").live("click",function(){
                 success: function(json)
                 {
                         var result = $.parseJSON(json);
-                        if(result.success == true)
-                        {
-                            
+                        
 
-                            if(result.status == 0)
+                            if(result.msg == 7010)
 							{
-								alert("领取成功");
-							}
-							if(result.status == 1)
-							{
-								alert("该流量包已失效");
-							}
-							if(result.status == 2)
-							{
-								alert("已领取");
-							}
+								//alert("流量包领取成功!");
 
-                        }
+                                 Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>^_^ 流量包领取成功!</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                    });
+							}
+							
+							
+                       
 
                 },
                 error: function(json)
                 {
+
                     var obj = $.parseJSON(json);
-                    //$("#loadingimg").hide();
-                    $("#alertP").show().html(obj.msg);
+                    $("#loadingimg").hide();
+
+                            if(obj.msg == 7003)
+                            {
+                                alert("你的地址是无效的");
+                            }
+                            if(obj.msg == 7002)
+                            {
+                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
+
+                                 Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>亲~，该流量包已被人抢一步领了，再跑一次吧～</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                    });
+
+                            }
+                            if(obj.msg == 7011)
+                            {
+                                //alert("吖～～服务器可能出错了，订购失败！");
+                                 Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>吖～～服务器可能出错了，订购失败！</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                    });
+                            }
+
+                    //$("#alertP").show().html(obj.msg);
                     return;
                 }
               });
@@ -127,7 +200,7 @@ $(".sendButton").live("click",function(){
 
 <body>
 
-      <div class="goodsPic"><div style="height:30px;text-align:right;color:#e7aaaa">点击右上角还可分享此免费流量包↑</div><img src="../city_res/liuliang.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="javascript:void;" id="click_btn" class="downloadButton" >点击领取</a></div></div>
+      <div class="goodsPic"><div class="shareTxt">点击右上角还可分享此免费流量包↑↑↑</div><img src="../city_res/liuliang.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="javascript:void;" id="click_btn" class="downloadButton" >点击领取</a></div></div>
 <!--电话信息
       <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
   -->
@@ -153,16 +226,7 @@ $(".sendButton").live("click",function(){
        <script>
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 
-        //获得参数的方法
-        var request ={
-        QueryString : function(val){
-            var uri = window.location.search;
-            var re = new RegExp("" +val+ "=([^&?]*)", "ig");
-            return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
-            }
-        }    
-        //调用方法获得参数
-        var awardID = request.QueryString("award");
+
         var weixinURL="http://218.207.182.80:8088/wx12580/city/10086/liuliang.html?award="+awardID;
         
         window.shareData = {  
