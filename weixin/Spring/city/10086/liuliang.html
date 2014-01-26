@@ -26,7 +26,7 @@ $(function(){
     }
   }
   //是否微信内置浏览器
-  is_weixn();
+  //is_weixn();
 
         //获得参数的方法
         var request ={
@@ -88,7 +88,7 @@ $(".sendButton").live("click",function(){
                 success: function(json)
                 {
                         var result = $.parseJSON(json);
-                        
+                        console.log("success--"+result.msg);
 
                             if(result.msg == 7010)
 							{
@@ -113,26 +113,10 @@ $(".sendButton").live("click",function(){
                                     
                                     });
 							}
-							
-							
-                       
-
-                },
-                error: function(json)
-                {
-
-                    var obj = $.parseJSON(json);
-                    $("#loadingimg").hide();
-
-                            if(obj.msg == 7003)
+                            if(obj.msg == 7003||obj.msg == 7002||obj.msg == 7005)
                             {
-                                alert("你的地址是无效的");
-                            }
-                            if(obj.msg == 7002)
-                            {
-                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
-
-                                 Dialog.close('sendDiv');
+                                //alert("亲~，该流量包已被人抢一步领了，再跑一次吧～");
+                                Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "<p style='color:#fbe695'>亲~，该流量包已被人抢一步领了，再跑一次吧～</p>",
                                     
@@ -149,7 +133,212 @@ $(".sendButton").live("click",function(){
                                                 }
                                         }
                                     
+                                });
+                            }
+                            
+                            if(obj.msg == 7004)
+                            {
+                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
+
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>你的恶意刷新行为，我们已经在记录！！</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                });
+
+                            }
+                            
+
+                            if(obj.msg == 7006||obj.msg == 7007)
+                            {
+                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
+
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>亲~，手机号码有误，请输入福建移动手机号～</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                });
+
+                            }
+                            if(obj.msg == 7007)
+                            {
+                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
+
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>亲~，该流量包已被人抢一步领了，再跑一次吧～</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                });
+
+                            }
+                            if(obj.msg == 7011)
+                            {
+                                //alert("吖～～服务器可能出错了，订购失败！");
+                                 Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>吖～～服务器可能出错了，订购失败！</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
                                     });
+                            }
+							
+							
+                       
+
+                },
+                error: function(json)
+                {
+
+                    var obj = $.parseJSON(json);
+                    console.log("error--"+result.msg);
+                    $("#loadingimg").hide();
+
+                            if(obj.msg == 7003||obj.msg == 7002||obj.msg == 7005)
+                            {
+                                //alert("你的地址是无效的");
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>亲~，该流量包已被人抢一步领了，再跑一次吧～</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                });
+                            }
+                            
+                            if(obj.msg == 7004)
+                            {
+                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
+
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>你的恶意刷新行为，我们已经在记录！！</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                });
+
+                            }
+                            
+
+                            if(obj.msg == 7006||obj.msg == 7007)
+                            {
+                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
+
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>亲~，手机号码有误，请输入福建移动手机号～</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                });
+
+                            }
+                            if(obj.msg == 7007)
+                            {
+                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
+
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>亲~，该流量包已被人抢一步领了，再跑一次吧～</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                });
 
                             }
                             if(obj.msg == 7011)
@@ -227,7 +416,7 @@ $(".sendButton").live("click",function(){
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 
 
-        var weixinURL="http://218.207.182.80:8088/wx12580/city/10086/liuliang.html?award="+awardID;
+        var weixinURL=String("http://218.207.182.80:8088/wx12580/city/10086/liuliang.html?award="+awardID);
         
         window.shareData = {  
             //分享图片http://218.207.182.80:8091/12580/more/shopNe

@@ -251,7 +251,7 @@ $(function(){
     }
   }
   //是否微信内置浏览器
-  //is_weixn();
+  is_weixn();
   //设置高度
   var wheight=$(window).height();
   var wwidth=$(window).width();
@@ -311,9 +311,8 @@ function getRandom(n){
 function goUrl(ranVarId){
      // alert(ranVarId);
       var  goUrlVar=ranVarId+1;
-  
       //alert(goUrlVar);
-            window.location.href="city/"+addVarId+"/shopNew"+goUrlVar+".html";
+      window.location.href="city/"+addVarId+"/shopNew"+goUrlVar+".html";
 
      
     
@@ -333,8 +332,8 @@ $(".getbutton").live("click",function(){
                 success: function(json)
                 {
                     var obj = $.parseJSON(json);  //使用这个方法解析json
-                    //alert("success"+obj);
-                    console.log("success--"+obj);
+                    alert("success"+obj);
+                    
                     if(obj.code == 7000)
                         {   
 
@@ -343,13 +342,11 @@ $(".getbutton").live("click",function(){
                           var es=/award=/;   
                           es.exec(str);   
                           var bingoId=RegExp.rightContext;  
-                          console.log("bingoId--"+obj);
-                          //alert(bingoId);
+                          alert(bingoId);
                           window.location.href="http://218.207.182.80:8088/wx12580/city/10086/liuliang.html?award="+bingoId;
 
                         }else{
-                            //alert(obj.code);
-                            console.log("obj.code--"+obj.code);
+                            alert(obj.code);
 
                              if(remote_ip_info["city"]=="福州"){
 
@@ -432,7 +429,7 @@ $(".getbutton").live("click",function(){
           ranVarId=ranVar;
       var timeVar=Math.round(ranVar*1000+5);
           timer = setTimeout(function(){
-        //做你想做的事
+        //跑完后调用
          $(".wlby_sprite").css({ "-webkit-animation-play-state": "paused"});
          $(".cloud").css({ "-webkit-animation-play-state": "paused"});
          
@@ -494,8 +491,7 @@ $(".getbutton").live("click",function(){
    
   })
 
-     //new Dialog("窗口宽度："+wwidth+"<br>窗口高度："+wheight);
-
+     
 
 })
 
