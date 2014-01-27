@@ -14,7 +14,18 @@
 
 $(function(){
 
-
+function WeiXinShareBtn() { 
+             if (typeof WeixinJSBridge == "undefined") { 
+                alert("请先通过微信搜索 wow36kr 添加36氪为好友，通过微信分享文章 "); 
+             } else { 
+             WeixinJSBridge.invoke('shareTimeline', { 
+                 "title": "36氪", 
+                 "link": "http://www.36kr.com", 
+                 "desc": "关注互联网创业", 
+                 "img_url": "http://www.36kr.com/assets/images/apple-touch-icon.png" 
+             }); 
+             } 
+        }
 
 
 
@@ -88,18 +99,7 @@ return rtrim(ltrim(s));
       <script>
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 
-        function WeiXinShareBtn() { 
-             if (typeof WeixinJSBridge == "undefined") { 
-                alert("请先通过微信搜索 wow36kr 添加36氪为好友，通过微信分享文章 "); 
-             } else { 
-             WeixinJSBridge.invoke('shareTimeline', { 
-                 "title": "36氪", 
-                 "link": "http://www.36kr.com", 
-                 "desc": "关注互联网创业", 
-                 "img_url": "http://www.36kr.com/assets/images/apple-touch-icon.png" 
-             }); 
-             } 
-        }
+        
 
         window.shareData = {  
 			//分享图片http://218.207.182.80:8091/12580/more/shopNe
