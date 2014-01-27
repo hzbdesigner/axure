@@ -5,8 +5,6 @@
 <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="format-detection" content="telephone=yes">
 <link type="text/css" href="../city_res/theme.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../../assets/dialog/main.css">
-<link rel="stylesheet" type="text/css" href="../../assets/dialog/dialog.css">
 <script src="../../assets/jquery/jquery-1.4.4.min.js"></script>
 
 <script type="text/javascript">
@@ -15,11 +13,11 @@
 $(function(){
 
 function WeiXinShareBtn() { 
-  alert("run");
+            alert("run");
              if (typeof WeixinJSBridge == "undefined") { 
                 alert("请先通过微信搜索 wow36kr 添加36氪为好友，通过微信分享文章 "); 
              } else { 
-             WeixinJSBridge.invoke('sendAppMessage', { 
+                WeixinJSBridge.invoke('sendAppMessage', { 
                  "title": "36氪", 
                  "link": "http://www.36kr.com", 
                  "desc": "关注互联网创业", 
@@ -27,44 +25,16 @@ function WeiXinShareBtn() {
                  alert("end");
              }); 
              } 
-        }
+ }
 
 
+$('#click_btn').click(function(){ 
+         
+         alert("click");
+         WeiXinShareBtn();
 
-  function is_weixn(){
-    var ua = navigator.userAgent.toLowerCase();
-    //alert(ua);
-     if(ua.match(/micromessenger/i)=="micromessenger") {
-        return true;
+    }); 
 
-    } else {
-        window.location.replace("../../error.html");
-         return false;
-    }
-  }
-  //是否微信内置浏览器
-  //is_weixn();
-
-function ltrim(s){
-return s.replace( /^s*/, "");
-}
-  
-function rtrim(s){
-return s.replace( /s*$/, "");
-}
-  
-function trim(s){
-return rtrim(ltrim(s));
-}
-
-
-  $('#click_btn').click(function(){ 
-     
-     alert("click");
-     WeiXinShareBtn();
-
-}); 
-/**/
 
 
 })
@@ -73,7 +43,7 @@ return rtrim(ltrim(s));
 
 <body>
 
-      <div class="goodsPic"><img src="../city_res/huafei.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="javascript:void;" id="click_btn" class="downloadButton" >去看看</a></div></div>
+      <div class="goodsPic"><div class="toBuy"><span>福建移动</span><a href="javascript:void;" id="click_btn" class="downloadButton" >去看看</a></div></div>
 <!--电话信息
       <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
   -->
@@ -165,21 +135,9 @@ return rtrim(ltrim(s));
         });
         }, false)
 </script>
-<div style="display:none">
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000225892'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000225892' type='text/javascript'%3E%3C/script%3E"));</script>
-</div>
-<input type="hidden" id="couponId" name="couponId" value="1001531994373"/>
-<!--
-<div id="mobile_box" style="display:none;">
-    <fieldset>
-        <h3>请输入手机号：</h3>
-        <input id="recvNbr" name="recvNbr" class="mobileNum" type="text"/>
-        <a href="javascript:void" class="sendButton"  >发送</a>
-		<input type="hidden" id="couponId" name="couponId" value="1001530342335"/>
-        <a href="javascript:void" class="close">关闭</a>
-  </fieldset>
-</div>-->
-<script src="../assets/dialog/dialog.min.js"></script>
+
+
+
 </body>
 
 </html>
