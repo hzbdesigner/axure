@@ -47,7 +47,7 @@ return rtrim(ltrim(s));
         console.log(this.result);
      };
 
-    new Dialog({id: "sendDiv",content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 0 10px;display:none'></p><p><p class='mobileNumTitle'>请输入要接收的手机号</p><input id='recvNbr' name='recvNbr' class='mobileNum' type='number'  /><a href='javascript:void' class='sendButton' >发送</a></p>",
+    new Dialog({id: "sendDiv",content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 0 10px;display:none'></p><p><p class='mobileNumTitle'>请输入您或TA的手机号码<br/>(必须是福建移动手机号码哦！)</p><input id='recvNbr' name='recvNbr' class='mobileNum' type='number'  /><a href='javascript:void' class='sendButton' >发送</a></p>",
     blocker: true,lockLocation: true,title:''
     });
 }); 
@@ -87,7 +87,7 @@ $(".sendButton").live("click",function(){
                             if(result.respDesc.indexOf("已经提交")>=0){
                                 Dialog.close('sendDiv');
                                 new Dialog({
-                                    content: "<p style='color:#fbe695'>信息提交成功！请注意查收通知短信^_^～</p>",
+                                    content: "<p style='color:#fbe695'>^_^已发送成功，请注意查收！</p>",
                                     
                                     blocker: true,
                                     timeout: 5,
