@@ -44,24 +44,15 @@ function trim(s){
 return rtrim(ltrim(s));
 }
 
-/*
+
   $('#click_btn').click(function(){ 
-      var fn_ok = function () {
-        console.log(this.result);
-     };
+     
+     alert("click");
+     WeiXinShareBtn();
 
-    new Dialog({id: "sendDiv",content: "<img id='loadingimg' style='display:none;position:absolute;width:50px;height:50px;margin-left:-25px;margin-top:-25px;left:50%;top:50%' src='images/loading.gif'><p id='alertP' style='color:red;margin:10px 0 0 10px;display:none'></p><p><input id='recvNbr' name='recvNbr' class='mobileNum' type='number'/><a href='javascript:void' class='sendButton' >发送</a></p>",
-    blocker: true,lockLocation: true,title:'请输入手机号'
-    });
 }); 
-*/
+/**/
 
-$(".click_btn").bind("click",function(){
-    alert("click");
-
-    WeiXinShareBtn();
-
-})
 
 })
 </script>
