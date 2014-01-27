@@ -93,7 +93,7 @@ $(".sendButton").live("click",function(){
                             if(result.msg == 7010)
 							{
 								//alert("流量包领取成功!");
-
+                                console.log("7010--:"+result.msg);
                                  Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "<p style='color:#fbe695'>^_^ 流量包领取成功!</p>",
@@ -113,9 +113,33 @@ $(".sendButton").live("click",function(){
                                     
                                     });
 							}
-                            if(obj.msg == 7003||obj.msg == 7002||obj.msg == 7005)
+                           else if(result.msg  == 7005)
                             {
                                 //alert("亲~，该流量包已被人抢一步领了，再跑一次吧～");
+                                console.log("7005-:"+result.msg);
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>亲~，此号码已经领过一次了啦，换个号码赠送吧～</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                });
+                            }
+                            else if(result.msg == 7003||result.msg == 7002)
+                            {
+                                //alert("亲~，该流量包已被人抢一步领了，再跑一次吧～");
+                                console.log("7003-7002-7005-:"+result.msg);
                                 Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "<p style='color:#fbe695'>亲~，该流量包已被人抢一步领了，再跑一次吧～</p>",
@@ -136,10 +160,10 @@ $(".sendButton").live("click",function(){
                                 });
                             }
                             
-                            if(obj.msg == 7004)
+                           else if(result.msg == 7004)
                             {
                                 //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
-
+                                console.log("7004--:"+result.msg);
                                 Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "<p style='color:#fbe695'>你的恶意刷新行为，我们已经在记录！！</p>",
@@ -162,10 +186,10 @@ $(".sendButton").live("click",function(){
                             }
                             
 
-                            if(obj.msg == 7006||obj.msg == 7007)
+                           else if(result.msg == 7006||result.msg == 7007)
                             {
                                 //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
-
+                                console.log("7006-7007-:"+result.msg);
                                 Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "<p style='color:#fbe695'>亲~，手机号码有误，请输入福建移动手机号～</p>",
@@ -186,33 +210,11 @@ $(".sendButton").live("click",function(){
                                 });
 
                             }
-                            if(obj.msg == 7007)
-                            {
-                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
 
-                                Dialog.close('sendDiv');
-                                new Dialog({
-                                    content: "<p style='color:#fbe695'>亲~，该流量包已被人抢一步领了，再跑一次吧～</p>",
-                                    
-                                    blocker: true,
-                                    timeout: 5,
-                                    showTimer:false,
-                                    buttons: {
-
-                                            确定: function () {
-                                                //console.log('确定');
-                                                this.close();
-                                                window.location.href="../../index.html"
-                                                //window.location.reload();
-                                                }
-                                        }
-                                    
-                                });
-
-                            }
-                            if(obj.msg == 7011)
+                          else if(result.msg == 7011)
                             {
                                 //alert("吖～～服务器可能出错了，订购失败！");
+                                console.log("7011-:"+result.msg);
                                  Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "<p style='color:#fbe695'>吖～～服务器可能出错了，订购失败！</p>",
@@ -233,7 +235,29 @@ $(".sendButton").live("click",function(){
                                     });
                             }
 							
-							
+							else{
+                                    //alert("吖～～服务器可能出错了，订购失败！");
+                                 console.log("错误代码-:"+result.msg);
+                                 Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>你的恶意刷新行为，我们已经在记录！！</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                    });
+
+                            }
                        
 
                 },
@@ -241,11 +265,12 @@ $(".sendButton").live("click",function(){
                 {
 
                     var obj = $.parseJSON(json);
-                    console.log("error--"+result.msg);
+                    console.log("error--"+obj.msg);
                     $("#loadingimg").hide();
 
-                            if(obj.msg == 7003||obj.msg == 7002||obj.msg == 7005)
+                            if(obj.msg == 7003||obj.msg == 7002)
                             {
+                                console.log("error7003-7004-7002:"+obj.msg);
                                 //alert("你的地址是无效的");
                                 Dialog.close('sendDiv');
                                 new Dialog({
@@ -266,11 +291,12 @@ $(".sendButton").live("click",function(){
                                     
                                 });
                             }
+
                             
-                            if(obj.msg == 7004)
+                           else if(obj.msg == 7004)
                             {
                                 //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
-
+                                console.log("error7004:"+obj.msg);
                                 Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "<p style='color:#fbe695'>你的恶意刷新行为，我们已经在记录！！</p>",
@@ -292,11 +318,33 @@ $(".sendButton").live("click",function(){
 
                             }
                             
+                           else if(result.msg  == 7005)
+                            {
+                                //alert("亲~，该流量包已被人抢一步领了，再跑一次吧～");
+                                console.log("error7005-:"+obj.msg);
+                                Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>亲~，此号码已经领过一次了啦，换个号码赠送吧～</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
 
-                            if(obj.msg == 7006||obj.msg == 7007)
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                });
+                            }
+                           else if(obj.msg == 7006||obj.msg == 7007)
                             {
                                 //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
-
+                                console.log("error7006-7007-:"+obj.msg);
                                 Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "<p style='color:#fbe695'>亲~，手机号码有误，请输入福建移动手机号～</p>",
@@ -317,33 +365,11 @@ $(".sendButton").live("click",function(){
                                 });
 
                             }
-                            if(obj.msg == 7007)
-                            {
-                                //alert("亲~，你的流量包已经被人抢先一步领取了，你可以再跑一次试试～");
 
-                                Dialog.close('sendDiv');
-                                new Dialog({
-                                    content: "<p style='color:#fbe695'>亲~，该流量包已被人抢一步领了，再跑一次吧～</p>",
-                                    
-                                    blocker: true,
-                                    timeout: 5,
-                                    showTimer:false,
-                                    buttons: {
-
-                                            确定: function () {
-                                                //console.log('确定');
-                                                this.close();
-                                                window.location.href="../../index.html"
-                                                //window.location.reload();
-                                                }
-                                        }
-                                    
-                                });
-
-                            }
-                            if(obj.msg == 7011)
+                           else if(obj.msg == 7011)
                             {
                                 //alert("吖～～服务器可能出错了，订购失败！");
+                                console.log("error7011-:"+obj.msg);
                                  Dialog.close('sendDiv');
                                 new Dialog({
                                     content: "<p style='color:#fbe695'>吖～～服务器可能出错了，订购失败！</p>",
@@ -363,9 +389,32 @@ $(".sendButton").live("click",function(){
                                     
                                     });
                             }
+                            else{
+                                console.log("error错误代码-:"+obj.msg);
+                                    //alert("吖～～服务器可能出错了，订购失败！");
+                                 Dialog.close('sendDiv');
+                                new Dialog({
+                                    content: "<p style='color:#fbe695'>你的恶意刷新行为，我们已经在记录！！</p>",
+                                    
+                                    blocker: true,
+                                    timeout: 5,
+                                    showTimer:false,
+                                    buttons: {
+
+                                            确定: function () {
+                                                //console.log('确定');
+                                                this.close();
+                                                window.location.href="../../index.html"
+                                                //window.location.reload();
+                                                }
+                                        }
+                                    
+                                    });
+
+                            }
 
                     //$("#alertP").show().html(obj.msg);
-                    return;
+                    //return;
                 }
               });
 
@@ -389,7 +438,7 @@ $(".sendButton").live("click",function(){
 
 <body>
 
-      <div class="goodsPic"><div class="shareTxt">点击右上角还可分享此免费流量包↑↑↑</div><img src="../city_res/liuliang.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="javascript:void;" id="click_btn" class="downloadButton" >点击领取</a></div></div>
+      <div class="goodsPic"><img src="../city_res/liuliang.jpg" style="width:100%;"   alt="商户商品"><div class="toBuy"><span>福建移动</span><a href="javascript:void;" id="click_btn" class="downloadButton" >点击领取</a></div></div>
 <!--电话信息
       <div class="wrapBox callHeight"><span class="numTitle">商家电话：</span><span class="num" >13599837308</span><div class="callIco"><a  href="tel:059187331882"><img src="images/callIco.png" style="width:24px" ></a></div></div>
   -->
@@ -416,7 +465,8 @@ $(".sendButton").live("click",function(){
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 
 
-        var weixinURL=String("http://218.207.182.80:8088/wx12580/city/10086/liuliang.html?award="+awardID);
+        var weixinURL = String(window.location);
+        console.log("weixinURL:-----"+weixinURL);
         
         window.shareData = {  
             //分享图片http://218.207.182.80:8091/12580/more/shopNe
@@ -434,7 +484,7 @@ $(".sendButton").live("click",function(){
             //朋友圈内容--貌似没用
             "tContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停！更有万份流量包免费等你领取！(数量有限，快来哦～)",
             //发送给朋友标题
-            "fTitle": "马上送祝福，赢100M流量好礼！",
+            "fTitle": "100M流量免费送，优惠好礼等你拿！",
             //发送给朋友内容
             "fContent": "马蹄哒哒震乾坤，祝福声声节节升！策马奔腾，好礼送不停！更有万份流量包免费等你领取！(数量有限，快来哦～)",
             //微博内容
