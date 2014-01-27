@@ -13,7 +13,7 @@
 $(function(){
 
 function WeiXinShareBtn() { 
- 
+              alert("run");
              if (typeof WeixinJSBridge == "undefined") { 
                 alert("请先通过微信搜索 wow36kr 添加36氪为好友，通过微信分享文章 "); 
              } else { 
@@ -30,9 +30,8 @@ function WeiXinShareBtn() {
 
 $('#click_btn').click(function(){ 
          alert("click");
-         //WeiXinShareBtn();
-
-    }); 
+         WeiXinShareBtn();
+       }); 
 
 
 
