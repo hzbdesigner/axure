@@ -471,7 +471,11 @@ function delCookie(name)//删除cookie
 
 
   
-
+$("#areaOpt").change( function() {
+  // 这里可以写些验证代码
+  addVarId=$("#areaOpt").val();
+  SetCookie ("addVarId", addVarId);
+});
 
 
 
