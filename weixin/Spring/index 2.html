@@ -295,6 +295,38 @@ body{
 <script>
 $(function(){
 
+
+  //cookie
+
+  function SetCookie(name,value)//两个参数，一个是cookie的名子，一个是值
+    {
+        var Days = 30; //此 cookie 将被保存 30 天
+        var exp  = new Date();    //new Date("December 31, 9998");
+        exp.setTime(exp.getTime() + Days*24*60*60*1000);
+        document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+    }
+function getCookie(name)//取cookies函数        
+    {
+        var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+         if(arr != null) return unescape(arr[2]); return null;
+
+    }
+function delCookie(name)//删除cookie
+    {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval=getCookie(name);
+        if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+    }
+
+
+
+//SetCookie ("xiaoqi", "3");
+//alert(getCookie('xiaoqi'));
+
+
+  //cookie- 结束；
+
 //canvas init
   var canvas = document.getElementById("canvas");
   var ctx = canvas.getContext("2d");
@@ -487,50 +519,60 @@ function ipChooose(){
 
                                   addVarId="fuzhou";
                                   $("#areaOpt").val("fuzhou");
+                                  SetCookie ("addVarId", "fuzhou");
                                   
                                 }else if(remote_ip_info["city"]=="厦门"){
 
                                   addVarId="xiamen";
                                   $("#areaOpt").val("xiamen");
+                                  SetCookie ("addVarId", "xiamen");
 
                                 }else if(remote_ip_info["city"]=="漳州"){
 
                                   addVarId="zhangzhou";
                                   $("#areaOpt").val("zhangzhou");
+                                  SetCookie ("addVarId", "zhangzhou");
 
                                 }else if(remote_ip_info["city"]=="龙岩"){
 
                                   addVarId="longyan";
                                   $("#areaOpt").val("longyan");
+                                  SetCookie ("addVarId", "longyan");
 
                                 }else if(remote_ip_info["city"]=="三明"){
 
                                   addVarId="sanming";
                                   $("#areaOpt").val("sanming");
+                                  SetCookie ("addVarId", "sanming");
 
                                 }else if(remote_ip_info["city"]=="泉州"){
 
                                   addVarId="quanzhou";
                                   $("#areaOpt").val("quanzhou");
+                                  SetCookie ("addVarId", "quanzhou");
 
                                 }else if(remote_ip_info["city"]=="宁德"){
 
                                   addVarId="ningde";
                                   $("#areaOpt").val("ningde");
+                                  SetCookie ("addVarId", "ningde");
 
                                 }else if(remote_ip_info["city"]=="莆田"){
 
                                   addVarId="putian";
                                    $("#areaOpt").val("putian");
+                                   SetCookie ("addVarId", "putian");
 
                                 }else if(remote_ip_info["city"]=="南平"){
 
                                   addVarId="nanping";
                                   $("#areaOpt").val("nanping");
+                                  SetCookie ("addVarId", "nanping");
 
                                 }else{
                                   addVarId="fuzhou";
                                   $("#areaOpt").val("fuzhou");
+                                  SetCookie ("addVarId", "fuzhou");
                                   //alert("仅限福建地域内访问，"+remote_ip_info["city"]+"暂不支持");
                                 }
 
