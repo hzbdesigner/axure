@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Android任务管理器</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">body{ margin:0px; padding:0px; background:url(images/manger_bak.jpg) repeat-x;}td img {display: block;}</style>
+
+
+<link type="text/css" rel="stylesheet" href="css/backToTop.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+    var $backToTopTxt = "返回顶部", $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
+        .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
+            $("html, body").animate({ scrollTop: 0 }, 120);
+    }), $backToTopFun = function() {
+        var st = $(document).scrollTop(), winh = $(window).height();
+         (st > 0)? $backToTopEle.show(): $backToTopEle.hide();    
+        //IE6下的定位
+        if (!window.XMLHttpRequest) {
+            $backToTopEle.css("top", st + winh - 166);    
+        }
+    };
+    $(window).bind("scroll", $backToTopFun);
+    $(function() { $backToTopFun(); });
+})();
+</script>
+<!--Fireworks CS3 Dreamweaver CS3 target.  Created Thu Nov 24 18:23:46 GMT+0800 2011-->
+</head>
+<body bgcolor="#ffffff" >
+<div class="backIndex"><a href="index.htm"> 返回首页</a></div>
+<table border="0" cellpadding="0" cellspacing="0" width="1024" align="center">
+<!-- fwtable fwsrc="未命名" fwpage="页面 1" fwbase="manger.jpg" fwstyle="Dreamweaver" fwdocid = "1409280751" fwnested="0" -->
+  <tr>
+   <td><img src="images/spacer.gif" width="159" height="1" border="0" alt="" /></td>
+   <td><img src="images/spacer.gif" width="167" height="1" border="0" alt="" /></td>
+   <td><img src="images/spacer.gif" width="698" height="1" border="0" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+  </tr>
+
+  <tr>
+   <td colspan="3"><img name="manger_r1_c1" src="images/manger_r1_c1.jpg" width="1024" height="83" border="0" id="manger_r1_c1" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="83" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td colspan="3"><img name="manger_r2_c1" src="images/manger_r2_c1.jpg" width="1024" height="357" border="0" id="manger_r2_c1" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="357" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td><img name="manger_r3_c1" src="images/manger_r3_c1.jpg" width="159" height="71" border="0" id="manger_r3_c1" alt="" /></td>
+   <td><a href="apk/MyTaskManager.apk"><img name="manger_r3_c2" src="images/manger_r3_c2.jpg" width="167" height="71" border="0" id="manger_r3_c2" alt="" /></a></td>
+   <td><img name="manger_r3_c3" src="images/manger_r3_c3.jpg" width="698" height="71" border="0" id="manger_r3_c3" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="71" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td colspan="3"><img name="manger_r4_c1" src="images/manger_r4_c1.jpg" width="1024" height="46" border="0" id="manger_r4_c1" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="46" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td colspan="3"><img name="manger_r5_c1" src="images/manger_r5_c1.jpg" width="1024" height="315" border="0" id="manger_r5_c1" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="315" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td colspan="3"><img name="manger_r6_c1" src="images/manger_r6_c1.jpg" width="1024" height="190" border="0" id="manger_r6_c1" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="190" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td colspan="3"><img name="manger_r7_c1" src="images/manger_r7_c1.jpg" width="1024" height="57" border="0" id="manger_r7_c1" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="57" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td colspan="3"><img name="manger_r8_c1" src="images/manger_r8_c1.jpg" width="1024" height="678" border="0" id="manger_r8_c1" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="678" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td colspan="3"><img name="manger_r9_c1" src="images/manger_r9_c1.jpg" width="1024" height="78" border="0" id="manger_r9_c1" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="78" border="0" alt="" /></td>
+  </tr>
+</table>
+</body>
+</html>
