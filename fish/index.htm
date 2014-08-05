@@ -17,6 +17,18 @@ background: #cc0048;
 ul,li{margin: 0px; padding: 0px;font-size: 12px; line-height: 22px; color: #6a654f}
 li{padding-left: 10px;}
 .red{ color:#e40077;}
+@-webkit-keyframes whale_animation{
+ 0%{
+        right:-40%;
+}
+ 30%{
+        right:50%;
+}
+ 100%{
+        right:160%;
+}
+
+}
 @-webkit-keyframes fish001_gogogo {
     0%{
          
@@ -419,6 +431,18 @@ li{padding-left: 10px;}
  
  
 }
+.whale{
+  position: absolute;
+  bottom: 10%;
+  -webkit-animation:whale_animation 30s infinite linear;
+  z-index: 2;
+}
+.crab{
+  position: absolute;
+  bottom: 1px;
+  left: 66%;
+  z-index: 2;
+}
 .fish001{
   position: absolute;
   top:50%;
@@ -485,12 +509,13 @@ li{padding-left: 10px;}
     background: url(images/3.png) no-repeat bottom left;
     background-size:cover;
     border-bottom: 2px solid #ff2371;
+    position: relative;
 
   }
   .title{
 
    
-    margin: 10px 5px;
+    margin: 5px;
   }
   .title-in{
     text-shadow:2px 2px 0px #ff9600; color:#60ad0d;
@@ -540,6 +565,148 @@ li{padding-left: 10px;}
     text-align: center;
 
   }
+  .pop0{
+    width: 80px;
+    height:80px;
+    border-radius: 80px;
+    position: absolute;
+    left: 1%;
+    bottom: 10px;
+    background: #fff;
+    opacity: 0.9;
+    z-index: 990;
+}
+  .pop1{
+    width: 80px;
+    height:80px;
+    border-radius: 80px;
+    position: absolute;
+    left: 25%;
+    bottom: 10px;
+    background: #fff;
+    opacity: 0.9;
+    z-index: 991;
+}
+  .pop2{
+    width: 80px;
+    height:80px;
+    border-radius: 80px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    background: #fff;
+    opacity: 0.9;
+    z-index: 992;
+}
+  .pop3{
+    width: 80px;
+    height:80px;
+    border-radius: 80px;
+    position: absolute;
+    left: 75%;
+    bottom: 10px;
+    background: #fff;
+    opacity: 0.9;
+    z-index: 993;
+}
+  .pop-in{
+    margin: 3px;
+    width: 74px;
+    height:74px;
+    border-radius: 74px;
+    background: #e7b737;
+    opacity: 0.9;
+    color: #12215c;
+    line-height: 74px;
+    text-align: center;;
+    position: relative;
+}
+.pop-in-light{
+    position: absolute;
+    top: 3px;
+    left:12px; 
+    width: 50px;
+    height:30px;
+    -webkit-border-radius: 25px / 15px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+    opacity: 0.8;
+    
+}
+@-webkit-keyframes w_pop_animation{
+    0%{
+             
+          -webkit-transform: rotate(0deg);
+          bottom:15%;
+       
+          opacity: 0.8;
+        }
+         20%{
+              
+            bottom:20%;
+          opacity: 0.8;
+            
+        }
+
+        50%{
+            
+            bottom:50%;
+           
+            -webkit-transform:rotate(190deg);
+          opacity: 0.5;
+        }
+     
+          70%{
+            
+            bottom:70%;
+      
+           
+        }
+
+        100%{
+              
+             bottom:85%;;
+           -webkit-transform:rotate(270deg);
+           opacity: 0.1;
+            
+        }
+
+
+}
+.w_pop1{
+
+  -webkit-animation:w_pop_animation 5s infinite linear ;
+  position: absolute;
+  left: 30%;
+  bottom: 15%
+}
+.w_pop2{
+
+  -webkit-animation:w_pop_animation 10s infinite linear ;
+  position: absolute;
+  left: 50%;
+  bottom: 15%
+}
+.w_pop3{
+
+  -webkit-animation:w_pop_animation 3s infinite linear ;
+  position: absolute;
+  left: 80%;
+  bottom: 15%
+}
+.w_pop4{
+
+  -webkit-animation:w_pop_animation 12s infinite linear ;
+  position: absolute;
+  left: 40%;
+  bottom: 15%
+}
+.w_pop5{
+
+  -webkit-animation:w_pop_animation 16s infinite linear ;
+  position: absolute;
+  left: 36%;
+  bottom: 15%
+}
 </style>
 <script>
     $("img").imgLoad({
@@ -556,8 +723,16 @@ li{padding-left: 10px;}
 <body >
   <div class="mark">加载中....</div>
 <div class="stage">
-   <img src="images/3.png"  style="display:none" />
-   <img src="images/hock.png" width="90" height="265" class="hock"/ >
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop1"/>
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop2"/>
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop3"/>
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop4"/>
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop5"/>
+  <div class="pop0"><div class="pop-in"><div class="pop-in-light"></div>试试看</div></div>
+   <div class="pop1"><div class="pop-in"><div class="pop-in-light"></div>我的收获</div></div>
+   <div class="pop2"><div class="pop-in"><div class="pop-in-light"></div>活动规则</div> </div>
+   <div class="pop3"><div class="pop-in"><div class="pop-in-light"></div>转发分享</div> </div>
+  <img src="images/hock.png" width="90" height="265" class="hock"/ >
   <img src="images/1.svg" width="50" height="50" class="fish001"/>
   <img src="images/2.svg" width="42" height="42" class="fish002"/>
   <img src="images/2.svg" width="42" height="42" class="fish0021"/>
@@ -566,6 +741,8 @@ li{padding-left: 10px;}
   <img src="images/4.svg" width="40" height="40" class="fish004"/>
   <img src="images/4.svg" width="40" height="40" class="fish0041"/>
   <img src="images/4.svg" width="40" height="40" class="fish0042"/>
+  <img src="images/5.svg" width="100" height="100" class="whale" />
+  <img src="images/6.svg" width="50" height="50" class="crab" />
 </div>
 <div class="title">
 <div class="title-in">中奖名单<span>别再羡慕达人啦，你也来试试看吧！</span></div>
@@ -581,5 +758,6 @@ li{padding-left: 10px;}
   </ul>
 </div>
 </div>
+<img src="images/3.png"  width="480" height="500" style="display:none" />
 </body>
 </html>
