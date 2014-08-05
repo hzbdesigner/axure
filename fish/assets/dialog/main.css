@@ -1,0 +1,24 @@
+
+.ui-dialog-prompt-content {text-align: center;}
+.ui-dialog-prompt-content input{margin:10px ;padding:0;font-size:16px;line-height:1.5;vertical-align:baseline;}
+a{text-decoration:none;outline:none;}a:hover{color:#ff4800;}
+a:active{color:#ff7200;}
+img{border:0;vertical-align:middle;}
+h2{margin:0;padding:0 8px;}
+#menu{position:fixed;left:0;top:0;width:240px;height:100%;overflow:auto;overflow-x:hidden;}
+.msie6 #menu{position:absolute;}
+.catel{padding:16px 0;}
+ul{margin:0 8px;padding:0 0 16px 32px;width:192px;list-style-type:circle;font-size:8px;}
+li{margin:0;padding:4px 0;}
+li a{font-size:16px;}
+#examples{margin:0 0 0 240px;padding:0 16px;height:100%;overflow:auto;overflow-x:hidden;border-left:3px solid #ccc;}
+.cater{padding:16px 0;}
+.cater h2{border-bottom:3px double #ccc;}
+dl{margin:0;padding:0;}
+dt{padding:16px 16px 0;font-weight:bold;}
+dd{margin:0;padding:0 16px 16px;}
+p{font-size: 1em;line-height: 1.2em;}
+pre{display:block;margin:16px 0 0;padding:8px;width:600px;border:1px solid #999;background:#fff;color:#666;font-family:Courier New, monospace;font-size:14px;font-weight:normal;resize:none;}
+textarea{display:block;margin:16px 0 0;padding:8px;width:600px;border:1px solid #999;background:#fff;font-family:Courier New, monospace;font-size:14px;font-weight:normal;resize:none;overflow:hidden;}
+
+#zone{margin:16px 0 0;padding:8px;width:586px;height:128px;border:8px solid #ccc;background:#eee;overflow:auto;}

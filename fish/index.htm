@@ -4,8 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta name="format-detection" content="telephone=no">
 <title>小积分，钓大奖</title>
+<link rel="stylesheet" type="text/css" href="assets/dialog/main.css">
+<link rel="stylesheet" type="text/css" href="assets/dialog/dialog.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/imagesjs.js"></script>
+
 
 <style>
 html, body { 
@@ -16,6 +19,7 @@ background: #cc0048;
 } 
 ul,li{margin: 0px; padding: 0px;font-size: 12px; line-height: 22px; color: #6a654f}
 li{padding-left: 10px;}
+a{ text-decoration: none;}
 .red{ color:#e40077;}
 @-webkit-keyframes whale_animation{
  0%{
@@ -718,6 +722,28 @@ li{padding-left: 10px;}
        
     }//图片加载完成回调；
   }); 
+
+
+function getprize(){
+ new Dialog({id: "sendDiv",content: "<p style='text-align:center'><img src='images/fish001.png' width='100' height='100'/><br/>恭喜您！您获得了“来电提醒”业务包，免费使用一个月。</p>",
+  buttons: {
+        按钮1: function () {
+            console.log('按钮1');
+            this.close();
+        },
+        按钮2: function () {
+            console.log('按钮2');
+            this.close();
+        }
+    },
+  blocker: true,lockLocation: true,title:'咬钩啦',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false,onclose: function(){alert("1");window.location.reload(); }});
+}
+$(function(){
+  $("#prize").on("click", function(){
+    getprize();
+    
+  });
+})
 </script>
 </head>
 <body >
@@ -728,9 +754,9 @@ li{padding-left: 10px;}
   <img src="images/w_pop.svg" width="50" height="10" class="w_pop3"/>
   <img src="images/w_pop.svg" width="50" height="10" class="w_pop4"/>
   <img src="images/w_pop.svg" width="50" height="10" class="w_pop5"/>
-  <div class="pop0"><div class="pop-in"><div class="pop-in-light"></div>试试看</div></div>
+  <div class="pop0"><a href="javascript:void();" id="prize" ><div class="pop-in"><div class="pop-in-light"></div>试试看</div></a></div>
    <div class="pop1"><div class="pop-in"><div class="pop-in-light"></div>我的收获</div></div>
-   <div class="pop2"><div class="pop-in"><div class="pop-in-light"></div>活动规则</div> </div>
+   <div class="pop2"><a href="rule.htm"><div class="pop-in"><div class="pop-in-light"></div>活动规则</div></a> </div>
    <div class="pop3"><div class="pop-in"><div class="pop-in-light"></div>转发分享</div> </div>
   <img src="images/hock.png" width="90" height="265" class="hock"/ >
   <img src="images/1.svg" width="50" height="50" class="fish001"/>
@@ -759,5 +785,6 @@ li{padding-left: 10px;}
 </div>
 </div>
 <img src="images/3.png"  width="480" height="500" style="display:none" />
+<script src="assets/dialog/dialog.min.js"></script>
 </body>
 </html>

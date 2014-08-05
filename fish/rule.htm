@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<title>小积分，钓大奖</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/imagesjs.js"></script>
+
+<style>
+html, body { 
+margin:0px;
+padding:0px;
+height: 100%; 
+
+} 
+html{
+margin:0px;
+padding:0px;
+height: 100%; 
+background: #cc0048;
+background: url(images/about_bak.png) no-repeat bottom left;
+background-size:cover;
+  
+}
+.wrapper{
+
+  padding: 0px 10px;
+}
+.wrapper p{
+
+  line-height: 22px;
+}
+</style>
+<script>
+    $("img").imgLoad({
+    time:10000000,//设置足够大 须等待图片载入完成，但是404的时候就杯具了...
+    callback:function(){
+      //alert("载入完成") 
+     $(".mark").hide();
+
+       
+    }//图片加载完成回调；
+  }); 
+</script>
+</head>
+<body >
+  <div class="wrapper">
+<h3>一、活动时间</h3>
+<p>即日起至10月31日</p>
+<h3>二、活动对象</h3>
+<p>福建移动手机用户</p>
+<h3>三、活动内容</h3>
+<p>用户点击活动页面的“试试看“，就有机会钓到游戏奖励，每钓一次消耗3个积分，参与的次数越多，钓到的奖励越多。同时还可将此活动转发至微信、微博、朋友圈邀请好友参与，每次成功分享可获得10个积分，每月仅限分享10次。</p>
+<h3>四、  活动规则</h3>
+<p>1、用户参与“小积分，钓大奖“专区获得的业务奖励，若用户已开通同类业务，则自动顺延生效</p>
+<p>2、  用户获得的话费、积分、100M流量加油包奖励将于2小时内到账</p>
+<p>3、活动期间，若用户手机停机（包括强制停机、欠费停机、申请停机、高额停机、半停）或预约销户，则无法参与钓鱼游戏。需重新开机或取消预约销户后，方可进行参与。</p>
+</div>
+
+</body>
+</html>
