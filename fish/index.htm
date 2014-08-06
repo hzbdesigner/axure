@@ -17,7 +17,7 @@ padding:0px;
 height: 100%; 
 background: #cc0048;
 } 
-ul,li{margin: 0px; padding: 0px;font-size: 12px; line-height: 22px; color: #6a654f}
+ul,li{margin: 0px; padding: 0px;font-size: 12px; line-height: 22px; color: #6a654f;width: 90%;}
 li{padding-left: 10px;}
 a{ text-decoration: none;}
 .red{ color:#e40077;}
@@ -556,9 +556,8 @@ a{ text-decoration: none;}
     z-index: 1;
     top:0px;
     left: 40%;
-
-
   }
+
   .mark{
     width: 100%;
     height:100%;
@@ -711,6 +710,10 @@ a{ text-decoration: none;}
   left: 36%;
   bottom: 15%
 }
+.bt-ui-dialog-钓起{
+
+  color: #6d9c12;
+}
 </style>
 <script>
     $("img").imgLoad({
@@ -727,20 +730,22 @@ a{ text-decoration: none;}
 function getprize(){
  new Dialog({id: "sendDiv",content: "<p style='text-align:center'><img src='images/fish001.png' width='100' height='100'/><br/>恭喜您！您获得了“来电提醒”业务包，免费使用一个月。</p>",
   buttons: {
-        按钮1: function () {
-            console.log('按钮1');
+        放生: function () {
+            console.log('放 生');
             this.close();
         },
-        按钮2: function () {
-            console.log('按钮2');
+        钓起: function () {
+            console.log('钓 起');
             this.close();
         }
     },
   blocker: true,lockLocation: true,title:'咬钩啦',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false,onclose: function(){alert("1");window.location.reload(); }});
 }
 $(function(){
+
   $("#prize").on("click", function(){
-    getprize();
+    $(".hock").animate({top: '-50px'}, "slow").animate({top: '-10px'}, "slow").animate({top: '-250px'}, "slow","linear",function(){getprize()});
+    
     
   });
 })

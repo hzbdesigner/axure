@@ -1,15 +1,15 @@
 /* dialog */
-.ui-dialog{ display:none; position:fixed; _position:absolute;top:50%; left:50%; z-index:1000; width:80%; margin:-250px 0 0 -180px; padding:4px;  background:#FFF; -webkit-box-shadow: 0em 0.1em 0.5em #000;}
+.ui-dialog{ display:none; position:fixed; _position:absolute;top:50%; left:50%; z-index:1000; width:78%; margin:-250px 0 0 -180px; padding:4px;  background:#FFF; -webkit-box-shadow: 0em 0.1em 0.5em #000;}
 .ui-dialog-in{ }
-.ui-dialog-bd{padding:10px;width: 100%; }
-.ui-dialog-hd{ *zoom:1; position:relative; padding-left:14px;  border-bottom: solid 1px #d61270;text-align:center;margin-left: 10px;}
+.ui-dialog-bd{padding:10px 0;width: 100%; }
+.ui-dialog-hd{ *zoom:1; position:relative; padding-left:14px;  border-bottom: solid 1px #d61270;text-align:center;margin-left: 0px; height: 38px; line-height: 38px;}
 .ui-dialog-bd p{ margin: 10px 0 0 0;color: #222;margin-left: 0.5em;}
 .ui-dialog-title-draggable{ }
 .ui-dialog-tit{ font-size: 1.2em;color: #d61270;margin-left: 10px;margin-bottom: 0.4em;}
 .ui-dialog-close{ position:absolute; top:0; right:0; width:30px; height:30px; font:normal 20px/28px Verdana; text-align:center; color:#b4b4b4}
 .ui-dialog-close:hover{ color:#b4b4b4; text-decoration:none}
 .ui-dialog-titless .ui-dialog-close { right:-16px; top:-16px;}
-.bt-ui-dialog{ display:inline-block; padding:10px; color:#000;  background:#fff}
+.bt-ui-dialog{ display:inline-block; padding:10px 0; color:#000;  background:#fff; width: 49%;}
 .bt-ui-dialog:hover{ color:#fff; text-decoration:none; border-color:#ff4800; background:#ff4800; cursor:pointer}
 .ui-blocker{ display:none; position:fixed; _position:absolute; top:0; left:0; z-index:999; width:100%; height:100%; background:#C58E00; opacity:.5; filter:alpha(opacity=50)}
 .input-radio{ box-sizing:border-box; *width:13px; *height:13px; margin:2px 5px 6px 0; vertical-align:middle}
@@ -17,7 +17,8 @@
 .dialog-note-error{ clear:both; color:#ff4800}
 .ui-dialog-ft{border-top: solid 1px #c5c5c5;}
 .ui-dialog-bt-box{ text-align: center;}
-.ui-dialog-bt-box .bt-ui-dialog{ margin:0 5px;}
+.ui-dialog-bt-box > a:first-child{ border-right: 1px solid #bfbfbf;}
+.ui-dialog-bt-box .bt-ui-dialog{ margin:5px 0;}
 
 /*dialog common*/
 .dialog-comm-box{ padding:20px 25px; text-align: center;}
