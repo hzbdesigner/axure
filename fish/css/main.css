@@ -1,26 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta name="format-detection" content="telephone=no">
-<title>小积分，钓大奖</title>
-<link rel="stylesheet" type="text/css" href="assets/dialog/main.css">
-<link rel="stylesheet" type="text/css" href="assets/dialog/dialog.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/imagesjs.js"></script>
 
-
-<style>
 html, body { 
 margin:0px;
 padding:0px;
 height: 100%; 
-background: #cc0048;
+background: #b01114;
 } 
-ul,li{margin: 0px; padding: 0px;font-size: 12px; line-height: 22px; color: #6a654f;width: 90%;}
+ul,li{margin: 0px; padding: 0px;font-size: 12px; line-height: 24px; color: #623500;width: 99%;}
 li{padding-left: 10px;}
 a{ text-decoration: none;}
 .red{ color:#e40077;}
+#bingo_wrapper{position: absolute; right: 20px;top:10px; border-radius: 10px;height: 28px;width: 100px; background: #fff;opacity: 0.5;z-index: 999;}
+#bingo{position: absolute; right: 5px;top:10px; border-radius: 10px;height: 28px;width: 100px; color: #fff;font-size: 14px; line-height: 28px;}
+#music_wrapper{position: absolute; left: 20px;top:10px; border-radius: 10px;height: 28px;width: 28px; background: #fff;opacity: 0.5;z-index: 999;}
+#music{position: absolute; left: 20px;top:10px; width:28px; height:28px;  }
+.date{ position: absolute; right: 10px; color: #b8a892;}
+#loading{
+
+  position: absolute;
+  left:0%;
+  top:0%;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+#blockDiv{
+  background: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+
+}
+#loadingImg{
+  position: absolute;
+  left: 15%;
+  top:30%;
+  z-index: 10000;
+}
 @-webkit-keyframes whale_animation{
  0%{
         right:-40%;
@@ -33,7 +48,7 @@ a{ text-decoration: none;}
 }
 
 }
-@-webkit-keyframes fish001_gogogo {
+@-webkit-keyframes fish003_gogogo {
     0%{
          
       -webkit-transform: rotate(0deg);
@@ -183,7 +198,7 @@ a{ text-decoration: none;}
      
      
     }
-@-webkit-keyframes fish004_gogogo {
+@-webkit-keyframes fish001_gogogo {
         0%{
              
           -webkit-transform: rotateY(0deg);
@@ -234,7 +249,7 @@ a{ text-decoration: none;}
      
     }
 
-@-webkit-keyframes fish0041_gogogo {
+@-webkit-keyframes fish0011_gogogo {
         0%{
              
           -webkit-transform: rotateY(0deg);
@@ -284,7 +299,7 @@ a{ text-decoration: none;}
      
      
     }
-@-webkit-keyframes fish0042_gogogo {
+@-webkit-keyframes fish0012_gogogo {
         0%{
              
           -webkit-transform: rotateY(0deg);
@@ -335,7 +350,7 @@ a{ text-decoration: none;}
      
     }
 
- @-webkit-keyframes fish0011_gogogo {
+ @-webkit-keyframes fish0031_gogogo {
     0%{
          
       -webkit-transform: rotate(0deg);
@@ -385,7 +400,7 @@ a{ text-decoration: none;}
  
  
 }
-@-webkit-keyframes fish0012_gogogo {
+@-webkit-keyframes fish0032_gogogo {
     0%{
          
       -webkit-transform: rotate(0deg);
@@ -447,11 +462,11 @@ a{ text-decoration: none;}
   left: 66%;
   z-index: 2;
 }
-.fish001{
+.fish003{
   position: absolute;
   top:36%;
     
-   -webkit-animation:fish001_gogogo 8s infinite linear ;
+   -webkit-animation:fish003_gogogo 8s infinite linear ;
 
   }
 .fish002{
@@ -468,39 +483,39 @@ a{ text-decoration: none;}
    -webkit-animation:fish0021_gogogo 10s infinite linear ;
 
   }
-.fish0011{
+.fish0031{
   position: absolute;
   top:50%;
+    
+   -webkit-animation:fish0031_gogogo 10s infinite linear ;
+
+  }
+  .fish0032{
+  position: absolute;
+  top:65%;
+    
+   -webkit-animation:fish0032_gogogo 12s infinite linear ;
+
+  }
+   .fish001{
+  position: absolute;
+  top:30%;
+    
+   -webkit-animation:fish001_gogogo 18s infinite linear ;
+
+  }
+     .fish0011{
+  position: absolute;
+  top:22%;
     
    -webkit-animation:fish0011_gogogo 10s infinite linear ;
 
   }
-  .fish0012{
-  position: absolute;
-  top:65%;
-    
-   -webkit-animation:fish0012_gogogo 12s infinite linear ;
-
-  }
-   .fish004{
-  position: absolute;
-  top:30%;
-    
-   -webkit-animation:fish004_gogogo 18s infinite linear ;
-
-  }
-     .fish0041{
-  position: absolute;
-  top:22%;
-    
-   -webkit-animation:fish0041_gogogo 10s infinite linear ;
-
-  }
-     .fish0042{
+     .fish0012{
   position: absolute;
   top:13%;
     
-   -webkit-animation:fish0042_gogogo 9s infinite linear ;
+   -webkit-animation:fish0012_gogogo 9s infinite linear ;
 
   }
   .stage{
@@ -510,7 +525,7 @@ a{ text-decoration: none;}
     background: #00cfff;
 
     position: relative;
-    background: url(images/3.png) no-repeat bottom left;
+    background: url(../images/3.png) no-repeat bottom left;
     background-size:cover;
     border-bottom: 2px solid #ff2371;
     position: relative;
@@ -524,10 +539,10 @@ a{ text-decoration: none;}
   .title-in{
     text-shadow:1px 1px 0px #ff9600; color:#60ad0d;
     border: 1px solid #b2330e;
-    color: #4c1106;
+    color: #FFF;
     padding: 8px 10px;
     border-radius: 6px;
-    background: url(images/title_bak.png);
+    background: #e0a326;
     font-size: 18px;
 
 
@@ -535,9 +550,10 @@ a{ text-decoration: none;}
   .title-in span{
     
     position: absolute;
-    color: #4c1106;
+    color: #f4eed9;
     right: 10px;
-    font-size: 14px;
+    padding-top: 4px;
+    font-size: 12px;
   }
   .rice-bak{
     
@@ -546,10 +562,12 @@ a{ text-decoration: none;}
   }
   .rice-bak-in{
     border-radius: 5px;
-    border: 1px solid #990009;
+    
     background: #eee8ce;
     height: 116px;
     overflow: hidden;
+    position: relative;
+
   }
   .hock{
     position: absolute;
@@ -569,44 +587,44 @@ a{ text-decoration: none;}
 
   }
   .pop0{
-    width: 80px;
-    height:80px;
-    border-radius: 80px;
+    width: 66px;
+    height:66px;
+    border-radius: 66px;
     position: absolute;
-    left: 1%;
+    left: 3%;
     bottom: 10px;
     background: #fff;
     opacity: 0.9;
     z-index: 990;
 }
   .pop1{
-    width: 80px;
-    height:80px;
-    border-radius: 80px;
+    width: 66px;
+    height:66px;
+    border-radius: 66px;
     position: absolute;
-    left: 25%;
+    left: 28%;
     bottom: 10px;
     background: #fff;
     opacity: 0.9;
     z-index: 991;
 }
   .pop2{
-    width: 80px;
-    height:80px;
-    border-radius: 80px;
+    width: 66px;
+    height:66px;
+    border-radius: 66px;
     position: absolute;
-    left: 50%;
+    left: 55%;
     bottom: 10px;
     background: #fff;
     opacity: 0.9;
     z-index: 992;
 }
   .pop3{
-    width: 80px;
-    height:80px;
-    border-radius: 80px;
+    width: 66px;
+    height:66px;
+    border-radius: 66px;
     position: absolute;
-    left: 75%;
+    left: 80%;
     bottom: 10px;
     background: #fff;
     opacity: 0.9;
@@ -614,15 +632,16 @@ a{ text-decoration: none;}
 }
   .pop-in{
     margin: 3px;
-    width: 74px;
-    height:74px;
-    border-radius: 74px;
+    width: 60px;
+    height:60px;
+    border-radius: 60px;
     background: #e7b737;
     opacity: 0.9;
     color: #12215c;
-    line-height: 74px;
+    line-height: 60px;
     text-align: center;;
     position: relative;
+    font-size: 12px;
 }
 .pop-in-light{
     position: absolute;
@@ -714,82 +733,3 @@ a{ text-decoration: none;}
 
   color: #6d9c12;
 }
-</style>
-<script>
-    $("img").imgLoad({
-    time:10000000,//设置足够大 须等待图片载入完成，但是404的时候就杯具了...
-    callback:function(){
-      //alert("载入完成") 
-     $(".mark").hide();
-
-       
-    }//图片加载完成回调；
-  }); 
-
-
-function getprize(){
- new Dialog({id: "sendDiv",content: "<p style='text-align:center'><img src='images/fish001.png' width='100' height='100'/><br/>恭喜您！您获得了“来电提醒”业务包，免费使用一个月。</p>",
-  buttons: {
-        放生: function () {
-            console.log('放 生');
-            this.close();
-        },
-        钓起: function () {
-            console.log('钓 起');
-            this.close();
-        }
-    },
-  blocker: true,lockLocation: true,title:'咬钩啦',location:{ x: .5, y: .35 },speed:1000,draggable:false,close:false,onclose: function(){alert("1");window.location.reload(); }});
-}
-$(function(){
-
-  $("#prize").on("click", function(){
-    $(".hock").animate({top: '-50px'}, "slow").animate({top: '-10px'}, "slow").animate({top: '-250px'}, "slow","linear",function(){getprize()});
-    
-    
-  });
-})
-</script>
-</head>
-<body >
-  <div class="mark">加载中....</div>
-<div class="stage">
-  <img src="images/w_pop.svg" width="50" height="10" class="w_pop1"/>
-  <img src="images/w_pop.svg" width="50" height="10" class="w_pop2"/>
-  <img src="images/w_pop.svg" width="50" height="10" class="w_pop3"/>
-  <img src="images/w_pop.svg" width="50" height="10" class="w_pop4"/>
-  <img src="images/w_pop.svg" width="50" height="10" class="w_pop5"/>
-  <div class="pop0"><a href="javascript:void();" id="prize" ><div class="pop-in"><div class="pop-in-light"></div>试试看</div></a></div>
-   <div class="pop1"><div class="pop-in"><div class="pop-in-light"></div>我的收获</div></div>
-   <div class="pop2"><a href="rule.htm"><div class="pop-in"><div class="pop-in-light"></div>活动规则</div></a> </div>
-   <div class="pop3"><div class="pop-in"><div class="pop-in-light"></div>转发分享</div> </div>
-  <img src="images/hock.png" width="90" height="265" class="hock"/ >
-  <img src="images/1.svg" width="50" height="50" class="fish001"/>
-  <img src="images/2.svg" width="42" height="42" class="fish002"/>
-  <img src="images/2.svg" width="42" height="42" class="fish0021"/>
-  <img src="images/1.svg" width="50" height="50" class="fish0011"/>
-  <img src="images/1.svg" width="50" height="50" class="fish0012"/>
-  <img src="images/4.svg" width="40" height="40" class="fish004"/>
-  <img src="images/4.svg" width="40" height="40" class="fish0041"/>
-  <img src="images/4.svg" width="40" height="40" class="fish0042"/>
-  <img src="images/5.svg" width="100" height="100" class="whale" />
-  <img src="images/6.svg" width="50" height="50" class="crab" />
-</div>
-<div class="title">
-<div class="title-in">中奖名单<span>别再羡慕达人啦，你也来试试看吧！</span></div>
-</div>
-<div class="rice-bak">
-<div class="rice-bak-in">
-  <ul>
-    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 7月12日 19:00</li>
-    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 7月12日 19:00</li>
-    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 7月12日 19:00</li>
-    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 7月12日 19:00</li>
-    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 7月12日 19:00</li>
-  </ul>
-</div>
-</div>
-<img src="images/3.png"  width="480" height="500" style="display:none" />
-<script src="assets/dialog/dialog.min.js"></script>
-</body>
-</html>
