@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<title>小积分，钓大奖</title>
+<link rel="stylesheet" type="text/css" href="assets/dialog/main.css">
+<link rel="stylesheet" type="text/css" href="assets/dialog/dialog.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/imagesjs.js"></script>
+
+<script>
+
+//加载图片
+ $("img").imgLoad({
+    time:10000000,//设置足够大 须等待图片载入完成，但是404的时候就杯具了...
+    callback:function(){
+      //alert("载入完成") 
+     $("#loading").hide();
+     test65();
+    }//图片加载完成回调；
+  }); 
+//android接口
+
+ 
+ var point;
+ //测试数据
+ var params66 = '{"act":66, "prmOut":{"msg" : "7004"},"version":1}';
+ var params65 = '{"act":65, "prmOut":{"point" : "7000"},"version":1}';
+
+function test65(){
+
+    AndroidCallWeb(params65);
+}
+function test66(){
+
+    AndroidCallWeb(params66);
+}
+
+//android返回json
+function AndroidCallWeb(jsonText){
+    
+    var result = $.parseJSON(jsonText);
+    //alert("result.act:--"+result.act);
+        if(result.act=="65"){
+
+                          point=result.prmOut.point;
+                          $("#bingo").html("积分:"+point);
+                          
+        }else if(result.act=="66"){
+
+
+
+                       if(result.prmOut.msg == 7000) {//小丑鱼
+
+                        var contentStr="<p style='text-align:center'><img src='images/fish001.png' width='100' height='100'/><br/>wa~!恭喜您！您获得了“来电提醒”业务包，免费使用一个月。</p>"
+
+                       }
+                       else if(result.prmOut.msg == 7001){//小黄鱼
+
+                        var contentStr="<p style='text-align:center'><img src='images/fish002.png' width='100' height='100'/><br/>wa~!恭喜您！您获得了“来电提醒”业务包，免费使用一个月。</p>"
+
+                       }
+                       else if(result.prmOut.msg == 7002){//小扁鱼
+                        var contentStr="<p style='text-align:center'><img src='images/fish003.png' width='100' height='100'/><br/>wa~!恭喜您！您获得了“来电提醒”业务包，免费使用一个月。</p>"
+                        
+
+                       }
+                       else if(result.prmOut.msg == 7003){//小螃蟹
+
+                        var contentStr="<p style='text-align:center'><img src='images/fish004.png' width='100' height='100'/><br/>wa~!恭喜您！您获得了“来电提醒”业务包，免费使用一个月。</p>"
+
+                       }
+                       else if(result.prmOut.msg == 7004){//鲸鱼
+
+                        var contentStr="<p style='text-align:center'><img src='images/fish005.png' width='100' height='100'/><br/>wa~!恭喜您！您获得了“来电提醒”业务包，免费使用一个月。</p>"
+
+                       }
+                       else{//出错了；
+                         
+
+                       }
+
+                 new Dialog({
+                          id: "sendDiv",
+                          content: contentStr,
+                          buttons: {
+                                放生: function () {
+                                    console.log('放 生');
+                                    this.close();
+                                },
+                                钓起: function () {
+                                    console.log('钓 起'+ result.prmOut.msg);
+                                    this.close();
+                                }
+                            },
+                          blocker: true,
+                          lockLocation: true,
+                          title:'咬钩啦',
+                          location:{ x: .5, y: .35 },
+                          speed:1000,draggable:false,
+                          close:false,
+                          onclose: function(){}
+                      });
+
+
+          }
+    $("#loading").hide();
+
+}
+//获奖调取
+function getprize(){
+
+  test66()
+}
+$(function(){
+
+  $("#prize").on("click", function(){
+    $(".hock").animate({top: '-50px'}, "slow").animate({top: '-10px'}, "slow").animate({top: '-250px'}, "slow","linear",function(){getprize()});
+  });
+})
+</script>
+</head>
+<body >
+  <div id="loading"><div id="blockDiv"></div><div id="loadingImg"><img src="images/loading.gif"  style="width:300px;height:232px"></div></div>
+<div class="stage">
+  <div id="bingo_wrapper"></div><div id="bingo">积分:0000</div>
+  <div id="music_wrapper"></div><div id="music"><img src="images/sound_ico.png"></div>
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop1"/>
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop2"/>
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop3"/>
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop4"/>
+  <img src="images/w_pop.svg" width="50" height="10" class="w_pop5"/>
+  <div class="pop0"><a href="javascript:void();" id="prize" ><div class="pop-in"><div class="pop-in-light"></div>试试看</div></a></div>
+   <div class="pop1"><div class="pop-in"><div class="pop-in-light"></div>我的收获</div></div>
+   <div class="pop2"><a href="rule.htm"><div class="pop-in"><div class="pop-in-light"></div>活动规则</div></a> </div>
+   <div class="pop3"><div class="pop-in"><div class="pop-in-light"></div>转发分享</div> </div>
+  <img src="images/hock.png" width="90" height="265" class="hock"/ >
+  <img src="images/3.svg" width="50" height="50" class="fish003"/>
+  <img src="images/2.svg" width="42" height="42" class="fish002"/>
+  <img src="images/2.svg" width="42" height="42" class="fish0021"/>
+  <img src="images/3.svg" width="50" height="50" class="fish0031"/>
+  <img src="images/3.svg" width="50" height="50" class="fish0032"/>
+  <img src="images/1.svg" width="40" height="40" class="fish001"/>
+  <img src="images/1.svg" width="40" height="40" class="fish0011"/>
+  <img src="images/1.svg" width="40" height="40" class="fish0012"/>
+  <img src="images/5.svg" width="100" height="100" class="whale" />
+  <img src="images/4.svg" width="50" height="50" class="crab" />
+</div>
+<div class="title">
+<div class="title-in">中奖名单<span>别再羡慕达人啦，你也来试试看吧！</span></div>
+</div>
+
+<div class="rice-bak">
+<div class="rice-bak-in" id="demo" >
+  <div id="demo1">
+  <ul>
+    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:01</span></li>
+    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:02</span></li>
+    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:03</span></li>
+    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:04</span></li>
+    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:05</span></li>
+    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:06</span></li>
+    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:07</span></li>
+    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:08</span></li>
+    <li>用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:09</span></li>
+    <li style="color:red">用户 138098298378 钓到了<span class="red">XXX</span>大奖 <span class="date">7月12日 19:10</span></li>
+  </ul>
+  </div>
+  <div id="demo2"></div>
+</div>
+   <script>
+     var speed=50
+     demo2.innerHTML=demo1.innerHTML
+     function Marquee(){
+        if(demo2.offsetTop-demo.scrollTop<=0){
+            
+            demo.scrollTop-=demo1.offsetHeight;
+             
+        }else{
+            
+            demo.scrollTop++
+            
+        }
+     }
+     var MyMar=setInterval(Marquee,speed)
+     demo.onmouseover=function() {clearInterval(MyMar)}
+     demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+     
+   </script>
+</div>
+<img src="images/3.png"  width="480" height="500" style="display:none" />
+<script src="assets/dialog/dialog.min.js"></script>
+</body>
+</html>
