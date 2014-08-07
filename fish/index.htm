@@ -12,6 +12,38 @@
 
 <script>
 
+ var point;
+ //测试数据
+ var params66 = '{"act":66, "prmOut":{"msg" : "7004"},"version":1}';
+ var params65 = '{"act":65, "prmOut":{"point" : "7000"},"version":1}';
+ var params67 = '{"act":67, "people":[{"mobileNum":"13800**0001","prize":"XX1大奖","date":"7月12日 18:01"},{"mobileNum":"12i09**0092","prize":"XX9大奖","date":"7月12日 18:02"},{"mobileNum":"13800**0003","prize":"XX1大奖","date":"7月12日 18:03"},{"mobileNum":"12i09**0094","prize":"XX9大奖","date":"7月12日 18:04"},{"mobileNum":"13800**0005","prize":"XX1大奖","date":"7月12日 18:05"},{"mobileNum":"12i09**0096","prize":"XX9大奖","date":"7月12日 18:06"},{"mobileNum":"13800**0007","prize":"XX1大奖","date":"7月12日 18:07"},{"mobileNum":"12i09**0098","prize":"XX9大奖","date":"7月12日 18:08"},{"mobileNum":"13800**0009","prize":"XX1大奖","date":"7月12日 18:09"},{"mobileNum":"12i09**0010","prize":"XX9大奖","date":"7月12日 18:10"}],"version":1}';
+ var musicFlag;
+//cookie;
+function SetCookie(name,value)//两个参数，一个是cookie的名子，一个是值
+    {
+        var Days = 30; //此 cookie 将被保存 30 天
+        var exp  = new Date();    //new Date("December 31, 9998");
+        exp.setTime(exp.getTime() + Days*24*60*60*1000);
+        document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+    }
+function getCookie(name)//取cookies函数        
+    {
+        var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+         if(arr != null) return unescape(arr[2]); return null;
+
+    }
+function delCookie(name)//删除cookie
+    {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval=getCookie(name);
+        if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+    }
+
+
+
+
+
 //加载图片
  $("img").imgLoad({
     time:10000000,//设置足够大 须等待图片载入完成，但是404的时候就杯具了...
@@ -19,15 +51,23 @@
       //alert("载入完成") 
      $("#loading").hide();
      test65();
+     test67();
+    alert(getCookie('musicFlag'));
+    if(getCookie('musicFlag')=="0"){
+
+      var myAudio=document.getElementById("bgaudio");
+      myAudio.pause();
+    }
     }//图片加载完成回调；
   }); 
 //android接口
 
- 
- var point;
- //测试数据
- var params66 = '{"act":66, "prmOut":{"msg" : "7004"},"version":1}';
- var params65 = '{"act":65, "prmOut":{"point" : "7000"},"version":1}';
+
+
+function test67(){
+
+  AndroidCallWeb(params67);
+}
 
 function test65(){
 
@@ -105,6 +145,16 @@ function AndroidCallWeb(jsonText){
                       });
 
 
+          }else if(result.act=="67"){
+              console.log("result.people.length:"+result.people.length);
+              var dataLength=result.people.length;
+              for(var i=0;i<=dataLength-1;i++){
+                  console.log("result.people.["+i+"].mobileNum:"+result.people[i].mobileNum);
+                  console.log("result.people.["+i+"].prize:"+result.people[i].prize);
+                  console.log("result.people.["+i+"].date:"+result.people[i].date);
+
+              }
+
           }
     $("#loading").hide();
 
@@ -115,7 +165,21 @@ function getprize(){
   test66()
 }
 $(function(){
+  $("#music_wrapper").on("click",function(){
+      var myAudio=document.getElementById("bgaudio");
+     if($("#sound_btn").attr("src")=="images/sound_ico.png"){
+      $("#sound_btn").attr("src","images/sound_ico2.png");
+          myAudio.pause();
+          SetCookie("musicFlag","0");
+     }else if($("#sound_btn").attr("src")=="images/sound_ico2.png"){
+      $("#sound_btn").attr("src","images/sound_ico.png");
+          myAudio.play();
+          SetCookie("musicFlag","1");
 
+     }
+     
+})
+  
   $("#prize").on("click", function(){
     $(".hock").animate({top: '-50px'}, "slow").animate({top: '-10px'}, "slow").animate({top: '-250px'}, "slow","linear",function(){getprize()});
   });
@@ -123,10 +187,11 @@ $(function(){
 </script>
 </head>
 <body >
+  <audio id="bgaudio" src="images/sound.wav" loop="loop"  autoplay="autoplay"></audio>
   <div id="loading"><div id="blockDiv"></div><div id="loadingImg"><img src="images/loading.gif"  style="width:300px;height:232px"></div></div>
 <div class="stage">
   <div id="bingo_wrapper"></div><div id="bingo">积分:0000</div>
-  <div id="music_wrapper"></div><div id="music"><img src="images/sound_ico.png"></div>
+  <div id="music_wrapper"></div><div id="music"><img id="sound_btn" src="images/sound_ico.png"></div>
   <img src="images/w_pop.svg" width="50" height="10" class="w_pop1"/>
   <img src="images/w_pop.svg" width="50" height="10" class="w_pop2"/>
   <img src="images/w_pop.svg" width="50" height="10" class="w_pop3"/>
