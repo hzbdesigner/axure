@@ -32,7 +32,7 @@ a{ text-decoration: none;}
 }
 #loadingImg{
   position: absolute;
-  left: 15%;
+  left: 12%;
   top:30%;
   z-index: 10000;
 }
