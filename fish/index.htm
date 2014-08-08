@@ -56,7 +56,9 @@ function delCookie(name)//删除cookie
     if(getCookie('musicFlag')=="0"){
 
       var myAudio=document.getElementById("bgaudio");
+      
       myAudio.pause();
+      $("#sound_btn").attr("src","images/sound_ico2.png");
     }
     }//图片加载完成回调；
   }); 
